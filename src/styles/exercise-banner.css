@@ -76,16 +76,18 @@
   position: relative;
   z-index: 4;
   color: var(--color-white);
-  padding: 60px 20px;
+  padding: 30px 20px 60px;
+  transform: translateY(-7vh);
 }
 
 .exercise-banner__label {
   font-family: var(--font-urbanist);
-  font-size: 20px;
-  font-weight: 400;
-  font-style: italic;
-  color: rgba(255, 255, 255, 0.75);
-  margin: 0 0 8px;
+  font-size: 40px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.05;
+  color: var(--color-white);
+  margin: 4px 0 0;
   transition: opacity 0.15s ease;
 }
 
@@ -95,7 +97,7 @@
   font-weight: 700;
   line-height: 1.05;
   color: var(--color-white);
-  margin: 0 0 40px 0;
+  margin: 0 0 4px 0;
   text-shadow: 0 4px 32px rgba(0, 0, 0, 0.30);
   transition: opacity 0.15s ease;
 }
@@ -106,7 +108,8 @@
     min-height: 500px;
   }
 
-  .exercise-banner__title {
+  .exercise-banner__title,
+  .exercise-banner__label {
     font-size: 32px;
   }
 }
@@ -116,11 +119,8 @@
     min-height: 420px;
   }
 
-  .exercise-banner__title {
-    font-size: 28px;
-  }
-
+  .exercise-banner__title,
   .exercise-banner__label {
-    font-size: 13px;
+    font-size: 28px;
   }
 }
