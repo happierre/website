@@ -99,10 +99,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  width: 100%;
+  width: min(100% - 84px, 1140px);
   text-align: right;
   margin-left: auto;
-  margin-right: 20%;
+  margin-right: auto;
 }
 
 .have-everything__title {
@@ -131,8 +131,9 @@
 /* ── Tablet ── */
 @media (max-width: 991px) {
   .have-everything__content {
-    margin-right: 10%;
-    padding: 0 20px;
+    width: calc(100% - 64px);
+    margin-right: auto;
+    padding: 0;
   }
 
   .have-everything__title {
@@ -160,9 +161,10 @@
     text-align: right;
     align-items: flex-end;
     margin-left: auto;
-    margin-right: 20px;
-    padding: 0 16px;
-    max-width: 85%;
+    width: calc(100% - 40px);
+    margin-right: auto;
+    padding: 0;
+    max-width: 100%;
   }
 
   .have-everything__title {
@@ -181,8 +183,9 @@
 /* ── Small mobile ── */
 @media (max-width: 575px) {
   .have-everything__content {
-    max-width: 90%;
-    margin-right: 12px;
+    width: calc(100% - 32px);
+    max-width: 100%;
+    margin-right: auto;
   }
 
   .have-everything__title {
