@@ -776,17 +776,22 @@ h6 {
 @media (max-width: 767px) {
   .have-everything {
     align-items: flex-start !important;
+    padding-top: 0 !important;
   }
   .have-everything__content {
     margin-top: 36px !important;
   }
 
+  .happiness {
+    padding-top: 0 !important;
+  }
   .happiness__inner {
     padding-top: 36px !important;
   }
 
   .premium {
     justify-content: flex-start !important;
+    padding-top: 0 !important;
   }
   .premium__inner {
     padding-top: 36px !important;
@@ -794,6 +799,7 @@ h6 {
 
   .fun-section {
     align-items: flex-start !important;
+    padding-top: 0 !important;
   }
   .hf-container {
     padding-top: 36px !important;
@@ -815,6 +821,9 @@ h6 {
     padding-top: 0 !important;
   }
 
+  .ll-section {
+    padding-top: 0 !important;
+  }
   .ll-sheet {
     padding-top: 36px !important;
   }
@@ -825,6 +834,7 @@ h6 {
 
   .na-section {
     align-items: flex-start !important;
+    padding-top: 0 !important;
   }
   .na-sheet {
     padding-top: 36px !important;
