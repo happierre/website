@@ -13,6 +13,12 @@
   --container-padding-mobile: 20px;
   --site-header-height: 80px;
 
+  /* Happierre gradient system */
+  --gradient-light: radial-gradient(circle at 0% 0%, #CAD0FB, transparent 75%), linear-gradient(225deg, #BDD6FF, #BFA8F3);
+  --gradient-middle: radial-gradient(circle at 0% 0%, #6C88DD, transparent 75%), linear-gradient(225deg, #698CCF, #8A4BE1);
+  --gradient-dark: radial-gradient(circle at 0% 0%, #2F45BA, transparent 75%), linear-gradient(225deg, #113890, #5118BA);
+  --gradient-super-dark: radial-gradient(circle at 0% 0%, #162F6F, transparent 75%), linear-gradient(225deg, #0B2462, #360568);
+
   /* Landing page extended palette */
   --color-brand-light: #b8bfff;
   --color-brand-pale: #d8dbff;
