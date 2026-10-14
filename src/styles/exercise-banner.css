@@ -90,7 +90,7 @@
   right: 20px;
   transform: translateY(-50%);
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 46px;
+  font-size: 54px;
   font-weight: 700;
   font-style: italic;
   line-height: 1.05;
@@ -120,7 +120,7 @@
 
   .exercise-banner__title { top: 16%; left: 20px; right: 20px; }
 
-  .exercise-banner__label { font-size: 36px; }
+  .exercise-banner__label { font-size: 42px; }
 }
 
 @media (max-width: 575px) {
@@ -130,5 +130,5 @@
 
   .exercise-banner__title { top: 14%; left: 16px; right: 16px; }
 
-  .exercise-banner__label { font-size: 32px; }
+  .exercise-banner__label { font-size: 38px; }
 }
