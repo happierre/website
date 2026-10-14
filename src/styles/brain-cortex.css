@@ -149,7 +149,7 @@
   .brain-cortex__grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 33px;
-    margin-top: 56px;
+    margin-top: 72px;
   }
 
   .cortex-card__icon {
@@ -161,7 +161,8 @@
 /* ── Mobile ── */
 @media (max-width: 767px) {
   .brain-cortex {
-    padding: 50px 16px;
+    padding: 36px 16px 50px;
+    justify-content: flex-start;
   }
 
   .brain-cortex__title {
@@ -172,7 +173,7 @@
   .brain-cortex__grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
-    margin-top: 72px;
+    margin-top: 88px;
     width: 100%;
     max-width: 100%;
   }
@@ -203,7 +204,7 @@
 
   .brain-cortex__grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 13px;
+    gap: 22px 13px;
     width: 100%;
     max-width: 100%;
     margin-left: 0;
