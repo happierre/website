@@ -1,4 +1,6 @@
 .site-footer {
+  position: relative;
+  z-index: 100200;
   background: var(--gradient-dark);
   color: var(--color-white);
 }
