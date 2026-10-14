@@ -1,5 +1,5 @@
 .site-footer {
-  background-color: var(--color-dark-purple);
+  background: linear-gradient(180deg, #0B2462 0%, #0E1848 52%, #360568 100%);
   color: var(--color-white);
 }
 
