@@ -77,20 +77,22 @@
   inset: 0;
   z-index: 4;
   color: var(--color-white);
-  padding: 17vh 20px 12vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  padding: 0 20px;
+  display: block;
   transform: none;
   pointer-events: none;
 }
 
 .exercise-banner__label {
-  font-family: var(--font-urbanist);
-  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  right: 20px;
+  transform: translateY(-50%);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 46px;
   font-weight: 700;
-  font-style: normal;
+  font-style: italic;
   line-height: 1.05;
   color: var(--color-white);
   margin: 0 0 0;
@@ -116,12 +118,9 @@
     min-height: 500px;
   }
 
-  .exercise-banner__content { padding-top: 16vh; padding-bottom: 14vh; }
+  .exercise-banner__title { top: 16%; left: 20px; right: 20px; }
 
-  .exercise-banner__title,
-  .exercise-banner__label {
-    font-size: 32px;
-  }
+  .exercise-banner__label { font-size: 36px; }
 }
 
 @media (max-width: 575px) {
@@ -129,10 +128,7 @@
     min-height: 420px;
   }
 
-  .exercise-banner__content { padding-top: 14vh; padding-bottom: 15vh; }
+  .exercise-banner__title { top: 14%; left: 16px; right: 16px; }
 
-  .exercise-banner__title,
-  .exercise-banner__label {
-    font-size: 28px;
-  }
+  .exercise-banner__label { font-size: 32px; }
 }
