@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(180deg, #BDD6FF 0%, #B8B6F6 52%, #B87BF8 100%);
+  background: var(--gradient-light);
   padding: 20px 0 30px;
   margin-bottom: 0;
   display: flex;
