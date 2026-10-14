@@ -8,7 +8,7 @@ body {
   background-color: #ffffff;
   position: relative;
   width: 100%;
-  font-family: var(--font-poppins);
+  font-family: var(--font-open-sans);
 }
 
 .blog-hero {
