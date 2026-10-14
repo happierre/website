@@ -94,10 +94,10 @@
   flex: 1;
   min-width: 260px;
   max-width: 320px;
-  background: rgba(15, 20, 30, 0.22);
+  background: linear-gradient(160deg, rgba(42, 34, 142, 0.96), rgba(71, 21, 163, 0.96));
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: 20px;
   padding: 35px 25px;
   display: flex;
