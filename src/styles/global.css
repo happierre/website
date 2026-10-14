@@ -711,6 +711,48 @@ h6 {
 }
 .page-sticky-wrapper > section::-webkit-scrollbar { display: none; }
 @media (max-width: 767px) {
-  .page-sticky-wrapper { height: 205svh; }
+  .page-sticky-wrapper { height: 240svh !important; }
   .page-sticky-wrapper > section { height: calc(100lvh - var(--site-header-height)) !important; }
+}
+
+/* Consistent mobile heading placement across the landing-page panels.
+   4C Cortex is the reference: a clean, centered heading with no inherited
+   heading margins or extra title padding. Keep the hero's left-aligned layout. */
+@media (max-width: 767px) {
+  .exercise-banner__title,
+  .brain-cortex__title,
+  .have-everything__title,
+  .happiness__title,
+  .premium__title,
+  .hf-heading,
+  .ai-section__title,
+  .ll-heading,
+  .gh-heading,
+  .na-heading,
+  .ls-heading,
+  .pom-heading {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    text-align: center !important;
+    box-sizing: border-box;
+  }
+
+  /* Increase the scroll distance before a panel is released, so a normal
+     swipe is less likely to pass through a sticky panel in one go. */
+  .fullpage-sticky-wrapper,
+  .brain-cortex-wrapper,
+  .he-sticky-wrapper,
+  .happiness-compounds-wrapper,
+  .na-sticky-wrapper,
+  .section-sticky-wrapper,
+  .page-sticky-wrapper {
+    height: 240svh !important;
+  }
+
+  .exercise-banner-wrapper {
+    height: 260svh !important;
+  }
 }
