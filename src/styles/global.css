@@ -517,11 +517,11 @@ h6 {
 @media (max-width: 767px) {
   /* Give each sticky panel a little more scroll dwell so it catches reliably. */
   .fullpage-sticky-wrapper {
-    height: 180svh !important;
+    height: 205svh !important;
   }
 
   .exercise-banner-wrapper {
-    height: 195svh !important;
+    height: 215svh !important;
   }
 
   .exercise-banner-wrapper,
@@ -677,4 +677,28 @@ h6 {
   .pom-heading {
     font-size: 28px !important;
   }
+}
+
+
+/* Shared full-screen sticky panels for secondary pages. Top and bottom sections stay natural-flow. */
+.page-sticky-wrapper {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 140svh;
+  margin: 0;
+  padding: 0;
+}
+.page-sticky-wrapper > section {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: var(--site-header-height) !important;
+  height: calc(100svh - var(--site-header-height)) !important;
+  min-height: 0 !important;
+  box-sizing: border-box !important;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .page-sticky-wrapper { height: 205svh; }
+  .page-sticky-wrapper > section { height: calc(100lvh - var(--site-header-height)) !important; }
 }
