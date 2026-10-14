@@ -94,7 +94,7 @@
   flex: 1;
   min-width: 260px;
   max-width: 320px;
-  background: linear-gradient(160deg, rgba(42, 34, 142, 0.96), rgba(71, 21, 163, 0.96));
+  background: linear-gradient(160deg, rgba(42, 34, 142, 0.62), rgba(71, 21, 163, 0.62));
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.28);
