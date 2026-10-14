@@ -19,18 +19,18 @@ import img13 from '../assets/images/banner/unsplash-1590602847861.jpg';
 
 const opts = await Promise.all([
   getImage({ src: img12, format: 'webp', width: 1400 }),
+  getImage({ src: img13, format: 'webp', width: 1400 }),
   getImage({ src: img06, format: 'webp', width: 1400 }),
-  getImage({ src: img09, format: 'webp', width: 1400 }),
   getImage({ src: img07, format: 'webp', width: 1400 }),
   getImage({ src: img02, format: 'webp', width: 1400 }),
-  getImage({ src: img04, format: 'webp', width: 1400 }),
   getImage({ src: img05, format: 'webp', width: 1400 }),
+  getImage({ src: img10, format: 'webp', width: 1400 }),
   getImage({ src: img08, format: 'webp', width: 1400 }),
   getImage({ src: img10, format: 'webp', width: 1400 }),
   getImage({ src: img11, format: 'webp', width: 1400 }),
   getImage({ src: img13, format: 'webp', width: 1400 }),
+  getImage({ src: img04, format: 'webp', width: 1400 }),
   getImage({ src: img03, format: 'webp', width: 1400 }),
-  getImage({ src: img01, format: 'webp', width: 1400 }),
 ]);
 
 const slides = [
@@ -38,14 +38,14 @@ const slides = [
   { image: opts[1].src,  label: 'sleep' },
   { image: opts[2].src,  label: 'yoga' },
   { image: opts[3].src,  label: 'journaling' },
-  { image: opts[4].src,  label: 'nutrition' },
-  { image: opts[5].src,  label: 'exercise' },
+  { image: opts[11].src, label: 'nutrition' },
+  { image: opts[8].src,  label: 'exercise' },
   { image: opts[6].src,  label: 'goal setting' },
   { image: opts[7].src,  label: 'habit tracking' },
-  { image: opts[8].src,  label: 'book summaries' },
+  { image: opts[4].src,  label: 'book summaries' },
   { image: opts[9].src,  label: 'podcasts' },
   { image: opts[10].src, label: 'medicine tracker' },
-  { image: opts[11].src, label: 'therapist listings' },
+  { image: opts[5].src,  label: 'therapist listings' },
   { image: opts[12].src, label: 'vision boards' },
 ];
 ---
@@ -60,8 +60,8 @@ const slides = [
 
   <div class="exercise-banner__overlay"></div>
   <div class="exercise-banner__content">
-    <p  class="exercise-banner__label" id="banner-label">{slides[0].label}</p>
-    <h2 class="exercise-banner__title" id="banner-title">complete wellness</h2>
+    <h1 class="exercise-banner__title" id="banner-title">complete wellness</h1>
+    <p class="exercise-banner__label" id="banner-label">{slides[0].label}</p>
   </div>
 
   <script define:vars={{ slides }}>
