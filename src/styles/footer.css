@@ -5,6 +5,18 @@
   color: var(--color-white);
 }
 
+/* Extend the footer background into the tiny bottom gap some mobile browsers expose. */
+.site-footer::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: max(env(safe-area-inset-bottom, 0px), 3px);
+  background: var(--gradient-dark);
+  pointer-events: none;
+}
+
 .site-footer__inner {
   max-width: 1140px;
   min-height: 105px;
