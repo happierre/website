@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import happierreIcon from '../assets/images/2026.10.14. happierre-icon-white.png';
 
 const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/fullfill/main/images/${name}`;
 ---
@@ -18,7 +19,7 @@ const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/ful
     <section class="contact-main">
       <div class="contact-inner">
         <div class="contact-copy">
-          <img class="logo-mark" src={oldImage('FinalLogoShapeOnly.png')} alt="" />
+          <img class="logo-mark" src={happierreIcon.src} alt="" />
           <h2>we'd love to hear from you</h2>
           <form
             name="contact"
@@ -48,8 +49,8 @@ const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/ful
 </Layout>
 
 <style>
-  .legacy-contact{font-family:'Open Sans',Arial,sans-serif;color:#3d4268}.legacy-contact *{box-sizing:border-box}.legacy-contact h1,.legacy-contact h2{font-family:'Urbanist','Open Sans',Arial,sans-serif;font-weight:500}
-  .contact-hero{min-height:330px;display:flex;align-items:center;justify-content:center;background:linear-gradient(115deg,#a9c9ff 0%,#a9c9ff 48%,#cfbbfc 100%);background-size:cover}.contact-hero h1{color:#fff;font-size:3.4rem;margin:0;text-align:center}
+  .legacy-contact{font-family:var(--font-open-sans);color:#3d4268}.legacy-contact *{box-sizing:border-box}.legacy-contact h1,.legacy-contact h2{font-family:var(--font-urbanist);font-weight:500}
+  .contact-hero{min-height:330px;display:flex;align-items:center;justify-content:center;background:var(--gradient-light);background-size:cover}.contact-hero h1{color:#fff;font-size:3.4rem;margin:0;text-align:center}
   .contact-main{background:#7c8cff;min-height:650px}.contact-inner{width:min(1200px,calc(100% - 40px));margin:0 auto;display:grid;grid-template-columns:7fr 8fr;gap:50px;min-height:650px}.contact-copy{align-self:center;color:#fff;padding:60px 0}.logo-mark{width:70px;height:70px;object-fit:contain;margin-bottom:15px}.contact-copy h2{font-size:2.5rem;line-height:1.15;margin:0 0 40px}.legacy-form{max-width:650px}.split{display:grid;grid-template-columns:1fr 1fr;gap:30px}.legacy-form input:not([type='hidden']),.legacy-form textarea{width:100%;display:block;padding:12px 0;margin-bottom:28px;border:0;border-bottom:2px solid #fff;border-radius:0;background:transparent;color:#fff;font:300 1rem 'Open Sans',Arial,sans-serif;outline:none}.legacy-form input::placeholder,.legacy-form textarea::placeholder{color:#fff;opacity:1}.legacy-form textarea{resize:vertical}.legacy-form [data-netlify-recaptcha='true']{margin:0 0 20px}.legacy-form button{border:0;border-radius:50px;background:#3f5ef0;color:#fff;padding:12px 35px;text-transform:uppercase;letter-spacing:1px;font-weight:700;cursor:pointer}.contact-image{align-self:center}.contact-image img{display:block;width:100%;max-height:560px;object-fit:cover;border-radius:22px}
   .hidden-field{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
   @media(max-width:800px){.contact-hero{min-height:240px}.contact-hero h1{font-size:2.3rem}.contact-inner{grid-template-columns:1fr;width:min(100% - 40px,650px);gap:0}.contact-copy{padding:65px 0 35px}.contact-copy h2{font-size:2rem;text-align:center}.logo-mark{display:block;margin:0 auto 15px}.split{grid-template-columns:1fr;gap:0}.contact-image{padding-bottom:60px}.contact-image img{max-height:420px}}
