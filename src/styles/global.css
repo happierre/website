@@ -696,8 +696,11 @@ h6 {
   height: calc(100svh - var(--site-header-height)) !important;
   min-height: 0 !important;
   box-sizing: border-box !important;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
 }
+.page-sticky-wrapper > section::-webkit-scrollbar { display: none; }
 @media (max-width: 767px) {
   .page-sticky-wrapper { height: 205svh; }
   .page-sticky-wrapper > section { height: calc(100lvh - var(--site-header-height)) !important; }
