@@ -183,7 +183,7 @@
   }
 
   .hero__logo {
-    width: 240px;
+    width: 220px;
     max-width: 100%;
     margin-bottom: 2px !important;
   }
@@ -218,7 +218,7 @@
   }
 
   .hero__logo {
-    width: 220px;
+    width: 200px;
     max-width: 100%;
   }
 }
