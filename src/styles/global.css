@@ -758,10 +758,14 @@ h6 {
 }
 
 
-/* Keep the final homepage panel sticky for the same longer dwell time,
-   then hand off cleanly to the footer. */
+/* The final panel gets only a short sticky runway equal to the footer
+   height. This keeps it sticky, while the footer follows directly after it. */
 @media (max-width: 767px) {
   .section-sticky-wrapper:has(.pom-section) {
-    height: calc(240svh - var(--footer-height, 0px)) !important;
+    height: calc(100lvh - var(--site-header-height) + var(--footer-height, 0px)) !important;
+  }
+
+  .section-sticky-wrapper:has(.pom-section) > .pom-section {
+    height: calc(100lvh - var(--site-header-height)) !important;
   }
 }
