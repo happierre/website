@@ -769,3 +769,137 @@ h6 {
     height: calc(100lvh - var(--site-header-height)) !important;
   }
 }
+
+/* ── Mobile layout correction: align section headings to the 4C Cortex top edge ──
+   Use a shared 36px top inset for the content groups. Preserve each section's
+   intentional horizontal alignment and its existing artwork/layout. */
+@media (max-width: 767px) {
+  .have-everything {
+    align-items: flex-start !important;
+  }
+  .have-everything__content {
+    margin-top: 36px !important;
+  }
+
+  .happiness__inner {
+    padding-top: 36px !important;
+  }
+
+  .premium {
+    justify-content: flex-start !important;
+  }
+  .premium__inner {
+    padding-top: 36px !important;
+  }
+
+  .fun-section {
+    align-items: flex-start !important;
+  }
+  .hf-container {
+    padding-top: 36px !important;
+  }
+  .hf-heading {
+    margin-top: 0 !important;
+  }
+
+  .ai-section {
+    padding-top: 0 !important;
+    padding-bottom: 24px !important;
+    align-items: flex-start !important;
+  }
+  .ai-section__layout {
+    align-items: flex-start !important;
+    padding-top: 36px !important;
+  }
+  .ai-section__content {
+    padding-top: 0 !important;
+  }
+
+  .ll-sheet {
+    padding-top: 36px !important;
+  }
+
+  .gh-section {
+    padding-top: 36px !important;
+  }
+
+  .na-section {
+    align-items: flex-start !important;
+  }
+  .na-sheet {
+    padding-top: 36px !important;
+  }
+
+  /* Keep Launch Special's artwork anchored while placing its heading at the
+     same top inset as the other panels. */
+  .ls-heading {
+    margin-top: 0 !important;
+  }
+  .ls-container {
+    justify-content: flex-start !important;
+    padding-top: 36px !important;
+  }
+
+  /* Peace of Mind is intentionally shorter than a full-screen panel so the
+     footer is visible immediately below it on the same mobile screen. */
+  .pom-section {
+    height: calc(100lvh - var(--site-header-height) - var(--footer-height, 120px)) !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    padding: 24px 0 14px !important;
+    align-items: flex-start !important;
+  }
+  .section-sticky-wrapper:has(.pom-section) {
+    height: calc(100lvh - var(--site-header-height) - var(--footer-height, 120px)) !important;
+  }
+  .section-sticky-wrapper:has(.pom-section) > .pom-section {
+    height: calc(100lvh - var(--site-header-height) - var(--footer-height, 120px)) !important;
+  }
+  .pom-inner {
+    gap: 14px !important;
+    padding: 0 18px !important;
+    align-items: center !important;
+  }
+  .pom-content {
+    width: 100%;
+    flex: 0 0 auto !important;
+  }
+  .pom-heading {
+    margin: 0 auto 8px !important;
+  }
+  .pom-subtitle {
+    line-height: 1.3 !important;
+  }
+  .pom-adherence {
+    margin-top: 16px !important;
+    margin-bottom: 14px !important;
+  }
+  .pom-card {
+    padding: 16px !important;
+    max-width: 280px !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .pom-section {
+    height: calc(100lvh - var(--site-header-height) - var(--footer-height, 120px)) !important;
+    padding: 18px 0 10px !important;
+  }
+  .section-sticky-wrapper:has(.pom-section) {
+    height: calc(100lvh - var(--site-header-height) - var(--footer-height, 120px)) !important;
+  }
+  .section-sticky-wrapper:has(.pom-section) > .pom-section {
+    height: calc(100lvh - var(--site-header-height) - var(--footer-height, 120px)) !important;
+  }
+  .pom-inner {
+    gap: 10px !important;
+  }
+  .pom-adherence {
+    margin-top: 12px !important;
+    margin-bottom: 10px !important;
+  }
+  .pom-card {
+    padding: 13px !important;
+  }
+}
+
