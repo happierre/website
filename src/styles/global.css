@@ -71,6 +71,15 @@ html {
   overflow-x: clip;
 }
 
+/* Reduce Safari's rubber-band overscroll at the document boundaries.
+   Scoped to WebKit-based browsers so Android behavior remains unchanged. */
+@supports (-webkit-touch-callout: none) {
+  html,
+  body {
+    overscroll-behavior-y: none;
+  }
+}
+
 @media (min-width: 769px) {
   html {
     scroll-behavior: smooth;
