@@ -7,7 +7,7 @@
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
-  background: linear-gradient(180deg, #0E2F79 0%, #2A228E 52%, #4715A3 100%);
+  background: var(--gradient-middle);
   color: var(--color-text-dark);
   font-family: var(--font-open-sans);
 }
@@ -175,7 +175,7 @@ body.menu-open .site-header__mobile-panel,
   margin: 0 !important;
   padding: 28px 24px 24px !important;
   list-style: none !important;
-  background: linear-gradient(180deg, #0B2462 0%, #0E1848 52%, #360568 100%) !important;
+  background: var(--gradient-super-dark) !important;
   z-index: 2 !important;
   overflow-y: auto !important;
   box-shadow: -8px 0 35px rgba(0, 0, 0, 0.25) !important;
