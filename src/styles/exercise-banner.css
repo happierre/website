@@ -73,11 +73,17 @@
 }
 
 .exercise-banner__content {
-  position: relative;
+  position: absolute;
+  inset: 0;
   z-index: 4;
   color: var(--color-white);
-  padding: 30px 20px 60px;
-  transform: translateY(-7vh);
+  padding: 17vh 20px 12vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transform: none;
+  pointer-events: none;
 }
 
 .exercise-banner__label {
@@ -87,7 +93,8 @@
   font-style: normal;
   line-height: 1.05;
   color: var(--color-white);
-  margin: 4px 0 0;
+  margin: 0 0 0;
+  max-width: 90%;
   transition: opacity 0.15s ease;
 }
 
@@ -97,7 +104,8 @@
   font-weight: 700;
   line-height: 1.05;
   color: var(--color-white);
-  margin: 0 0 4px 0;
+  margin: 0;
+  max-width: 900px;
   text-shadow: 0 4px 32px rgba(0, 0, 0, 0.30);
   transition: opacity 0.15s ease;
 }
@@ -107,6 +115,8 @@
     height: 100vh;
     min-height: 500px;
   }
+
+  .exercise-banner__content { padding-top: 16vh; padding-bottom: 14vh; }
 
   .exercise-banner__title,
   .exercise-banner__label {
@@ -118,6 +128,8 @@
   .exercise-banner {
     min-height: 420px;
   }
+
+  .exercise-banner__content { padding-top: 14vh; padding-bottom: 15vh; }
 
   .exercise-banner__title,
   .exercise-banner__label {
