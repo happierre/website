@@ -240,3 +240,32 @@
     font-size: 0.82rem;
   }
 }
+
+
+@media (max-width: 767px) {
+  .hf-container {
+    gap: 24px;
+  }
+  .hf-heading-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+  }
+  .hf-heading {
+    margin: 0;
+    padding: 0;
+  }
+  .hf-text {
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+  .hf-phone-frame {
+    width: min(52vw, 210px);
+    height: min(104vw, 420px);
+  }
+  .hf-btn-mobile-wrap {
+    margin-top: 0;
+  }
+}
