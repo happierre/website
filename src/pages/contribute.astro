@@ -116,4 +116,72 @@ const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/ful
 
   /* The secondary phone artwork is decorative on mobile and was rendering as a small, unexplained image beneath the form. */
   @media(max-width:767px){.legacy-contribute .form-art{display:none!important}}
+
+  /* Mobile hero follows the landing page's two-column-to-one-column pattern:
+     phone/artwork first, then left-aligned brand copy and CTA. */
+  @media(max-width:767px){
+    .legacy-contribute .hero-inner{
+      display:grid;
+      grid-template-columns:minmax(0,1fr);
+      grid-template-rows:44svh minmax(0,1fr);
+      align-items:stretch;
+      width:100%;
+    }
+    .legacy-contribute .hero-phone{
+      grid-row:1;
+      height:auto;
+      min-height:0;
+      width:100%;
+      justify-content:flex-start;
+      align-items:flex-end;
+      padding:0 0 0 16px;
+    }
+    .legacy-contribute .hero-phone img{
+      height:95%;
+      width:auto;
+      max-width:none;
+      max-height:44svh;
+      object-fit:contain;
+      object-position:left bottom;
+    }
+    .legacy-contribute .hero-copy{
+      grid-row:2;
+      align-self:start;
+      width:100%;
+      max-width:none;
+      padding:10px 20px 28px 32px;
+      text-align:left;
+      transform:none;
+    }
+    .legacy-contribute .hero-mark{
+      display:block;
+      width:200px;
+      height:auto;
+      max-width:100%;
+      margin:0 0 2px;
+    }
+    .legacy-contribute .hero-copy h1{
+      font-size:27.2px;
+      line-height:1.1;
+      text-align:left;
+      margin:0 0 18px;
+    }
+    .legacy-contribute .hero-copy .button{
+      align-self:flex-start;
+    }
+    .legacy-contribute .feature-inner,
+    .legacy-contribute .form-inner{
+      grid-template-columns:minmax(0,1fr);
+    }
+  }
+  @media(max-width:575px){
+    .legacy-contribute .hero-inner{
+      grid-template-rows:44svh minmax(0,1fr);
+    }
+    .legacy-contribute .hero-phone{padding-left:16px}
+    .legacy-contribute .hero-phone img{max-height:44svh}
+    .legacy-contribute .hero-copy{padding:10px 20px 28px 32px}
+    .legacy-contribute .hero-copy h1{font-size:27.2px}
+  }
+
 </style>
