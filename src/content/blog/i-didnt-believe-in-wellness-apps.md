@@ -148,4 +148,4 @@ And more importantly — you're not stuck.
 
 If this resonates, I'd love to hear your experience.
 
-If you'd like to experience Happierre in action, visit [fullfill.me](https://fullfill.me) or [download the app](https://fullfill.me/try).
+If you'd like to experience Happierre in action, visit [Happierre website](https://fullfill.me) or [download the app](https://fullfill.me/try).
