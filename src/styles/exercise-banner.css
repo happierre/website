@@ -132,3 +132,28 @@
 
   .exercise-banner__label { font-size: 38px; }
 }
+
+/* Keep the headline in the top content band, independent of the rotating label. */
+.exercise-banner__content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.exercise-banner__title {
+  position: absolute;
+  top: 36px;
+  left: 20px;
+  right: 20px;
+  width: auto;
+  margin: 0 auto;
+  padding: 0 8px;
+  text-align: center;
+}
+@media (max-width: 575px) {
+  .exercise-banner__title {
+    top: 28px;
+    left: 16px;
+    right: 16px;
+    padding: 0 4px;
+  }
+}
