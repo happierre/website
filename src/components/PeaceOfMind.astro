@@ -90,7 +90,7 @@ import '../styles/peace-of-mind.css';
     /* On mobile, size the final panel around the real footer height so
        the last sticky panel hands off cleanly to the footer. */
     function setFooterHeight() {
-      if (!section || window.innerWidth > 767) return;
+      if (!section) return;
       var footer = document.getElementById('footer');
       if (!footer) return;
       section.style.setProperty('--footer-height', footer.getBoundingClientRect().height + 'px');
