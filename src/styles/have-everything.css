@@ -251,3 +251,11 @@
     font-size: 24px;
   }
 }
+
+/* Add clearer breathing room between the headline, supporting copy and CTA. */
+.have-everything__desc { margin-top: 30px !important; }
+.have-everything__content .btn-primary { margin-top: 38px !important; }
+@media (max-width: 767px) {
+  .have-everything__desc { margin-top: 27px !important; }
+  .have-everything__content .btn-primary { margin-top: 34px !important; }
+}
