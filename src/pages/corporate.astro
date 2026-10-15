@@ -7,169 +7,534 @@ const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/ful
 
 <Layout
   title="Corporate Wellness & Mental Fitness | Happierre"
-  description="Happierre corporate memberships help teams build mental fitness, manage workplace stress, support emotional fitness, and develop healthier, more resilient habits."
-  keywords="corporate wellness, corporate mental fitness, employee wellness, workplace wellbeing, workplace stress, emotional fitness, burnout prevention, mental fitness, Happierre corporate memberships"
+  description="Give your team practical tools to build mental fitness, manage workplace stress, and develop healthier everyday habits with Happierre."
+  keywords="corporate wellness, corporate mental fitness, employee wellbeing, workplace stress, burnout prevention, mental fitness, Happierre corporate memberships"
   canonicalPath="/corporate/"
 >
-  <div class="legacy-corporate">
-    <section class="hero" style={`--hero-pattern: url("${happierreIcon.src}")`}>
-      <div class="hero-inner">
-        <div class="hero-art">
-          <div class="hero-circle"></div>
-          <img src={oldImage('02.profilepage.png')} alt="Happierre profile and wellbeing app" />
+  <div class="corporate-page" style={`--hero-pattern: url("${happierreIcon.src}")`}>
+    <section class="corp-hero">
+      <div class="corp-hero__inner">
+        <div class="corp-hero__art">
+          <div class="corp-orbit"></div>
+          <img src={oldImage('02.profilepage.png')} alt="Happierre mental fitness app on a phone" />
         </div>
-        <div class="hero-copy">
-          
-          <h1>stand by your team in uncertain times</h1>
-          <a class="button" href="#enroll">ENROLL NOW</a>
+        <div class="corp-hero__copy">
+          <p class="corp-eyebrow">HAPPIER TEAMS START HERE</p>
+          <h1>help your team feel better, <span>at work and beyond.</span></h1>
+          <p class="corp-intro">Give people practical tools to navigate stress, build resilience, and feel more in control — one small habit at a time.</p>
+          <a class="corp-button" href="#enroll">EXPLORE TEAM ACCESS <span aria-hidden="true">↗</span></a>
+          <p class="corp-proof">Mental fitness for real life. Made for everyday use.</p>
         </div>
       </div>
     </section>
 
-    <div class="page-sticky-wrapper"><section class="stress">
-      <div class="stress-inner">
-        <div class="stress-heading">
-          <h2>Rising Stress in the Workplace</h2>
-          <p>Employees face rising stress from global uncertainty and AI-driven job fears — fueling burnout, anxiety, and lost productivity</p>
-        </div>
-        <div class="stress-content">
-          <div class="stress-image"></div>
-          <ul>
-            <li>Lower productivity</li>
-            <li>Higher burnout &amp; anxiety</li>
-            <li>Reduced engagement</li>
-            <li>Lost focus and resilience</li>
-          </ul>
-        </div>
-        <div class="offer">
-          <img src={oldImage('maninoffice.jpg')} alt="Employee working in an office" />
-          <div class="offer-card">
-            <h3>launch<br />offer</h3>
-            <p>200 employees can access 6 months free</p>
+    <div class="page-sticky-wrapper">
+      <section class="corp-pressure">
+        <div class="corp-panel-inner corp-pressure__layout">
+          <div class="corp-pressure__copy">
+            <p class="corp-eyebrow">THE CHALLENGE</p>
+            <h2>work is changing.<br /><span>people need support.</span></h2>
+            <p>Uncertainty, constant change, and pressure to keep up can make it harder to focus, connect, and recover. Supporting mental fitness helps people build the everyday skills to meet those moments.</p>
           </div>
-          <p class="offer-copy">Uncertainty and job insecurity are silent drains on productivity - stress that companies can’t afford to ignore</p>
-          <a class="button" href="#enroll">ENROLL NOW</a>
+          <div class="corp-pressure__visual">
+            <img src={oldImage('people-working-together.jpg')} alt="Colleagues working together and supporting one another" loading="lazy" />
+            <div class="corp-pullquote">
+              <span class="corp-pullquote__mark">“</span>
+              <p>Small habits can make a meaningful difference to how we feel and work.</p>
+            </div>
+          </div>
+          <div class="corp-pressure__chips" aria-label="Areas where teams may need support">
+            <span>Stress &amp; recovery</span><span>Focus &amp; clarity</span><span>Resilience</span><span>Connection</span>
+          </div>
         </div>
-      </div>
-    </section></div>
+      </section>
+    </div>
 
-    <div class="page-sticky-wrapper"><section class="benefits">
-      <div class="benefits-inner">
-        <h2>Happierre benefits</h2>
-        <div class="benefit-grid">
-          <article><img src={oldImage('2222366-26491e6d.png')} alt="" /><h3>content</h3><p>beyond meditation: expert guidance on nutrition, exercise, and daily wellness.</p></article>
-          <article><img src={oldImage('11031487-1c76bd0a.png')} alt="" /><h3>support</h3><p>direct access to licensed therapists for professional mental health care.</p></article>
-          <article><img src={oldImage('10303062-b214155b.png')} alt="" /><h3>safety</h3><p>anonymous fulfillment friend within your company for open, judgment-free sharing.</p></article>
-          <article><img src={oldImage('3234841-33a8600d.png')} alt="" /><h3>growth</h3><p>tools for clarity through goal setting and purpose discovery</p></article>
+    <div class="page-sticky-wrapper">
+      <section class="corp-offer">
+        <div class="corp-panel-inner corp-offer__layout">
+          <div class="corp-offer__copy">
+            <p class="corp-eyebrow">A PLACE TO START</p>
+            <h2>make wellbeing<br /><span>part of the everyday.</span></h2>
+            <p>Happierre brings bite-sized guidance and practical exercises into one approachable app, so people can make space for their mental fitness whenever it fits their day.</p>
+            <a class="corp-button corp-button--light" href="#enroll">BRING HAPPIERRE TO YOUR TEAM <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="corp-offer__card">
+            <span class="corp-offer__spark" aria-hidden="true">✳</span>
+            <p class="corp-offer__label">LAUNCH OFFER</p>
+            <p class="corp-offer__number">6 months</p>
+            <p class="corp-offer__free">free access</p>
+            <div class="corp-offer__rule"></div>
+            <p class="corp-offer__detail">For up to 200 employees</p>
+            <p class="corp-offer__note">A simple way to help your people try a new daily mental-fitness habit.</p>
+          </div>
         </div>
-      </div>
-    </section></div>
+      </section>
+    </div>
 
-    <section class="enroll" id="enroll">
-      <div class="enroll-inner">
-        <div class="enroll-copy">
-          <h2>enroll to Happierre</h2>
-          <form
-            name="corporate-enrollment"
-            method="POST"
-            data-netlify="true"
-            data-netlify-recaptcha="true"
-            netlify-honeypot="bot-field"
-            class="legacy-form"
-          >
-            <input type="hidden" name="form-name" value="corporate-enrollment" />
-            <p class="hidden-field"><label>Don’t fill this out if you’re human: <input name="bot-field" /></label></p>
-            <input type="text" name="name" placeholder="your email" aria-label="Name" autocomplete="name" required />
-            <input type="email" name="email" placeholder="your email address" aria-label="Email" autocomplete="email" required />
-            <textarea name="message" rows="6" placeholder="your message" aria-label="Message" required></textarea>
-            <div data-netlify-recaptcha="true"></div>
-            <button type="submit">Send Message</button>
-          </form>
+    <div class="page-sticky-wrapper">
+      <section class="corp-benefits">
+        <div class="corp-panel-inner">
+          <div class="corp-section-heading">
+            <p class="corp-eyebrow">BUILT FOR REAL LIFE</p>
+            <h2>four ways to feel <span>more supported.</span></h2>
+            <p>Accessible tools to help people care for their minds, build confidence, and grow healthier habits over time.</p>
+          </div>
+          <div class="corp-benefit-grid">
+            <article class="corp-benefit">
+              <div class="corp-benefit__icon"><img src={oldImage('2222366-26491e6d.png')} alt="" loading="lazy" /></div>
+              <p class="corp-benefit__index">01 / LEARN</p>
+              <h3>content that helps</h3>
+              <p>Explore practical guidance across mindfulness, movement, nutrition, and everyday wellbeing.</p>
+            </article>
+            <article class="corp-benefit">
+              <div class="corp-benefit__icon"><img src={oldImage('11031487-1c76bd0a.png')} alt="" loading="lazy" /></div>
+              <p class="corp-benefit__index">02 / SUPPORT</p>
+              <h3>support when needed</h3>
+              <p>Find pathways to additional support, including access to professional mental-health care where available.</p>
+            </article>
+            <article class="corp-benefit">
+              <div class="corp-benefit__icon"><img src={oldImage('10303062-b214155b.png')} alt="" loading="lazy" /></div>
+              <p class="corp-benefit__index">03 / CONNECT</p>
+              <h3>connection without judgement</h3>
+              <p>Encourage a culture where people can feel less alone and build meaningful connections.</p>
+            </article>
+            <article class="corp-benefit">
+              <div class="corp-benefit__icon"><img src={oldImage('3234841-33a8600d.png')} alt="" loading="lazy" /></div>
+              <p class="corp-benefit__index">04 / GROW</p>
+              <h3>progress that sticks</h3>
+              <p>Use reflection, goal-setting, and repeatable exercises to turn good intentions into daily habits.</p>
+            </article>
+          </div>
+          <p class="corp-benefits__footnote">A supportive wellbeing resource — not a replacement for clinical care or workplace mental-health services.</p>
         </div>
-        <div class="enroll-image"></div>
+      </section>
+    </div>
+
+    <section class="corp-enroll" id="enroll">
+      <div class="corp-enroll__inner">
+        <div class="corp-enroll__copy">
+          <p class="corp-eyebrow">LET’S TALK</p>
+          <h2>make room for<br /><span>a happier team.</span></h2>
+          <p>Tell us a little about your organisation. We’ll help you explore the right next step for your team.</p>
+          <div class="corp-enroll__aside">
+            <span aria-hidden="true">✳</span>
+            <p>Start a conversation. Find an approach that works for your people.</p>
+          </div>
+        </div>
+        <form
+          name="corporate-enrollment"
+          method="POST"
+          data-netlify="true"
+          data-netlify-recaptcha="true"
+          netlify-honeypot="bot-field"
+          class="corp-form"
+        >
+          <input type="hidden" name="form-name" value="corporate-enrollment" />
+          <p class="corp-hidden-field"><label>Don’t fill this out if you’re human: <input name="bot-field" /></label></p>
+          <label for="corp-name">Your name</label>
+          <input id="corp-name" type="text" name="name" placeholder="How should we address you?" autocomplete="name" required />
+          <label for="corp-email">Work email</label>
+          <input id="corp-email" type="email" name="email" placeholder="you@company.com" autocomplete="email" required />
+          <label for="corp-message">Tell us about your team</label>
+          <textarea id="corp-message" name="message" rows="4" placeholder="Team size, what you’re looking for, or any questions…" required></textarea>
+          <div data-netlify-recaptcha="true"></div>
+          <button class="corp-button" type="submit">SEND ENQUIRY <span aria-hidden="true">↗</span></button>
+          <p class="corp-form__privacy">We’ll use these details to respond to your enquiry.</p>
+        </form>
       </div>
     </section>
   </div>
 </Layout>
 
 <style>
-  .legacy-corporate{--blue:#3f5ef0;--dark:#3d4268;--light:#f7f7fb;font-family:var(--font-urbanist);color:#3d4268}.legacy-corporate *{box-sizing:border-box}.legacy-corporate h1,.legacy-corporate h2,.legacy-corporate h3{font-family:var(--font-urbanist);font-weight:700}.legacy-corporate p,.legacy-corporate li{font-family:var(--font-urbanist);font-weight:400}.legacy-corporate .hero{height:calc(100dvh - var(--site-header-height)) !important;min-height:0 !important;max-height:calc(100dvh - var(--site-header-height)) !important;background:var(--gradient-light);overflow:hidden;position:relative}.legacy-corporate .hero::before{content:"";position:absolute;inset:-20%;background-image:var(--hero-pattern),var(--hero-pattern);background-repeat:space;background-size:88px 88px;background-position:0 0,132px 132px;opacity:.09;pointer-events:none;z-index:0;transform:rotate(-18deg) scale(1.4)}.hero-inner,.stress-inner,.enroll-inner{width:min(1200px,calc(100% - 40px));margin:0 auto}.hero-inner{height:100%;min-height:0;display:grid;grid-template-columns:1fr 1fr;position:relative;z-index:1}.hero-art{position:relative;display:flex;align-items:center;justify-content:center;min-height:0;overflow:hidden}.hero-circle{position:absolute;width:min(530px,90%);aspect-ratio:1;border-radius:50%;background:linear-gradient(135deg,#a9c9ff,#cfbbfc)}.hero-art img{position:relative;width:auto;height:105.6%;max-height:calc(100dvh - var(--site-header-height) - 40px);max-width:88%;object-fit:contain;transform:scale(1.2);transform-origin:center bottom}.hero-copy{align-self:center;color:#fff;padding:50px 0 50px 30px}.hero-mark{width:70px;height:70px;object-fit:contain;margin-bottom:12px}.hero-copy h1{font-size:2.8rem;line-height:1.12;margin:0 0 28px}.hero-copy p{font-size:1.35rem;line-height:1.45;max-width:560px;margin:0 0 30px}.button{display:inline-flex;align-items:center;justify-content:center;padding:11px 35px;border-radius:50px;background:#3f5ef0;color:#fff;text-decoration:none;text-transform:uppercase;font-size:.875rem;font-weight:700;letter-spacing:1px;border:0}.button:hover{background:#000}.stress{background:#fff}.stress-inner{padding:80px 0}.stress-heading{max-width:750px;margin-bottom:55px}.stress-heading h2{color:#e64c3c;font-size:2.5rem;margin:0 0 18px}.stress-heading p{font-size:1.2rem;line-height:1.6;margin:0}.stress-content{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}.stress-image{height:340px;border-radius:24px;background-image:url('https://raw.githubusercontent.com/srvplt/fullfill/main/images/people-working-together.jpg');background-size:cover;background-position:center}.stress-content ul{margin:0;padding-left:25px;font-size:1.25rem;line-height:2.4}.offer{position:relative;margin-top:70px;min-height:470px}.offer>img{width:62%;height:470px;object-fit:cover;border-radius:24px}.offer-card{position:absolute;top:35px;right:7%;background:#dce1ff;border-radius:30px;padding:35px 42px;width:290px;text-align:center}.offer-card h3{font-size:2rem;margin:0 0 10px}.offer-card p{margin:0;font-size:1.1rem}.offer-copy{position:absolute;right:3%;bottom:72px;width:38%;font-size:1.1rem;line-height:1.5}.offer .button{position:absolute;right:3%;bottom:0}.benefits{background:#7c8cff;color:#fff}.benefits-inner{width:min(1250px,calc(100% - 40px));margin:0 auto;padding:75px 0 85px}.benefits h2{text-align:center;font-size:2.6rem;margin:0 0 45px}.benefit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.benefit-grid article{min-height:350px;border-radius:30px;padding:42px 25px;background:linear-gradient(145deg,#a9c9ff,#cfbbfc);display:flex;flex-direction:column;align-items:center;text-align:center}.benefit-grid img{width:65px;height:65px;object-fit:contain;background:#fff;border-radius:50%;padding:8px;margin-bottom:22px}.benefit-grid h3{font-size:1.6rem;margin:0 0 15px}.benefit-grid p{font-size:1rem;line-height:1.55;margin:0}.enroll{background:#fff}.enroll-inner{min-height:670px;display:grid;grid-template-columns:1.2fr .8fr;align-items:center}.enroll-copy{padding:70px 50px 70px 0}.enroll-copy h2{font-size:2.6rem;color:#7c8cff;margin:0 0 40px}.legacy-form{max-width:600px}.legacy-form input:not([type='hidden']),.legacy-form textarea{width:100%;display:block;padding:12px 0;margin-bottom:28px;border:0;border-bottom:2px solid #a8b2f5;background:transparent;color:#3d4268;font:400 1rem var(--font-urbanist);outline:none}.legacy-form input::placeholder,.legacy-form textarea::placeholder{color:#7d8299}.legacy-form [data-netlify-recaptcha='true']{margin:0 0 20px}.legacy-form button{border:0;border-radius:50px;background:#7c8cff;color:#fff;padding:12px 35px;text-transform:uppercase;letter-spacing:1px;font-weight:700;cursor:pointer}.enroll-image{height:570px;border-radius:24px;background-image:url('https://raw.githubusercontent.com/srvplt/fullfill/main/images/phonehand.jpg');background-size:cover;background-position:center}.hidden-field{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-  @media(max-width:900px){.legacy-corporate .hero{height:calc(100dvh - var(--site-header-height)) !important;min-height:0 !important;max-height:calc(100dvh - var(--site-header-height)) !important}.hero-inner{grid-template-columns:1fr;height:100%;min-height:0}.hero-art{height:46%;min-height:0}.hero-copy{text-align:center;padding:40px 20px 70px}.hero-mark{display:block;margin:0 auto 12px}.hero-copy p{margin-left:auto;margin-right:auto}.stress-inner{padding:60px 0}.stress-content{grid-template-columns:1fr}.stress-image{height:300px}.offer{min-height:auto}.offer>img{width:100%;height:390px}.offer-card{right:20px}.offer-copy{position:static;width:auto;margin:30px 0 20px}.offer .button{position:static}.benefit-grid{grid-template-columns:1fr 1fr}.enroll-inner{grid-template-columns:1fr}.enroll-copy{padding:65px 0 35px}.enroll-image{height:400px;margin-bottom:60px}}
-  @media(max-width:575px){.legacy-corporate .hero{height:calc(100svh - var(--site-header-height)) !important;min-height:0 !important;max-height:calc(100svh - var(--site-header-height)) !important}.hero-inner{height:100%;min-height:0}.hero-art{height:44%;min-height:0}.hero-circle{width:min(350px,90%);height:auto;aspect-ratio:1}.hero-art img{height:90%;width:auto;max-height:100%;max-width:88%}.hero-copy h1{font-size:2rem}.hero-copy p{font-size:1rem}.stress-heading h2,.benefits h2,.enroll-copy h2{font-size:2rem}.stress-heading p,.stress-content ul{font-size:1rem}.stress-content ul{line-height:2}.offer-card{position:static;width:100%;margin-top:20px}.benefit-grid{grid-template-columns:1fr}.benefit-grid article{min-height:290px}.enroll-inner{width:min(100% - 40px,600px)}}
-
-  /* Use the landing page's mobile column contract: visual first, copy below,
-     consistent left alignment and the same inset for the brand headline/CTA. */
-  @media(max-width:767px){
-    .legacy-corporate .hero-inner{
-      display:grid;
-      grid-template-columns:minmax(0,1fr);
-      grid-template-rows:58dvh minmax(0,1fr);
-      align-items:stretch;
-      width:100%;
-    }
-    .legacy-corporate .hero-art{
-      grid-row:1;
-      width:100%;
-      height:auto;
-      min-height:0;
-      justify-content:flex-start;
-      align-items:flex-end;
-      padding-left:16px;
-    }
-    .legacy-corporate .hero-circle{
-      width:min(350px,90%);
-      height:auto;
-      aspect-ratio:1;
-      left:16px;
-      bottom:0;
-    }
-    .legacy-corporate .hero-art img{
-      height:90%;
-      width:auto;
-      max-height:58dvh;
-      max-width:none;
-      object-fit:contain;
-      object-position:left bottom;
-    }
-    .legacy-corporate .hero-copy{
-      grid-row:2;
-      align-self:start;
-      width:100%;
-      max-width:none;
-      padding:10px 20px 28px 32px;
-      text-align:left;
-    }
-    .legacy-corporate .hero-mark{
-      display:block;
-      width:200px;
-      height:auto;
-      max-width:100%;
-      margin:0 0 2px;
-    }
-    .legacy-corporate .hero-copy h1{
-      font-size:27.2px;
-      line-height:1.1;
-      text-align:left;
-      margin:0 0 18px;
-    }
-    .legacy-corporate .hero-copy .button{
-      justify-self:start;
-    }
-    .legacy-corporate .stress-content,
-    .legacy-corporate .benefit-grid,
-    .legacy-corporate .enroll-inner{
-      grid-template-columns:minmax(0,1fr);
-    }
-    .legacy-corporate .benefit-grid article{
-      width:100%;
-    }
+  .corporate-page {
+    --corp-ink: #27113d;
+    --corp-muted: #5a5470;
+    --corp-purple: #5e61d6;
+    --corp-lilac: #c5caff;
+    --corp-card: rgba(255,255,255,.72);
+    color: var(--corp-ink);
+    font-family: var(--font-urbanist);
   }
-  @media(max-width:575px){
-    .legacy-corporate .hero-inner{grid-template-rows:53dvh minmax(0,1fr)}
-    .legacy-corporate .hero-art{padding-left:16px}
-    .legacy-corporate .hero-art img{max-height:53dvh}
-    .legacy-corporate .hero-copy{padding:10px 20px 28px 32px}
-    .legacy-corporate .hero-copy h1{font-size:27.2px}
+  .corporate-page * { box-sizing: border-box; }
+  .corporate-page h1, .corporate-page h2, .corporate-page h3, .corporate-page p { margin-top: 0; }
+  .corp-hero {
+    position: relative;
+    min-height: calc(100svh - var(--site-header-height));
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background: var(--gradient-light);
+    isolation: isolate;
   }
+  .corp-hero::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: -20%;
+    background-image: var(--hero-pattern), var(--hero-pattern);
+    background-repeat: space;
+    background-size: 88px 88px;
+    background-position: 0 0, 132px 132px;
+    opacity: .09;
+    pointer-events: none;
+    transform: rotate(-18deg) scale(1.4);
+  }
+  .corp-hero__inner, .corp-panel-inner, .corp-enroll__inner {
+    width: min(1140px, calc(100% - 48px));
+    margin-inline: auto;
+  }
+  .corp-hero__inner {
+    display: grid;
+    grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+    align-items: center;
+    gap: clamp(24px, 5vw, 72px);
+    padding-block: 32px 42px;
+  }
+  .corp-hero__art {
+    min-width: 0;
+    min-height: 520px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .corp-orbit {
+    position: absolute;
+    width: min(34vw, 440px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: linear-gradient(140deg, rgba(255,255,255,.68), rgba(167,184,255,.65) 48%, rgba(197,170,243,.72));
+    box-shadow: 0 30px 80px rgba(76,67,170,.10);
+  }
+  .corp-hero__art img {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: auto;
+    height: min(76svh, 690px);
+    max-width: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 24px 30px rgba(39,17,61,.16));
+  }
+  .corp-hero__copy { max-width: 570px; padding: 28px 0; }
+  .corp-eyebrow {
+    margin: 0 0 18px;
+    color: var(--corp-purple);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .16em;
+    line-height: 1.4;
+  }
+  .corp-hero .corp-eyebrow { color: rgba(255,255,255,.95); }
+  .corp-hero h1 {
+    max-width: 650px;
+    margin: 0 0 22px;
+    color: #fff;
+    font-size: clamp(38px, 4.5vw, 64px);
+    font-weight: 750;
+    line-height: .99;
+    letter-spacing: -.045em;
+  }
+  .corp-hero h1 span { color: var(--corp-ink); }
+  .corp-intro {
+    max-width: 500px;
+    margin-bottom: 30px;
+    color: #fff;
+    font-size: clamp(17px, 1.45vw, 21px);
+    line-height: 1.55;
+  }
+  .corp-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    min-height: 52px;
+    padding: 15px 24px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    background: var(--corp-purple);
+    color: #fff;
+    font: 800 12px/1 var(--font-urbanist);
+    letter-spacing: .09em;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+  }
+  .corp-button:hover { transform: translateY(-2px); background: #484bc0; box-shadow: 0 10px 24px rgba(39,17,61,.15); }
+  .corp-button span { font-size: 18px; line-height: .7; }
+  .corp-proof { margin: 17px 0 0; color: rgba(255,255,255,.9); font-size: 13px; }
+  .page-sticky-wrapper { position: relative; }
+  .page-sticky-wrapper > section { overflow: hidden; }
+  .corp-pressure { display: flex; align-items: center; background: #f7f8ff; }
+  .corp-pressure__layout {
+    display: grid;
+    grid-template-columns: .95fr 1.05fr;
+    grid-template-rows: 1fr auto;
+    align-items: center;
+    gap: 28px 7%;
+    padding-block: clamp(44px, 7vh, 80px);
+  }
+  .corp-pressure__copy h2, .corp-offer__copy h2, .corp-section-heading h2, .corp-enroll h2 {
+    margin-bottom: 22px;
+    font-size: clamp(34px, 4.2vw, 56px);
+    line-height: 1.02;
+    letter-spacing: -.04em;
+    font-weight: 750;
+  }
+  .corp-pressure__copy h2 span, .corp-section-heading h2 span, .corp-enroll h2 span { color: var(--corp-purple); }
+  .corp-pressure__copy > p:last-child, .corp-offer__copy > p:not(.corp-eyebrow), .corp-section-heading > p:last-child, .corp-enroll__copy > p:not(.corp-eyebrow) {
+    max-width: 510px;
+    color: var(--corp-muted);
+    font-size: 17px;
+    line-height: 1.65;
+  }
+  .corp-pressure__visual { min-width: 0; position: relative; padding: 0 0 36px 30px; }
+  .corp-pressure__visual > img {
+    display: block;
+    width: 100%;
+    height: clamp(250px, 40vh, 390px);
+    object-fit: cover;
+    border-radius: 28px;
+    box-shadow: 0 20px 45px rgba(39,17,61,.12);
+  }
+  .corp-pullquote {
+    position: absolute;
+    right: -4px;
+    bottom: 0;
+    width: min(290px, 78%);
+    padding: 18px 22px 20px;
+    border: 1px solid rgba(255,255,255,.8);
+    border-radius: 20px;
+    background: rgba(255,255,255,.88);
+    box-shadow: 0 14px 35px rgba(39,17,61,.12);
+    backdrop-filter: blur(12px);
+  }
+  .corp-pullquote__mark { display: block; color: var(--corp-purple); font-size: 36px; font-weight: 800; line-height: .8; }
+  .corp-pullquote p { margin: 8px 0 0; font-size: 15px; font-weight: 700; line-height: 1.4; }
+  .corp-pressure__chips {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 8px;
+  }
+  .corp-pressure__chips span {
+    padding: 10px 16px;
+    border: 1px solid #dfe1ff;
+    border-radius: 999px;
+    background: #fff;
+    color: #514e83;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .corp-offer {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background: radial-gradient(circle at 82% 18%, rgba(177,190,255,.55), transparent 35%), linear-gradient(135deg, #454dc4 0%, #645fd5 48%, #815fd2 100%);
+  }
+  .corp-offer__layout {
+    display: grid;
+    grid-template-columns: 1fr minmax(280px, .72fr);
+    align-items: center;
+    gap: clamp(36px, 8vw, 110px);
+    padding-block: clamp(48px, 7vh, 82px);
+  }
+  .corp-offer .corp-eyebrow { color: #e3e5ff; }
+  .corp-offer__copy h2 { color: #fff; }
+  .corp-offer__copy h2 span { color: #d8dbff; }
+  .corp-offer__copy > p:not(.corp-eyebrow) { color: rgba(255,255,255,.88); margin-bottom: 28px; }
+  .corp-button--light { background: #fff; color: #4c4fc4; }
+  .corp-button--light:hover { background: #f0f1ff; }
+  .corp-offer__card {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(30px, 4vw, 48px);
+    border: 1px solid rgba(255,255,255,.58);
+    border-radius: 32px;
+    background: linear-gradient(145deg, rgba(255,255,255,.94), rgba(239,240,255,.87));
+    box-shadow: 0 28px 70px rgba(31,24,103,.2);
+    color: var(--corp-ink);
+    text-align: center;
+  }
+  .corp-offer__spark { display: block; margin-bottom: 14px; color: var(--corp-purple); font-size: 30px; }
+  .corp-offer__label { margin: 0 0 12px; color: var(--corp-purple); font-size: 12px; font-weight: 800; letter-spacing: .16em; }
+  .corp-offer__number { margin: 0; font-size: clamp(42px, 4.5vw, 60px); font-weight: 800; letter-spacing: -.05em; line-height: 1; }
+  .corp-offer__free { margin: 5px 0 0; color: var(--corp-purple); font-size: 24px; font-weight: 700; }
+  .corp-offer__rule { height: 1px; margin: 24px 0 18px; background: #d9dcff; }
+  .corp-offer__detail { margin-bottom: 10px; font-size: 17px; font-weight: 800; }
+  .corp-offer__note { margin: 0; color: var(--corp-muted); font-size: 14px; line-height: 1.5; }
+  .corp-benefits { display: flex; align-items: center; background: linear-gradient(145deg, #edf0ff 0%, #f8f8ff 55%, #e8eaff 100%); }
+  .corp-benefits .corp-panel-inner { padding-block: clamp(40px, 6vh, 68px); }
+  .corp-section-heading { max-width: 690px; margin: 0 auto 34px; text-align: center; }
+  .corp-section-heading .corp-eyebrow { margin-bottom: 14px; }
+  .corp-section-heading h2 { margin-bottom: 14px; }
+  .corp-section-heading > p:last-child { margin-inline: auto; font-size: 16px; }
+  .corp-benefit-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 14px; }
+  .corp-benefit {
+    min-width: 0;
+    padding: 25px 20px 24px;
+    border: 1px solid rgba(255,255,255,.92);
+    border-radius: 24px;
+    background: rgba(255,255,255,.76);
+    box-shadow: 0 12px 30px rgba(55,53,132,.06);
+  }
+  .corp-benefit__icon {
+    display: grid;
+    place-items: center;
+    width: 58px;
+    height: 58px;
+    margin-bottom: 22px;
+    border-radius: 18px;
+    background: linear-gradient(145deg, #e2e5ff, #f2e7ff);
+  }
+  .corp-benefit__icon img { width: 34px; height: 34px; object-fit: contain; }
+  .corp-benefit__index { margin-bottom: 10px; color: var(--corp-purple); font-size: 10px; font-weight: 800; letter-spacing: .12em; }
+  .corp-benefit h3 { margin-bottom: 12px; font-size: 21px; line-height: 1.1; font-weight: 750; }
+  .corp-benefit > p:last-child { margin-bottom: 0; color: var(--corp-muted); font-size: 14px; line-height: 1.55; }
+  .corp-benefits__footnote { margin: 20px 0 0; color: #706b84; font-size: 11px; line-height: 1.45; text-align: center; }
+  .corp-enroll { background: #fff; }
+  .corp-enroll__inner {
+    display: grid;
+    grid-template-columns: .9fr 1fr;
+    align-items: center;
+    gap: clamp(42px, 8vw, 100px);
+    padding-block: clamp(64px, 9vh, 110px);
+  }
+  .corp-enroll h2 { font-size: clamp(38px, 4.6vw, 62px); }
+  .corp-enroll__copy > p:not(.corp-eyebrow) { margin-bottom: 26px; }
+  .corp-enroll__aside { display: flex; align-items: flex-start; gap: 13px; max-width: 360px; color: #6a6481; }
+  .corp-enroll__aside span { color: var(--corp-purple); font-size: 24px; line-height: 1; }
+  .corp-enroll__aside p { margin: 0; font-size: 14px; line-height: 1.5; }
+  .corp-form {
+    padding: clamp(26px, 4vw, 44px);
+    border: 1px solid #e6e7fb;
+    border-radius: 28px;
+    background: #f8f8ff;
+    box-shadow: 0 20px 55px rgba(39,17,61,.07);
+  }
+  .corp-form label { display: block; margin: 0 0 7px; color: #4d4864; font-size: 12px; font-weight: 800; }
+  .corp-form input:not([type="hidden"]), .corp-form textarea {
+    display: block;
+    width: 100%;
+    margin: 0 0 20px;
+    padding: 13px 15px;
+    border: 1px solid #dfe1f7;
+    border-radius: 12px;
+    outline: none;
+    background: #fff;
+    color: var(--corp-ink);
+    font: 500 15px/1.4 var(--font-urbanist);
+    transition: border-color .2s ease, box-shadow .2s ease;
+  }
+  .corp-form input:focus, .corp-form textarea:focus { border-color: var(--corp-purple); box-shadow: 0 0 0 3px rgba(94,97,214,.12); }
+  .corp-form input::placeholder, .corp-form textarea::placeholder { color: #9692a8; }
+  .corp-form textarea { min-height: 112px; resize: vertical; }
+  .corp-form [data-netlify-recaptcha="true"] { margin: 0 0 20px; }
+  .corp-form__privacy { margin: 13px 0 0; color: #817b94; font-size: 11px; line-height: 1.4; }
+  .corp-hidden-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
+  @media (min-width: 768px) {
+    .corp-pressure, .corp-offer, .corp-benefits {
+      min-height: calc(100svh - var(--site-header-height));
+    }
+    .corp-pressure__layout, .corp-offer__layout, .corp-benefits .corp-panel-inner { max-height: calc(100svh - var(--site-header-height)); }
+  }
+  @media (max-width: 1000px) {
+    .corp-hero__inner { gap: 28px; grid-template-columns: .85fr 1.15fr; }
+    .corp-hero__art { min-height: 460px; }
+    .corp-hero__art img { height: min(70svh, 600px); max-width: 100%; }
+    .corp-orbit { width: min(42vw, 390px); }
+    .corp-benefit-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .corp-benefits .corp-panel-inner { padding-block: 48px; }
+    .corp-benefit { padding: 22px; }
+  }
+  @media (max-width: 767px) {
+    .corp-hero { height: calc(100svh - var(--site-header-height)); min-height: 600px; max-height: none; align-items: stretch; }
+    .corp-hero__inner {
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+      grid-template-columns: minmax(0,1fr);
+      grid-template-rows: 48% minmax(0,1fr);
+      gap: 0;
+      padding: 0;
+    }
+    .corp-hero__art { grid-row: 1; min-height: 0; justify-content: flex-start; align-items: flex-end; padding-left: 20px; overflow: hidden; }
+    .corp-orbit { left: 16px; bottom: 2%; width: min(76vw, 340px); }
+    .corp-hero__art img { height: 96%; max-height: 48svh; max-width: none; width: auto; object-position: left bottom; }
+    .corp-hero__copy { grid-row: 2; align-self: start; padding: 12px 22px 28px 32px; max-width: 640px; }
+    .corp-hero .corp-eyebrow { margin-bottom: 10px; font-size: 10px; }
+    .corp-hero h1 { max-width: 580px; margin-bottom: 13px; font-size: clamp(29px, 7vw, 42px); line-height: 1.02; }
+    .corp-intro { margin-bottom: 18px; font-size: 15px; line-height: 1.42; }
+    .corp-button { min-height: 47px; padding: 13px 18px; gap: 10px; font-size: 10px; }
+    .corp-proof { margin-top: 10px; font-size: 11px; }
+    .page-sticky-wrapper { height: 240svh !important; }
+    .page-sticky-wrapper > section { height: calc(100lvh - var(--site-header-height)) !important; min-height: 0 !important; overflow-x: hidden; overflow-y: auto; }
+    .corp-pressure, .corp-offer, .corp-benefits { align-items: flex-start; }
+    .corp-panel-inner { width: calc(100% - 36px); }
+    .corp-pressure__layout { grid-template-columns: minmax(0,1fr); grid-template-rows: auto auto auto; gap: 16px; padding-block: 30px 24px; }
+    .corp-pressure__copy .corp-eyebrow { margin-bottom: 10px; }
+    .corp-pressure__copy h2, .corp-offer__copy h2, .corp-section-heading h2 { font-size: clamp(31px, 8vw, 42px); margin-bottom: 12px; }
+    .corp-pressure__copy > p:last-child, .corp-offer__copy > p:not(.corp-eyebrow), .corp-section-heading > p:last-child { font-size: 14px; line-height: 1.48; margin-bottom: 0; }
+    .corp-pressure__visual { padding: 0 0 24px 14px; }
+    .corp-pressure__visual > img { height: clamp(145px, 23vh, 210px); border-radius: 20px; }
+    .corp-pullquote { width: min(245px, 82%); padding: 12px 15px; border-radius: 15px; }
+    .corp-pullquote__mark { font-size: 26px; }
+    .corp-pullquote p { margin-top: 5px; font-size: 12px; }
+    .corp-pressure__chips { gap: 7px; margin-top: 0; }
+    .corp-pressure__chips span { padding: 8px 11px; font-size: 11px; }
+    .corp-offer__layout { grid-template-columns: minmax(0,1fr); gap: 20px; padding-block: 30px 24px; }
+    .corp-offer__copy > p:not(.corp-eyebrow) { margin-bottom: 16px; }
+    .corp-offer__card { width: min(100%, 390px); margin-inline: auto; padding: 19px 22px; border-radius: 23px; }
+    .corp-offer__spark { margin-bottom: 6px; font-size: 22px; }
+    .corp-offer__label { margin-bottom: 7px; font-size: 10px; }
+    .corp-offer__number { font-size: 43px; }
+    .corp-offer__free { font-size: 19px; }
+    .corp-offer__rule { margin: 13px 0 10px; }
+    .corp-offer__detail { margin-bottom: 6px; font-size: 14px; }
+    .corp-offer__note { font-size: 12px; }
+    .corp-benefits .corp-panel-inner { padding-block: 30px 22px; }
+    .corp-section-heading { margin-bottom: 18px; }
+    .corp-section-heading .corp-eyebrow { margin-bottom: 8px; }
+    .corp-section-heading > p:last-child { display: none; }
+    .corp-benefit-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 9px; }
+    .corp-benefit { padding: 13px 12px 14px; border-radius: 17px; }
+    .corp-benefit__icon { width: 40px; height: 40px; margin-bottom: 12px; border-radius: 13px; }
+    .corp-benefit__icon img { width: 25px; height: 25px; }
+    .corp-benefit__index { margin-bottom: 7px; font-size: 8px; }
+    .corp-benefit h3 { margin-bottom: 7px; font-size: 16px; }
+    .corp-benefit > p:last-child { font-size: 11px; line-height: 1.35; }
+    .corp-benefits__footnote { margin-top: 10px; font-size: 9px; }
+    .corp-enroll__inner { grid-template-columns: minmax(0,1fr); gap: 24px; width: calc(100% - 36px); padding-block: 44px; }
+    .corp-enroll h2 { margin-bottom: 14px; font-size: 42px; }
+    .corp-enroll__copy > p:not(.corp-eyebrow) { margin-bottom: 14px; font-size: 15px; line-height: 1.5; }
+    .corp-form { padding: 22px 18px; border-radius: 22px; }
+    .corp-form input:not([type="hidden"]), .corp-form textarea { margin-bottom: 15px; padding: 12px; }
+  }
+  @media (max-width: 575px) {
+    .corp-hero { height: calc(100svh - var(--site-header-height)); min-height: 590px; }
+    .corp-hero__inner { grid-template-rows: 44% minmax(0,1fr); }
+    .corp-hero__art { padding-left: 16px; }
+    .corp-orbit { left: 8px; width: min(76vw, 310px); }
+    .corp-hero__art img { max-height: 44svh; }
+    .corp-hero__copy { padding: 10px 20px 24px 32px; }
+    .corp-hero h1 { font-size: 29px; }
+    .corp-intro { font-size: 14px; }
+    .corp-proof { font-size: 10px; }
+    .corp-panel-inner { width: calc(100% - 32px); }
+    .corp-pressure__layout, .corp-offer__layout { padding-block: 24px 20px; gap: 13px; }
+    .corp-pressure__copy h2, .corp-offer__copy h2, .corp-section-heading h2 { font-size: 31px; }
+    .corp-pressure__copy > p:last-child, .corp-offer__copy > p:not(.corp-eyebrow) { font-size: 13px; }
+    .corp-pressure__visual > img { height: 150px; }
+    .corp-benefit { padding: 11px 10px 12px; }
+    .corp-benefit h3 { font-size: 15px; }
+    .corp-benefit > p:last-child { font-size: 10px; }
+    .corp-enroll h2 { font-size: 38px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .corp-button { transition: none; }
+  }
 </style>
