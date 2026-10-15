@@ -1366,3 +1366,111 @@ h6 {
 .legacy-contribute .form-inner {
   min-height: 0 !important;
 }
+
+
+/* Final corrections requested: the rotating panel headline belongs in the
+   upper third on every viewport; keep the rotating word directly beneath it. */
+.exercise-banner__title {
+  top: 33% !important;
+}
+.exercise-banner__label {
+  top: 48% !important;
+}
+@media (max-width: 575px) {
+  .exercise-banner__title {
+    top: 33% !important;
+  }
+  .exercise-banner__label {
+    top: 48% !important;
+  }
+}
+
+/* Mobile podcast heading: lift it to the top content band while preserving
+   the card stack and topic-pill placement below. */
+@media (max-width: 767px) {
+  .ll-sheet {
+    padding-top: 16px !important;
+  }
+  .ll-heading-wrap {
+    margin-top: 0 !important;
+  }
+}
+
+/* Mobile comparison table: slimmer pinned feature column plus a persistent
+   visual hint that the table can be swiped horizontally. */
+@media (max-width: 767px) {
+  .ls-table-frame {
+    position: relative;
+    width: 100%;
+    padding-top: 28px;
+  }
+  .ls-scroll-cue {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: rgba(94, 97, 214, 0.12);
+    color: #4549b5;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    pointer-events: none;
+  }
+  .ls-scroll-cue::after {
+    content: "→";
+    font-size: 20px;
+    line-height: 0.8;
+  }
+  .ls-comparison thead th:first-child,
+  .ls-comparison tbody th {
+    width: 104px !important;
+    min-width: 104px !important;
+  }
+  .ls-comparison thead th:nth-child(2),
+  .ls-comparison tbody td:nth-child(2) {
+    left: 104px !important;
+    min-width: 64px !important;
+    width: 64px !important;
+  }
+}
+@media (min-width: 768px) {
+  .ls-scroll-cue {
+    display: none;
+  }
+}
+
+/* Peace of Mind: keep the heading at the top, but centre the supporting
+   content vertically in the remaining mobile panel space. */
+@media (max-width: 767px) {
+  .pom-section {
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+  }
+  .pom-inner {
+    height: 100% !important;
+    min-height: 0 !important;
+    align-items: stretch !important;
+    gap: 20px !important;
+  }
+  .pom-content {
+    display: flex !important;
+    flex: 1 1 auto !important;
+    flex-direction: column !important;
+    min-height: 0 !important;
+    width: 100%;
+  }
+  .pom-heading {
+    flex: 0 0 auto !important;
+  }
+  .pom-details {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 0;
+  }
+}
