@@ -1,57 +1,42 @@
 ---
-import { Image } from 'astro:assets';
 import '../styles/launch-special.css';
-import phonesImg from '../assets/images/042sidebyside.png';
 ---
 
-<section class="ls-section" id="sec-launch-special">
+<section class="ls-section" id="sec-launch-special" aria-labelledby="ls-heading">
   <div class="ls-container">
+    <h2 class="ls-heading" id="ls-heading">one app for all</h2>
 
-    <h2 class="ls-heading ls-fade">launch special - save 60%</h2>
-    <p class="ls-sub ls-fade">limited spots available for founding members</p>
-
-    <div class="ls-btn-wrap ls-fade">
-      <a href="#" class="btn-primary">CLAIM MY OFFER</a>
+    <div class="ls-table-scroll" role="region" aria-label="Wellness app feature comparison" tabindex="0">
+      <table class="ls-comparison">
+        <thead>
+          <tr>
+            <th scope="col">Feature</th>
+            <th scope="col">Fullfill</th>
+            <th scope="col">Headspace</th>
+            <th scope="col">Calm</th>
+            <th scope="col">Insight Timer</th>
+            <th scope="col">Fabulous</th>
+            <th scope="col">Blinkist</th>
+            <th scope="col">Day One</th>
+            <th scope="col">Streaks</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Meditation</th><td class="yes">●</td><td class="yes">●</td><td class="yes">●</td><td class="yes">●</td><td class="partial">○</td><td></td><td></td><td></td></tr>
+          <tr><th scope="row">Breathwork</th><td class="yes">●</td><td class="yes">●</td><td class="yes">●</td><td class="yes">●</td><td class="partial">○</td><td></td><td></td><td></td></tr>
+          <tr><th scope="row">Sleep</th><td class="yes">●</td><td class="yes">●</td><td class="yes">●</td><td class="partial">○</td><td></td><td></td><td></td><td></td></tr>
+          <tr><th scope="row">Yoga</th><td class="yes">●</td><td class="partial">○</td><td class="partial">○</td><td class="yes">●</td><td></td><td></td><td></td><td></td></tr>
+          <tr><th scope="row">Exercise</th><td class="yes">●</td><td class="partial">○</td><td class="partial">○</td><td class="partial">○</td><td class="partial">○</td><td></td><td></td><td></td></tr>
+          <tr><th scope="row">Journaling</th><td class="yes">●</td><td class="partial">○</td><td class="partial">○</td><td class="partial">○</td><td class="yes">●</td><td></td><td class="yes">●</td><td></td></tr>
+          <tr><th scope="row">Habit tracking</th><td class="yes">●</td><td class="partial">○</td><td class="partial">○</td><td></td><td class="yes">●</td><td></td><td></td><td class="yes">●</td></tr>
+          <tr><th scope="row">Vision boards</th><td class="yes">●</td><td></td><td></td><td></td><td class="partial">○</td><td></td><td></td><td></td></tr>
+          <tr><th scope="row">Book summaries</th><td class="yes">●</td><td></td><td></td><td></td><td></td><td class="yes">●</td><td></td><td></td></tr>
+          <tr><th scope="row">Structured programmes</th><td class="yes">●</td><td class="partial">○</td><td class="partial">○</td><td class="partial">○</td><td class="partial">○</td><td></td><td></td><td></td></tr>
+          <tr><th scope="row">Live therapy</th><td class="none">—</td><td class="yes">●</td><td class="partial">○</td><td class="partial">○</td><td></td><td></td><td></td><td></td></tr>
+          <tr><th scope="row">Wearable integration</th><td class="none">—</td><td class="partial">○</td><td class="partial">○</td><td></td><td class="partial">○</td><td></td><td></td><td class="partial">○</td></tr>
+        </tbody>
+      </table>
     </div>
-
-    <!-- Semi-circle shape -->
-    <div class="ls-shape ls-anim-shape">
-      <svg
-        viewBox="0 0 160 80"
-        preserveAspectRatio="none"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-      >
-        <path d="M80,0C35.8,0,0,35.8,0,80h160C160,35.8,124.2,0,80,0z" />
-      </svg>
-    </div>
-
-    <!-- Phone image: pulled up over the shape with negative margin -->
-    <Image
-      src={phonesImg}
-      alt="Fullfill app screens side by side"
-      class="ls-phones ls-anim-flip"
-      loading="lazy"
-    />
-
+    <p class="ls-legend"><span class="yes">●</span> Included <span class="partial">○</span> Partial / limited <span class="none">—</span> Not included</p>
   </div>
 </section>
-
-<script>
-  (function () {
-    var section = document.getElementById('sec-launch-special');
-    if (!section) return;
-
-    function reveal() { section.classList.add('ls-in'); }
-
-    if (!('IntersectionObserver' in window)) { reveal(); return; }
-
-    var obs = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) { reveal(); obs.disconnect(); }
-      });
-    }, { threshold: 0.08, rootMargin: '0px 0px -60px 0px' });
-
-    obs.observe(section);
-  })();
-</script>
