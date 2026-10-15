@@ -2,14 +2,12 @@
 import '../styles/fun-section.css';
 import { getImage } from 'astro:assets';
 
-import yogaBg        from '../assets/images/yoga-bg.webp';
 import cardBreathwork from '../assets/images/banner/unsplash-1545389336.jpg';
 import cardFocusFlow  from '../assets/images/banner/unsplash-focus-flow.jpg';
 import cardStretch    from '../assets/images/banner/unsplash-1518611012118.jpg';
 import cardSleepYoga  from '../assets/images/banner/unsplash-1419242902214.jpg';
 import cardVinyasa    from '../assets/images/banner/unsplash-1544367567.jpg';
 
-const bgOpt   = await getImage({ src: yogaBg,         format: 'webp', width: 1400 });
 const card1   = await getImage({ src: cardBreathwork, format: 'webp', width: 600 });
 const card2   = await getImage({ src: cardFocusFlow,  format: 'webp', width: 600 });
 const card3   = await getImage({ src: cardStretch,    format: 'webp', width: 600 });
@@ -17,7 +15,7 @@ const card4   = await getImage({ src: cardSleepYoga,  format: 'webp', width: 600
 const card5   = await getImage({ src: cardVinyasa,    format: 'webp', width: 600 });
 ---
 
-<section class="fun-section" id="sec-habit-feed" style={`background-image: url('${bgOpt.src}')`}>
+<section class="fun-section" id="sec-habit-feed">
   <div class="hf-overlay"></div>
 
   <div class="hf-container landing-container">
