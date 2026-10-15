@@ -72,8 +72,8 @@
 }
 
 .ai-section__book-img {
-  width: 446px;
-  height: 543px;
+  width: 892px;
+  height: 1086px;
   object-fit: contain;
   display: block;
   margin: 3px auto -9px;
@@ -85,7 +85,8 @@
   }
 
   .ai-section__book-img {
-    width: 360px;
+    width: 720px;
+    max-width: 52vw;
     height: auto;
   }
 }
@@ -120,7 +121,8 @@
   }
 
   .ai-section__book-img {
-    width: 300px;
+    width: 600px;
+    max-width: 80vw;
     height: auto;
     margin: 0 auto;
   }
@@ -178,6 +180,7 @@
   }
 
   .ai-section__book-img {
-    width: 263px;
+    width: 526px;
+    max-width: 86vw;
   }
 }
