@@ -1333,3 +1333,36 @@ h6 {
     gap: 48px !important;
   }
 }
+
+
+/* Final mobile podcast layout correction: keep the headline at the top and
+   centre the card stack in the space below it. */
+@media (max-width: 767px) {
+  .ll-sheet {
+    justify-content: flex-start !important;
+  }
+  .ll-heading-wrap {
+    flex: 0 0 auto !important;
+    margin-bottom: 34px !important;
+  }
+  .ll-stack-outer {
+    flex: 1 1 auto !important;
+    min-height: 220px !important;
+    height: auto !important;
+    align-items: center !important;
+  }
+  .ll-stack {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+  .ll-pills {
+    flex: 0 0 auto !important;
+    margin-top: 24px !important;
+  }
+}
+
+/* The contributor form's inner grid must fit the height reserved for the
+   footer instead of retaining the legacy 680px minimum. */
+.legacy-contribute .form-inner {
+  min-height: 0 !important;
+}
