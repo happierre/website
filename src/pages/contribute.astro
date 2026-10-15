@@ -84,6 +84,22 @@ const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/ful
       </div>
     </section>
   </div>
+
+<script>
+  // Keep the final contributor form sized to the real footer on this page.
+  function updateContributorFooterHeight() {
+    const footer = document.getElementById('footer');
+    if (!footer) return;
+    document.documentElement.style.setProperty('--footer-height', footer.getBoundingClientRect().height + 'px');
+  }
+  updateContributorFooterHeight();
+  window.addEventListener('resize', updateContributorFooterHeight);
+  const contributorFooter = document.getElementById('footer');
+  if (contributorFooter && 'ResizeObserver' in window) {
+    new ResizeObserver(updateContributorFooterHeight).observe(contributorFooter);
+  }
+</script>
+
 </Layout>
 
 <style>
