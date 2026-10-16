@@ -12,14 +12,12 @@ const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/ful
   canonicalPath="/contact/"
 >
   <div class="legacy-contact">
-    <section class="contact-hero">
-      <h1>contact us</h1>
-    </section>
-
     <section class="contact-main">
       <div class="contact-inner">
+        <div class="contact-image">
+          <img src={oldImage('photo-1604881988758-f76ad2f7aac1.jpeg')} alt="A calm moment of reflection" />
+        </div>
         <div class="contact-copy">
-          <img class="logo-mark" src={happierreIcon.src} alt="" />
           <h2>we'd love to hear from you</h2>
           <form
             name="contact"
@@ -40,9 +38,6 @@ const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/ful
             <button type="submit">Send Message</button>
           </form>
         </div>
-        <div class="contact-image">
-          <img src={oldImage('photo-1604881988758-f76ad2f7aac1.jpeg')} alt="A calm moment of reflection" />
-        </div>
       </div>
     </section>
   </div>
@@ -54,4 +49,27 @@ const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/ful
   .contact-main{background:#7c8cff;min-height:650px}.contact-inner{width:min(1200px,calc(100% - 40px));margin:0 auto;display:grid;grid-template-columns:7fr 8fr;gap:50px;min-height:650px}.contact-copy{align-self:center;color:#fff;padding:60px 0}.logo-mark{width:70px;height:70px;object-fit:contain;margin-bottom:15px}.contact-copy h2{font-size:2.5rem;line-height:1.15;margin:0 0 40px}.legacy-form{max-width:650px}.split{display:grid;grid-template-columns:1fr 1fr;gap:30px}.legacy-form input:not([type='hidden']),.legacy-form textarea{width:100%;display:block;padding:12px 0;margin-bottom:28px;border:0;border-bottom:2px solid #fff;border-radius:0;background:transparent;color:#fff;font:400 1rem var(--font-urbanist);outline:none}.legacy-form input::placeholder,.legacy-form textarea::placeholder{color:#fff;opacity:1}.legacy-form textarea{resize:vertical}.legacy-form [data-netlify-recaptcha='true']{margin:0 0 20px}.legacy-form button{border:0;border-radius:50px;background:#3f5ef0;color:#fff;padding:12px 35px;text-transform:uppercase;letter-spacing:1px;font-weight:700;cursor:pointer}.contact-image{align-self:center}.contact-image img{display:block;width:100%;max-height:560px;object-fit:cover;border-radius:22px}
   .hidden-field{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
   @media(max-width:800px){.contact-hero{min-height:240px}.contact-hero h1{font-size:2.3rem}.contact-inner{grid-template-columns:1fr;width:min(100% - 40px,650px);gap:0}.contact-copy{padding:65px 0 35px}.contact-copy h2{font-size:2rem;text-align:center}.logo-mark{display:block;margin:0 auto 15px}.split{grid-template-columns:1fr;gap:0}.contact-image{padding-bottom:60px}.contact-image img{max-height:420px}}
+
+  /* Contact flow: image first, then the invitation and form. */
+  .contact-hero { display: none; }
+  .contact-main { min-height: 0; padding: 48px 0 64px; }
+  .contact-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 34px;
+    min-height: 0;
+    max-width: 920px;
+  }
+  .contact-image { order: 0; width: 100%; }
+  .contact-image img { width: 100%; max-height: 360px; object-position: center 45%; }
+  .contact-copy { order: 1; padding: 0; }
+  .contact-copy h2 { margin: 0 0 30px; text-align: left; }
+  .legacy-form { max-width: none; }
+  @media (max-width: 800px) {
+    .contact-main { padding: 28px 0 44px; }
+    .contact-inner { gap: 26px; }
+    .contact-copy { padding: 0; }
+    .contact-copy h2 { font-size: 2rem; text-align: left; margin-bottom: 24px; }
+    .contact-image { padding-bottom: 0; }
+    .contact-image img { max-height: 300px; }
+  }
 </style>
