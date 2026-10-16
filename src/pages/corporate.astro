@@ -135,8 +135,8 @@ import growIcon from '../assets/images/3234841-33a8600d.png';
   .corporate-page {
     --corp-ink: #27113d;
     --corp-muted: #5a5470;
-    --corp-purple: #5e61d6;
-    --corp-lilac: #c5caff;
+    --corp-purple: var(--color-brand);
+    --corp-lilac: var(--color-lavender);
     --corp-card: rgba(255,255,255,.72);
     color: var(--corp-ink);
     font-family: var(--font-urbanist);
@@ -615,4 +615,50 @@ import growIcon from '../assets/images/3234841-33a8600d.png';
     .corp-benefit > p:last-child { font-size: 12px; }
   }
 
+</style>
+
+
+<style>
+  /* Corporate pages use the landing page's typography scale and brand tokens. */
+  .corporate-page .corp-hero h1,
+  .corporate-page .corp-pressure__copy h2,
+  .corporate-page .corp-offer__copy h2,
+  .corporate-page .corp-section-heading h2,
+  .corporate-page .corp-enroll h2 {
+    font-family: var(--font-urbanist);
+    font-size: var(--type-hero) !important;
+    line-height: 1.15 !important;
+    letter-spacing: 0 !important;
+  }
+  .corporate-page .corp-intro,
+  .corporate-page .corp-pressure__copy > p,
+  .corporate-page .corp-offer__copy > p:not(.corp-eyebrow),
+  .corporate-page .corp-section-heading > p:last-child,
+  .corporate-page .corp-enroll__aside p {
+    font-size: var(--type-body) !important;
+    line-height: 1.5 !important;
+  }
+  .corporate-page .corp-benefit h3 { font-size: var(--type-card) !important; line-height: 1.2 !important; }
+  .corporate-page .corp-benefit > p:last-child { font-size: var(--type-body) !important; line-height: 1.5 !important; }
+  .corporate-page .corp-button {
+    font-family: var(--font-open-sans);
+    font-size: var(--type-cta) !important;
+  }
+  .corporate-page .corp-form input,
+  .corporate-page .corp-form textarea { font-family: var(--font-urbanist); font-size: var(--type-input); }
+  @media (max-width: 767px) {
+    .corporate-page .corp-hero h1,
+    .corporate-page .corp-pressure__copy h2,
+    .corporate-page .corp-offer__copy h2,
+    .corporate-page .corp-section-heading h2,
+    .corporate-page .corp-enroll h2 { font-size: var(--type-section) !important; }
+    .corporate-page .corp-benefit h3 { font-size: var(--type-card) !important; }
+  }
+  @media (max-width: 575px) {
+    .corporate-page .corp-hero h1,
+    .corporate-page .corp-pressure__copy h2,
+    .corporate-page .corp-offer__copy h2,
+    .corporate-page .corp-section-heading h2,
+    .corporate-page .corp-enroll h2 { font-size: var(--type-section) !important; }
+  }
 </style>
