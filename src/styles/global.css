@@ -11,13 +11,13 @@
   --gradient-text-on-dark: linear-gradient(90deg, var(--stop-light-a) 0%, var(--stop-light-b) 100%);
   --gradient-text-on-light: linear-gradient(90deg, var(--stop-middle-a) 0%, var(--stop-middle-b) 100%);
 
-  --color-brand: var(--stop-dark-a);
-  --color-brand-hover: color-mix(in srgb, var(--stop-dark-a) 85%, #000000);
+  --color-brand: #5e61d6;
+  --color-brand-hover: #4a4dc2;
   --color-bg-light: #ffffff;
   --color-bg-tint: var(--stop-light-b);
-  --color-text-dark: #111111;
-  --color-text-body: #333333;
-  --color-text-muted: #666666;
+  --color-text-dark: #113890;
+  --color-text-body: #243b68;
+  --color-text-muted: #52678f;
   --color-text-light: #999999;
   --container-max-width: 1140px;
   --container-padding-desktop: 42px;
@@ -59,7 +59,7 @@
   /* mapped to Urbanist like original site */
 
   /* Button */
-  --btn-bg: var(--color-brand);
+  --btn-bg: #5e61d6;
   --btn-bg-hover: var(--color-brand-hover);
   --btn-color: #ffffff;
   --btn-padding: 18px 45px;
