@@ -1543,3 +1543,52 @@ h6 {
     --type-section: 28px;
   }
 }
+
+/* Site-wide title contrast: brand on white, white on colour, podcast gradient on very dark panels. */
+:root {
+  --title-color-on-white: var(--color-brand);
+  --title-gradient-on-dark: linear-gradient(90deg, #ae68f7 0%, #6a77ff 55%, #a9c9ff 100%);
+}
+
+/* Ordinary page titles on white content surfaces use the Happiness Compounds brand colour. */
+main h1,
+main h2,
+main h3,
+main h4,
+main h5,
+main h6 {
+  color: var(--title-color-on-white);
+}
+
+/* Coloured and image-backed panels use white for clear contrast. */
+.hero__headline,
+.exercise-banner__title,
+.legacy-contact .contact-copy h2 {
+  color: #fff;
+}
+
+/* Very dark landing panels use the same text gradient as Curated Podcasts. */
+.brain-cortex__title,
+.have-everything__title,
+.premium__title,
+.hf-heading,
+.ai-section__title,
+.gh-heading,
+.na-heading,
+.ls-heading,
+.pom-heading,
+.ll-heading {
+  background: var(--title-gradient-on-dark);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Happiness Compounds sits on a white background, so keep its solid brand title. */
+.happiness__title {
+  background: none;
+  -webkit-text-fill-color: var(--title-color-on-white);
+  color: var(--title-color-on-white);
+}
+
