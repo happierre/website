@@ -1,14 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import happierreIcon from '../assets/images/2026.10.14. happierre-icon-white.png';
 import corpPhoneImage from '../assets/images/02.profilepage.png';
 import teamPhoto from '../assets/images/group-people-volunteering-foodbank-poor-people6-min.jpg';
 import learnIcon from '../assets/images/2222366-26491e6d.png';
 import supportIcon from '../assets/images/11031487-1c76bd0a.png';
 import connectIcon from '../assets/images/10303062-b214155b.png';
 import growIcon from '../assets/images/3234841-33a8600d.png';
-const heartPatternSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="276.48" height="171.36" viewBox="0 0 276.48 171.36"><image href="${happierreIcon.src}" x="0" y="0" width="72" height="53.28" preserveAspectRatio="none" opacity=".12"/><image href="${happierreIcon.src}" x="138.24" y="0" width="72" height="53.28" preserveAspectRatio="none" opacity=".12"/><image href="${happierreIcon.src}" x="69.12" y="85.68" width="72" height="53.28" preserveAspectRatio="none" opacity=".12"/><image href="${happierreIcon.src}" x="207.36" y="85.68" width="72" height="53.28" preserveAspectRatio="none" opacity=".12"/></svg>`;
-
 ---
 
 <Layout
@@ -17,7 +14,7 @@ const heartPatternSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="276.48" 
   keywords="corporate wellness, corporate mental fitness, employee wellbeing, workplace stress, burnout prevention, mental fitness, Happierre corporate memberships"
   canonicalPath="/corporate/"
 >
-  <div class="corporate-page" style={`--hero-pattern: url("data:image/svg+xml,${encodeURIComponent(heartPatternSvg)}")`}>
+  <div class="corporate-page">
     <section class="corp-hero">
       <div class="corp-hero__inner">
         <div class="corp-hero__art">
@@ -26,7 +23,7 @@ const heartPatternSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="276.48" 
         </div>
         <div class="corp-hero__copy">
           <h1>help your team feel better, <span>at work and beyond.</span></h1>
-          <a class="corp-button" href="#enroll">TEAM ACCESS</a>
+          <a class="corp-button" href="#enroll">GET IT FOR MY TEAM</a>
         </div>
       </div>
     </section>
@@ -42,7 +39,7 @@ const heartPatternSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="276.48" 
             <img src={teamPhoto.src} alt="People coming together to support their community" loading="lazy" />
             <div class="corp-pullquote">
               <span class="corp-pullquote__mark">“</span>
-              <p>Small habits can make a meaningful difference to how we feel and work.</p>
+              <p>Happierre helped me build small habits that made stressful workdays feel more manageable.</p>
             </div>
           </div>
           <div class="corp-pressure__chips" aria-label="Areas where teams may need support">
@@ -60,12 +57,11 @@ const heartPatternSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="276.48" 
             <p>Happierre brings bite-sized guidance and practical exercises into one approachable app, so people can make space for their mental fitness whenever it fits their day.</p>
           </div>
           <div class="corp-offer__card">
-            <p class="corp-offer__label">LAUNCH OFFER</p>
-            <p class="corp-offer__number">6 months</p>
-            <p class="corp-offer__free">free access</p>
+            <p class="corp-offer__label">INTRODUCTORY OFFER</p>
+            <p class="corp-offer__number">12 months</p>
             <div class="corp-offer__rule"></div>
-            <p class="corp-offer__detail">Free for up to 200 employees</p>
-            <a class="corp-button corp-button--light" href="#enroll">GET TEAM ACCESS</a>
+            <p class="corp-offer__detail">For 200 employees</p>
+            <a class="corp-button" href="#enroll">CLAIM NOW</a>
           </div>
         </div>
       </section>
@@ -75,8 +71,7 @@ const heartPatternSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="276.48" 
       <section class="corp-benefits">
         <div class="corp-panel-inner">
           <div class="corp-section-heading">
-            <h2>four ways to feel <span>more supported.</span></h2>
-            <p>Accessible tools to help people care for their minds, build confidence, and grow healthier habits over time.</p>
+            <h2>four ways your team feels <span>supported.</span></h2>
           </div>
           <div class="corp-benefit-grid">
             <article class="corp-benefit">
@@ -100,7 +95,6 @@ const heartPatternSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="276.48" 
               <p>Use reflection, goal-setting, and repeatable exercises to turn good intentions into daily habits.</p>
             </article>
           </div>
-          <p class="corp-benefits__footnote">A supportive wellbeing resource — not a replacement for clinical care or workplace mental-health services.</p>
         </div>
       </section>
     </div>
@@ -131,7 +125,6 @@ const heartPatternSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="276.48" 
           <textarea id="corp-message" name="message" rows="4" placeholder="Team size, what you’re looking for, or any questions…" required></textarea>
           <div data-netlify-recaptcha="true"></div>
           <button class="corp-button" type="submit">SEND ENQUIRY</button>
-          <p class="corp-form__privacy">We’ll use these details to respond to your enquiry.</p>
         </form>
       </div>
     </section>
@@ -164,9 +157,9 @@ const heartPatternSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="276.48" 
     position: absolute;
     z-index: -1;
     inset: -20%;
-    background-image: var(--hero-pattern);
-    background-repeat: space;
-    background-size: 88px 88px;
+    background-image: url('/heart-pattern.svg');
+    background-repeat: repeat;
+    background-size: 276.48px 171.36px;
     background-position: center;
     opacity: .09;
     pointer-events: none;
@@ -228,7 +221,7 @@ const heartPatternSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="276.48" 
     line-height: .99;
     letter-spacing: -.045em;
   }
-  .corp-hero h1 span { color: var(--corp-ink); }
+  .corp-hero h1 span { color: #fff; }
   .corp-intro {
     max-width: 500px;
     margin-bottom: 30px;
@@ -281,7 +274,8 @@ const heartPatternSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="276.48" 
     font-size: 17px;
     line-height: 1.65;
   }
-  .corp-pressure__visual { min-width: 0; position: relative; padding: 0 0 36px 30px; }
+  .corp-pressure__visual { min-width: 0; position: relative; align-self: center; padding: 0 0 36px 30px; }
+  .corp-pressure__visual > img { align-self: center; }
   .corp-pressure__visual > img {
     display: block;
     width: 100%;
@@ -538,9 +532,8 @@ const heartPatternSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="276.48" 
      shape-only mark, never a boxed logo asset. */
   .corp-hero::before {
     background-image: var(--hero-pattern);
-    background-repeat: space;
-    background-size: 276.48px 171.36px;
     background-repeat: repeat;
+    background-size: 276.48px 171.36px;
     background-position: center;
     opacity: 1;
     transform: rotate(-18deg) scale(1.4);
@@ -563,7 +556,6 @@ const heartPatternSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="276.48" 
     font-size: 16px;
     line-height: 1.55;
   }
-  .corp-benefits__footnote { font-size: 12px; }
   @media (min-width: 768px) {
     .corp-pressure__layout,
     .corp-offer__layout,
@@ -606,9 +598,7 @@ const heartPatternSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="276.48" 
       font-size: 16px;
       line-height: 1.5;
     }
-    .corp-section-heading > p:last-child { display: block; font-size: 15px; }
     .corp-benefit > p:last-child { font-size: 13px; line-height: 1.4; }
-    .corp-benefits__footnote { font-size: 11px; }
     .corp-pressure__layout,
     .corp-offer__layout,
     .corp-benefits .corp-panel-inner {
