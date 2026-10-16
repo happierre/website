@@ -287,3 +287,33 @@ body {
     padding: 20px;
   }
 }
+
+/* Blog index follows the landing page's type scale and primary brand color. */
+.blog-page .blog-hero__title {
+  font-family: var(--font-urbanist);
+  font-size: var(--type-hero);
+  line-height: 1.15;
+  letter-spacing: 0;
+}
+.blog-page .blog-hero__subtitle,
+.blog-page .blog-card__excerpt {
+  font-family: var(--font-urbanist);
+  font-size: var(--type-body);
+  line-height: 1.5;
+}
+.blog-page .blog-card__title {
+  font-family: var(--font-urbanist);
+  font-size: var(--type-card);
+  line-height: 1.2;
+  color: var(--color-brand);
+}
+.blog-page .blog-card__date { font-size: var(--type-small); }
+@media (max-width: 767px) {
+  .blog-page .blog-hero__title { font-size: var(--type-section); }
+  .blog-page .blog-hero__subtitle,
+  .blog-page .blog-card__excerpt { font-size: var(--type-body); }
+  .blog-page .blog-card__title { font-size: var(--type-card); }
+}
+@media (max-width: 575px) {
+  .blog-page .blog-hero__title { font-size: var(--type-section); }
+}
