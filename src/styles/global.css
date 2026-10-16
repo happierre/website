@@ -26,10 +26,10 @@
   --site-header-height: 80px;
 
   /* Brand gradients use only the official stops; the subtle glow is removed */
-  --gradient-light: linear-gradient(225deg, var(--stop-light-b), var(--stop-light-a));
-  --gradient-middle: linear-gradient(225deg, var(--stop-middle-b), var(--stop-middle-a));
-  --gradient-dark: linear-gradient(225deg, var(--stop-dark-b), var(--stop-dark-a));
-  --gradient-super-dark: linear-gradient(225deg, var(--stop-dark-b), var(--stop-dark-a));
+  --gradient-light: radial-gradient(circle at 0% 0%, #CAD0FB, transparent 75%), linear-gradient(225deg, var(--stop-light-b), var(--stop-light-a));
+  --gradient-middle: radial-gradient(circle at 0% 0%, #6C88DD, transparent 75%), linear-gradient(225deg, var(--stop-middle-b), var(--stop-middle-a));
+  --gradient-dark: radial-gradient(circle at 0% 0%, #2F45BA, transparent 75%), linear-gradient(225deg, var(--stop-dark-b), var(--stop-dark-a));
+  --gradient-super-dark: radial-gradient(circle at 0% 0%, #162F6F, transparent 75%), linear-gradient(225deg, #0B2462, #360568);
 
   /* Legacy semantic aliases retained for existing page styles */
   --color-brand-light: var(--stop-light-a);
