@@ -25,7 +25,7 @@ import growIcon from '../assets/images/3234841-33a8600d.png';
         </div>
         <div class="corp-hero__copy">
           <h1>help your team feel better, <span>at work and beyond.</span></h1>
-          <a class="corp-button" href="#enroll">EXPLORE TEAM ACCESS</a>
+          <a class="corp-button" href="#enroll">TEAM ACCESS</a>
         </div>
       </div>
     </section>
@@ -64,7 +64,7 @@ import growIcon from '../assets/images/3234841-33a8600d.png';
             <p class="corp-offer__free">free access</p>
             <div class="corp-offer__rule"></div>
             <p class="corp-offer__detail">Free for up to 200 employees</p>
-            <a class="corp-button corp-button--light" href="#enroll">BRING HAPPIERRE TO YOUR TEAM</a>
+            <a class="corp-button corp-button--light" href="#enroll">GET TEAM ACCESS</a>
           </div>
         </div>
       </section>
@@ -529,4 +529,85 @@ import growIcon from '../assets/images/3234841-33a8600d.png';
   @media (prefers-reduced-motion: reduce) {
     .corp-button { transition: none; }
   }
+
+  
+  /* Consistency pass: restore shared body-copy and CTA sizing, and centre
+     each panel's content within its available height instead of pinning it
+     to the top of a capped inner grid. The repeating pattern uses the new
+     shape-only mark, never a boxed logo asset. */
+  .corp-hero::before {
+    background-image: var(--hero-pattern);
+    background-repeat: space;
+    background-size: 88px 88px;
+    background-position: center;
+    transform: rotate(-18deg) scale(1.4);
+  }
+  .corp-button {
+    font-family: var(--font-urbanist);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    gap: 8px;
+    padding: 15px 24px;
+  }
+  .corp-pressure__copy > p:last-child,
+  .corp-offer__copy > p:not(.corp-eyebrow),
+  .corp-section-heading > p:last-child {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  .corp-benefit > p:last-child {
+    font-size: 16px;
+    line-height: 1.55;
+  }
+  .corp-benefits__footnote { font-size: 12px; }
+  @media (min-width: 768px) {
+    .corp-pressure__layout,
+    .corp-offer__layout,
+    .corp-benefits .corp-panel-inner {
+      max-height: none;
+      align-content: center;
+    }
+    .corp-pressure__layout,
+    .corp-offer__layout {
+      min-height: calc(100svh - var(--site-header-height));
+    }
+    .corp-benefits .corp-panel-inner {
+      min-height: calc(100svh - var(--site-header-height));
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  @media (max-width: 767px) {
+    .corp-button {
+      min-height: 47px;
+      padding: 13px 18px;
+      font-size: 12px;
+      letter-spacing: .8px;
+    }
+    .corp-pressure__copy > p:last-child,
+    .corp-offer__copy > p:not(.corp-eyebrow) {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .corp-section-heading > p:last-child { display: block; font-size: 15px; }
+    .corp-benefit > p:last-child { font-size: 13px; line-height: 1.4; }
+    .corp-benefits__footnote { font-size: 11px; }
+    .corp-pressure__layout,
+    .corp-offer__layout,
+    .corp-benefits .corp-panel-inner {
+      max-height: none;
+    }
+  }
+  @media (max-width: 575px) {
+    .corp-button {
+      font-size: 11px;
+      padding-inline: 16px;
+    }
+    .corp-pressure__copy > p:last-child,
+    .corp-offer__copy > p:not(.corp-eyebrow) { font-size: 15px; }
+    .corp-benefit > p:last-child { font-size: 12px; }
+  }
+
 </style>
