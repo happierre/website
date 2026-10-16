@@ -7,7 +7,7 @@
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
-  background: linear-gradient(180deg, #0E2F79, #2A228E, #4715A3);
+  background: var(--gradient-middle);
   color: var(--color-text-dark);
   font-family: var(--font-open-sans);
 }
