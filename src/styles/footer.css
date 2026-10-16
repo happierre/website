@@ -1,7 +1,7 @@
 .site-footer {
   position: relative;
   z-index: 100200;
-  background: var(--gradient-dark);
+  background: linear-gradient(225deg, color-mix(in srgb, var(--stop-dark-b) 92%, #ffffff), color-mix(in srgb, var(--stop-dark-a) 92%, #ffffff));
   color: var(--color-white);
 }
 
@@ -13,7 +13,7 @@
   left: 0;
   width: 100%;
   height: max(env(safe-area-inset-bottom, 0px), 3px);
-  background: var(--gradient-dark);
+  background: linear-gradient(225deg, color-mix(in srgb, var(--stop-dark-b) 92%, #ffffff), color-mix(in srgb, var(--stop-dark-a) 92%, #ffffff));
   pointer-events: none;
 }
 
