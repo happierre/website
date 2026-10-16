@@ -261,3 +261,7 @@
 
 
 .na-heading { text-shadow: none !important; }
+
+
+/* This title sits over photography: keep it solid white for contrast. */
+.na-heading { background: none !important; -webkit-text-fill-color: #fff !important; color: #fff !important; }
