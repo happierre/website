@@ -1618,3 +1618,27 @@ main > section:not(.corp-hero):not(.legacy-contact .contact-main) .container > h
   color: #fff;
 }
 
+
+
+/* Landing-page title contrast overrides requested for the current design pass. */
+.brain-cortex__title {
+  background: none !important;
+  -webkit-text-fill-color: var(--color-brand) !important;
+  color: var(--color-brand) !important;
+}
+.have-everything__title,
+.premium__title {
+  background: none !important;
+  -webkit-text-fill-color: #fff !important;
+  color: #fff !important;
+}
+.pom-heading {
+  background: none !important;
+  -webkit-text-fill-color: var(--color-text-dark) !important;
+  color: var(--color-text-dark) !important;
+  text-shadow: 0 0 40px rgba(95, 66, 197, 0.3) !important;
+}
+.pom-heading span {
+  -webkit-text-fill-color: var(--color-purple-deep) !important;
+  color: var(--color-purple-deep) !important;
+}
