@@ -374,3 +374,10 @@
     margin: 24px auto 0;
   }
 }
+
+
+/* Bring the subtitle closer to the card stack and give the topic pills breathing room below. */
+@media (max-width: 767px) {
+  .ll-heading-wrap { margin-bottom: 8px !important; }
+  .ll-pills { margin-top: 12px !important; padding-bottom: 30px !important; }
+}
