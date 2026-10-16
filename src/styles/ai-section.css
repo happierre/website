@@ -184,3 +184,25 @@
     max-width: 86vw;
   }
 }
+
+/* Chat CTA is anchored to the bottom centre of the AI panel. */
+.ai-section { position: relative; padding-bottom: 104px; }
+.ai-section__content .btn-primary { display: none; }
+.ai-section__chat-cta {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%);
+  margin: 0 !important;
+  z-index: 5;
+}
+@media (max-width: 767px) {
+  .ai-section { padding-bottom: 100px !important; }
+  .ai-section__book-img {
+    width: 620px !important;
+    max-width: 128vw !important;
+    height: auto !important;
+    margin-left: -14vw !important;
+    margin-right: -14vw !important;
+  }
+}
