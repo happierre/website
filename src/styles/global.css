@@ -1506,3 +1506,29 @@ h6 {
   .have-everything__desc { margin-top: 30px !important; }
   .have-everything__content .btn-primary { margin-top: 38px !important; }
 }
+
+
+/* Shared design tokens: secondary pages follow the landing page's type and brand palette. */
+:root {
+  --type-hero: 40px;
+  --type-section: 40px;
+  --type-card: 24px;
+  --type-body: 18px;
+  --type-small: 14px;
+  --type-cta: 14px;
+  --type-input: 16px;
+}
+@media (max-width: 767px) {
+  :root {
+    --type-hero: 32px;
+    --type-section: 32px;
+    --type-card: 20px;
+    --type-body: 16px;
+  }
+}
+@media (max-width: 575px) {
+  :root {
+    --type-hero: 28px;
+    --type-section: 28px;
+  }
+}
