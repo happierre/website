@@ -571,6 +571,18 @@ import growIcon from '../assets/images/3234841-33a8600d.png';
     .corp-pressure__layout,
     .corp-offer__layout {
       min-height: calc(100svh - var(--site-header-height));
+      align-items: stretch;
+    }
+    /* Section headings share a consistent top anchor; supporting visuals and
+       offer card stay vertically centred in the space beside the copy. */
+    .corp-pressure__copy,
+    .corp-offer__copy {
+      align-self: start;
+      padding-top: clamp(0px, 1vh, 12px);
+    }
+    .corp-pressure__visual,
+    .corp-offer__card {
+      align-self: center;
     }
     .corp-benefits .corp-panel-inner {
       min-height: calc(100svh - var(--site-header-height));
