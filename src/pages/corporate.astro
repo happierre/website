@@ -662,3 +662,111 @@ import growIcon from '../assets/images/3234841-33a8600d.png';
     .corporate-page .corp-enroll h2 { font-size: var(--type-section) !important; }
   }
 </style>
+
+
+<style>
+  /* Match the Contribute hero composition: artwork on the left, copy on the
+     right on desktop; artwork first and left-aligned copy beneath on mobile. */
+  .corporate-page .corp-hero {
+    height: calc(100svh - var(--site-header-height));
+    min-height: 0;
+    max-height: calc(100svh - var(--site-header-height));
+    padding: 0;
+    align-items: stretch;
+  }
+  .corporate-page .corp-hero::before {
+    background-image: url('/heart-pattern.svg');
+    background-repeat: repeat;
+    background-size: 180px 111.6px;
+    background-position: center;
+    opacity: .12;
+    transform: none;
+    inset: 0;
+  }
+  .corporate-page .corp-hero__inner {
+    width: min(1200px, calc(100% - 40px));
+    height: 100%;
+    min-height: 0;
+    padding: 0;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 0;
+    align-items: stretch;
+  }
+  .corporate-page .corp-hero__art {
+    min-height: 0;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .corporate-page .corp-orbit { display: none; }
+  .corporate-page .corp-hero__art img {
+    height: min(78svh, 650px);
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+  }
+  .corporate-page .corp-hero__copy {
+    align-self: center;
+    max-width: 570px;
+    padding: 40px 20px 40px 0;
+  }
+  .corporate-page .corp-hero h1 {
+    font-size: var(--type-hero) !important;
+    line-height: 1.15 !important;
+    letter-spacing: 0 !important;
+  }
+  .corporate-page .corp-hero h1 span { color: #fff; }
+  .corporate-page .corp-hero .corp-button { font-size: var(--type-cta) !important; }
+  @media (max-width: 767px) {
+    .corporate-page .corp-hero {
+      height: calc(100svh - var(--site-header-height));
+      min-height: 0;
+      max-height: calc(100svh - var(--site-header-height));
+    }
+    .corporate-page .corp-hero__inner {
+      width: 100%;
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-rows: 54dvh minmax(0, 1fr);
+    }
+    .corporate-page .corp-hero__art {
+      grid-row: 1;
+      justify-content: flex-start;
+      align-items: flex-end;
+      padding: 18px 0 0 16px;
+    }
+    .corporate-page .corp-hero__art img {
+      height: auto;
+      width: auto;
+      max-height: 48dvh;
+      max-width: none;
+      object-position: left bottom;
+    }
+    .corporate-page .corp-hero__copy {
+      grid-row: 2;
+      align-self: start;
+      width: 100%;
+      max-width: none;
+      padding: 18px 20px 28px 32px;
+    }
+    .corporate-page .corp-hero h1 {
+      font-size: var(--type-section) !important;
+      line-height: 1.1 !important;
+      margin-bottom: 18px;
+    }
+    .corporate-page .corp-hero .corp-button {
+      min-height: 44px;
+      padding: 9px 24px;
+      font-size: var(--type-cta) !important;
+    }
+  }
+  @media (max-width: 575px) {
+    .corporate-page .corp-hero__inner {
+      grid-template-rows: 54dvh minmax(0, 1fr);
+    }
+    .corporate-page .corp-hero__art { padding: 18px 0 0 16px; }
+    .corporate-page .corp-hero__art img { max-height: 48dvh; }
+    .corporate-page .corp-hero__copy { padding: 18px 20px 28px 32px; }
+  }
+</style>
