@@ -73,3 +73,34 @@ const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/ful
     .contact-image img { max-height: 300px; }
   }
 </style>
+
+
+<style>
+  /* Shared landing-page type scale and brand colors. */
+  .legacy-contact { color: var(--color-dark-purple); }
+  .legacy-contact .contact-main {
+    background: var(--gradient-middle);
+  }
+  .legacy-contact .contact-copy h2 {
+    font-size: var(--type-hero) !important;
+    line-height: 1.15 !important;
+    letter-spacing: 0 !important;
+  }
+  .legacy-contact .legacy-form input:not([type='hidden']),
+  .legacy-contact .legacy-form textarea {
+    font-size: var(--type-input);
+  }
+  .legacy-contact .legacy-form button {
+    background: var(--btn-bg);
+    font-family: var(--font-open-sans);
+    font-size: var(--type-cta);
+    min-height: 48px;
+  }
+  .legacy-contact .legacy-form button:hover { background: var(--btn-bg-hover); }
+  @media (max-width: 767px) {
+    .legacy-contact .contact-copy h2 { font-size: var(--type-section) !important; }
+  }
+  @media (max-width: 575px) {
+    .legacy-contact .contact-copy h2 { font-size: var(--type-section) !important; }
+  }
+</style>
