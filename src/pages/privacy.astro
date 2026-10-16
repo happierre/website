@@ -167,3 +167,33 @@ import Layout from '../layouts/Layout.astro';
     }
   }
 </style>
+
+<style>
+  .privacy-section { color: var(--color-text-body); }
+  .privacy-section h1 {
+    font-family: var(--font-urbanist);
+    font-size: var(--type-hero) !important;
+    line-height: 1.15;
+    color: var(--color-dark-purple);
+  }
+  .privacy-section h2 {
+    font-family: var(--font-urbanist);
+    font-size: var(--type-card) !important;
+    line-height: 1.2;
+    color: var(--color-brand);
+  }
+  .privacy-section h3 {
+    font-family: var(--font-urbanist);
+    font-size: 20px !important;
+    color: var(--color-dark-purple);
+  }
+  .privacy-section p,
+  .privacy-section li { font-size: var(--type-body) !important; line-height: 1.5; }
+  .privacy-section a { color: var(--color-brand); }
+  @media (max-width: 767px) {
+    .privacy-section h1 { font-size: var(--type-section) !important; }
+  }
+  @media (max-width: 575px) {
+    .privacy-section h1 { font-size: var(--type-section) !important; }
+  }
+</style>
