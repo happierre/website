@@ -259,3 +259,11 @@
   .have-everything__desc { margin-top: 27px !important; }
   .have-everything__content .btn-primary { margin-top: 34px !important; }
 }
+
+
+/* The headline sits over photography: use solid white, not gradient text. */
+.have-everything__title {
+  background: none !important;
+  -webkit-text-fill-color: #fff !important;
+  color: #fff !important;
+}
