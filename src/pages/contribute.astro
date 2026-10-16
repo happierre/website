@@ -180,10 +180,51 @@ const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/ful
   /* Contact-page heart mark pattern: H=72px, 1.92H horizontal pitch,
      1.19H row pitch, alternate rows offset by 0.96H. */
   .legacy-contribute .hero::before {
+    inset: 0;
     background-repeat: repeat;
-    background-size: 276.48px 171.36px;
+    background-size: 260px 161.1px;
     background-position: center;
-    opacity: 1;
-    transform: rotate(-18deg) scale(1.4);
+    opacity: .09;
+    transform: none;
+  }
+
+  /* Match the landing page's shared type scale while keeping this page's layout. */
+  .legacy-contribute .hero-copy h1,
+  .legacy-contribute .feature-copy h2,
+  .legacy-contribute .form-copy h2 {
+    font-size: var(--type-hero) !important;
+    line-height: 1.15 !important;
+    letter-spacing: 0 !important;
+  }
+  .legacy-contribute .hero-copy p,
+  .legacy-contribute .feature-copy p {
+    font-size: var(--type-body) !important;
+    line-height: 1.5 !important;
+  }
+  .legacy-contribute .button {
+    font-size: var(--type-cta) !important;
+    font-family: var(--font-open-sans);
+  }
+  .legacy-contribute .legacy-form input:not([type='hidden']),
+  .legacy-contribute .legacy-form textarea {
+    font-size: var(--type-input);
+  }
+  @media (max-width: 767px) {
+    .legacy-contribute .hero-copy h1,
+    .legacy-contribute .feature-copy h2,
+    .legacy-contribute .form-copy h2 {
+      font-size: var(--type-section) !important;
+    }
+    .legacy-contribute .hero-copy p,
+    .legacy-contribute .feature-copy p {
+      font-size: var(--type-body) !important;
+    }
+  }
+  @media (max-width: 575px) {
+    .legacy-contribute .hero-copy h1,
+    .legacy-contribute .feature-copy h2,
+    .legacy-contribute .form-copy h2 {
+      font-size: var(--type-section) !important;
+    }
   }
 </style>
