@@ -1,6 +1,6 @@
 .blog-post {
   padding-bottom: 80px;
-  background-color: var(--color-bg-light);
+  background: var(--gradient-light);
 }
 
 .blog-post__hero {
