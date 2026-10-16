@@ -179,3 +179,8 @@
   color: #fff !important;
 }
 .premium .stat-card { background: var(--gradient-middle) !important; }
+
+
+/* Lighter, airy gradient for the four content-library cards. */
+.premium .stat-card { background: var(--gradient-light) !important; }
+.premium .stat-card__number, .premium .stat-card__label { color: var(--color-text-dark) !important; }
