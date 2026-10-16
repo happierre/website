@@ -324,3 +324,15 @@
     font-size: 28px;
   }
 }
+
+/* Mobile: centre the weekday tracker grid within its glass card. */
+@media (max-width: 767px) {
+  .pom-card { margin-inline: auto !important; }
+  .pom-day-labels,
+  .pom-slot-row {
+    width: 100%;
+    max-width: 240px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
