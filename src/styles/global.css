@@ -1507,7 +1507,7 @@ h6 {
   .have-everything__desc { margin-top: 27px !important; }
   .have-everything__content .btn-primary { margin-top: 34px !important; }
   .fun-section { background-color: var(--stop-dark-b) !important; background-image: var(--gradient-dark) !important; background-attachment: scroll !important; }
-  .hf-grad { background: var(--gradient-text-on-light) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; background-clip: text !important; }
+  .hf-grad { background: var(--gradient-text-on-dark) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; background-clip: text !important; }
 }
 @media (max-width: 575px) {
   .brain-cortex__grid { margin-top: 38px !important; }
