@@ -35,7 +35,7 @@ import growIcon from '../assets/images/3234841-33a8600d.png';
             <h2>work is changing.<br /><span>people need support.</span></h2>
             <p>Uncertainty, constant change, and pressure to keep up can make it harder to focus, connect, and recover. Supporting mental fitness helps people build the everyday skills to meet those moments.</p>
           </div>
-          <div class="corp-pressure__visual">
+          <div class="corp-pressure__visual" style={`background-image: linear-gradient(rgba(0,0,0,.08), rgba(0,0,0,.08)), url(${teamPhoto.src})`}>
             <img src={teamPhoto.src} alt="People coming together to support their community" loading="lazy" />
             <div class="corp-pullquote">
               <span class="corp-pullquote__mark">“</span>
@@ -103,9 +103,7 @@ import growIcon from '../assets/images/3234841-33a8600d.png';
       <div class="corp-enroll__inner">
         <div class="corp-enroll__copy">
           <h2>let’s talk</h2>
-          <div class="corp-enroll__aside">
-            <p>Start a conversation. Find an approach that works for your people.</p>
-          </div>
+          
         </div>
         <form
           name="corporate-enrollment"
@@ -768,5 +766,53 @@ import growIcon from '../assets/images/3234841-33a8600d.png';
     .corporate-page .corp-hero__art { padding: 18px 0 0 16px; }
     .corporate-page .corp-hero__art img { max-height: 48dvh; }
     .corporate-page .corp-hero__copy { padding: 18px 20px 28px 32px; }
+  }
+</style>
+
+
+<style>
+  /* Corporate hero and benefit cards use the same navigation gradient and crisp white iconography. */
+  .corporate-page .corp-hero h1,
+  .corporate-page .corp-hero h1 span { color: #fff !important; }
+  .corporate-page .corp-pressure__visual {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 28px;
+    overflow: hidden;
+  }
+  .corporate-page .corp-pressure__visual > img { visibility: hidden; }
+  .corporate-page .corp-pullquote { z-index: 1; }
+  .corporate-page .corp-offer__number,
+  .corporate-page .corp-offer__detail {
+    font-size: clamp(20px, 2vw, 27px) !important;
+    line-height: 1.2;
+    font-weight: 800;
+  }
+  .corporate-page .corp-benefit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .corporate-page .corp-benefit__icon {
+    display: grid;
+    place-items: center;
+    margin: 0 auto 18px;
+    background: var(--gradient-middle) !important;
+  }
+  .corporate-page .corp-benefit__icon img {
+    filter: brightness(0) invert(1) !important;
+    opacity: 1;
+  }
+  .corporate-page .corp-enroll__aside { display: none !important; }
+  @media (max-width: 767px) {
+    .corporate-page .corp-pressure__visual {
+      background-size: cover;
+      background-position: center;
+    }
+    .corporate-page .corp-benefit__icon { margin-bottom: 12px; }
+    .corporate-page .corp-offer__number,
+    .corporate-page .corp-offer__detail { font-size: 22px !important; }
   }
 </style>
