@@ -34,10 +34,14 @@ import pierreFox from '../assets/images/pierre fox.png';
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             layout.classList.add('ai-in');
+            section.classList.add('ai-in');
           } else {
             const els = layout.querySelectorAll('.ai-animate-left, .ai-animate-right');
+            const chat = section.querySelector('.ai-section__chat-cta');
+            if (chat) chat.style.transition = 'none';
             els.forEach(el => (el.style.transition = 'none'));
             layout.classList.remove('ai-in');
+            section.classList.remove('ai-in');
             requestAnimationFrame(() =>
               requestAnimationFrame(() =>
                 els.forEach(el => (el.style.transition = ''))
