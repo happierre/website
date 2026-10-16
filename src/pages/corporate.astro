@@ -1,8 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import happierreIcon from '../assets/images/2026.10.14. happierre-icon-white.png';
+import happierreIcon from '../assets/images/FinalLogoShapeOnly.png';
+import corpPhoneImage from '../assets/images/02.profilepage.png';
+import teamPhoto from '../assets/images/group-people-volunteering-foodbank-poor-people6-min.jpg';
+import learnIcon from '../assets/images/2222366-26491e6d.png';
+import supportIcon from '../assets/images/11031487-1c76bd0a.png';
+import connectIcon from '../assets/images/10303062-b214155b.png';
+import growIcon from '../assets/images/3234841-33a8600d.png';
 
-const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/fullfill/main/images/${name}`;
 ---
 
 <Layout
@@ -16,14 +21,11 @@ const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/ful
       <div class="corp-hero__inner">
         <div class="corp-hero__art">
           <div class="corp-orbit"></div>
-          <img src={oldImage('02.profilepage.png')} alt="Happierre mental fitness app on a phone" />
+          <img src={corpPhoneImage.src} alt="Happierre mental fitness app on a phone" />
         </div>
         <div class="corp-hero__copy">
-          <p class="corp-eyebrow">HAPPIER TEAMS START HERE</p>
           <h1>help your team feel better, <span>at work and beyond.</span></h1>
-          <p class="corp-intro">Give people practical tools to navigate stress, build resilience, and feel more in control — one small habit at a time.</p>
-          <a class="corp-button" href="#enroll">EXPLORE TEAM ACCESS <span aria-hidden="true">↗</span></a>
-          <p class="corp-proof">Mental fitness for real life. Made for everyday use.</p>
+          <a class="corp-button" href="#enroll">EXPLORE TEAM ACCESS</a>
         </div>
       </div>
     </section>
@@ -32,12 +34,11 @@ const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/ful
       <section class="corp-pressure">
         <div class="corp-panel-inner corp-pressure__layout">
           <div class="corp-pressure__copy">
-            <p class="corp-eyebrow">THE CHALLENGE</p>
             <h2>work is changing.<br /><span>people need support.</span></h2>
             <p>Uncertainty, constant change, and pressure to keep up can make it harder to focus, connect, and recover. Supporting mental fitness helps people build the everyday skills to meet those moments.</p>
           </div>
           <div class="corp-pressure__visual">
-            <img src={oldImage('people-working-together.jpg')} alt="Colleagues working together and supporting one another" loading="lazy" />
+            <img src={teamPhoto.src} alt="People coming together to support their community" loading="lazy" />
             <div class="corp-pullquote">
               <span class="corp-pullquote__mark">“</span>
               <p>Small habits can make a meaningful difference to how we feel and work.</p>
@@ -54,19 +55,16 @@ const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/ful
       <section class="corp-offer">
         <div class="corp-panel-inner corp-offer__layout">
           <div class="corp-offer__copy">
-            <p class="corp-eyebrow">A PLACE TO START</p>
             <h2>make wellbeing<br /><span>part of the everyday.</span></h2>
             <p>Happierre brings bite-sized guidance and practical exercises into one approachable app, so people can make space for their mental fitness whenever it fits their day.</p>
-            <a class="corp-button corp-button--light" href="#enroll">BRING HAPPIERRE TO YOUR TEAM <span aria-hidden="true">↗</span></a>
           </div>
           <div class="corp-offer__card">
-            <span class="corp-offer__spark" aria-hidden="true">✳</span>
             <p class="corp-offer__label">LAUNCH OFFER</p>
             <p class="corp-offer__number">6 months</p>
             <p class="corp-offer__free">free access</p>
             <div class="corp-offer__rule"></div>
-            <p class="corp-offer__detail">For up to 200 employees</p>
-            <p class="corp-offer__note">A simple way to help your people try a new daily mental-fitness habit.</p>
+            <p class="corp-offer__detail">Free for up to 200 employees</p>
+            <a class="corp-button corp-button--light" href="#enroll">BRING HAPPIERRE TO YOUR TEAM</a>
           </div>
         </div>
       </section>
@@ -76,32 +74,27 @@ const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/ful
       <section class="corp-benefits">
         <div class="corp-panel-inner">
           <div class="corp-section-heading">
-            <p class="corp-eyebrow">BUILT FOR REAL LIFE</p>
             <h2>four ways to feel <span>more supported.</span></h2>
             <p>Accessible tools to help people care for their minds, build confidence, and grow healthier habits over time.</p>
           </div>
           <div class="corp-benefit-grid">
             <article class="corp-benefit">
-              <div class="corp-benefit__icon"><img src={oldImage('2222366-26491e6d.png')} alt="" loading="lazy" /></div>
-              <p class="corp-benefit__index">01 / LEARN</p>
+              <div class="corp-benefit__icon"><img src={learnIcon.src} alt="" loading="lazy" /></div>
               <h3>content that helps</h3>
               <p>Explore practical guidance across mindfulness, movement, nutrition, and everyday wellbeing.</p>
             </article>
             <article class="corp-benefit">
-              <div class="corp-benefit__icon"><img src={oldImage('11031487-1c76bd0a.png')} alt="" loading="lazy" /></div>
-              <p class="corp-benefit__index">02 / SUPPORT</p>
+              <div class="corp-benefit__icon"><img src={supportIcon.src} alt="" loading="lazy" /></div>
               <h3>support when needed</h3>
               <p>Find pathways to additional support, including access to professional mental-health care where available.</p>
             </article>
             <article class="corp-benefit">
-              <div class="corp-benefit__icon"><img src={oldImage('10303062-b214155b.png')} alt="" loading="lazy" /></div>
-              <p class="corp-benefit__index">03 / CONNECT</p>
+              <div class="corp-benefit__icon"><img src={connectIcon.src} alt="" loading="lazy" /></div>
               <h3>connection without judgement</h3>
               <p>Encourage a culture where people can feel less alone and build meaningful connections.</p>
             </article>
             <article class="corp-benefit">
-              <div class="corp-benefit__icon"><img src={oldImage('3234841-33a8600d.png')} alt="" loading="lazy" /></div>
-              <p class="corp-benefit__index">04 / GROW</p>
+              <div class="corp-benefit__icon"><img src={growIcon.src} alt="" loading="lazy" /></div>
               <h3>progress that sticks</h3>
               <p>Use reflection, goal-setting, and repeatable exercises to turn good intentions into daily habits.</p>
             </article>
@@ -114,11 +107,8 @@ const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/ful
     <section class="corp-enroll" id="enroll">
       <div class="corp-enroll__inner">
         <div class="corp-enroll__copy">
-          <p class="corp-eyebrow">LET’S TALK</p>
-          <h2>make room for<br /><span>a happier team.</span></h2>
-          <p>Tell us a little about your organisation. We’ll help you explore the right next step for your team.</p>
+          <h2>let’s talk</h2>
           <div class="corp-enroll__aside">
-            <span aria-hidden="true">✳</span>
             <p>Start a conversation. Find an approach that works for your people.</p>
           </div>
         </div>
@@ -139,7 +129,7 @@ const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/ful
           <label for="corp-message">Tell us about your team</label>
           <textarea id="corp-message" name="message" rows="4" placeholder="Team size, what you’re looking for, or any questions…" required></textarea>
           <div data-netlify-recaptcha="true"></div>
-          <button class="corp-button" type="submit">SEND ENQUIRY <span aria-hidden="true">↗</span></button>
+          <button class="corp-button" type="submit">SEND ENQUIRY</button>
           <p class="corp-form__privacy">We’ll use these details to respond to your enquiry.</p>
         </form>
       </div>
@@ -173,10 +163,10 @@ const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/ful
     position: absolute;
     z-index: -1;
     inset: -20%;
-    background-image: var(--hero-pattern), var(--hero-pattern);
+    background-image: var(--hero-pattern);
     background-repeat: space;
     background-size: 88px 88px;
-    background-position: 0 0, 132px 132px;
+    background-position: center;
     opacity: .09;
     pointer-events: none;
     transform: rotate(-18deg) scale(1.4);
@@ -213,7 +203,7 @@ const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/ful
     z-index: 1;
     display: block;
     width: auto;
-    height: min(76svh, 690px);
+    height: min(68svh, 600px);
     max-width: 100%;
     object-fit: contain;
     filter: drop-shadow(0 24px 30px rgba(39,17,61,.16));
@@ -366,6 +356,8 @@ const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/ful
   .corp-offer__rule { height: 1px; margin: 24px 0 18px; background: #d9dcff; }
   .corp-offer__detail { margin-bottom: 10px; font-size: 17px; font-weight: 800; }
   .corp-offer__note { margin: 0; color: var(--corp-muted); font-size: 14px; line-height: 1.5; }
+  .corp-offer__card .corp-button { margin-top: 20px; }
+  .corp-benefit__icon img { display: block; opacity: 1; visibility: visible; }
   .corp-benefits { display: flex; align-items: center; background: linear-gradient(145deg, #edf0ff 0%, #f8f8ff 55%, #e8eaff 100%); }
   .corp-benefits .corp-panel-inner { padding-block: clamp(40px, 6vh, 68px); }
   .corp-section-heading { max-width: 690px; margin: 0 auto 34px; text-align: center; }
@@ -395,19 +387,18 @@ const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/ful
   .corp-benefit h3 { margin-bottom: 12px; font-size: 21px; line-height: 1.1; font-weight: 750; }
   .corp-benefit > p:last-child { margin-bottom: 0; color: var(--corp-muted); font-size: 14px; line-height: 1.55; }
   .corp-benefits__footnote { margin: 20px 0 0; color: #706b84; font-size: 11px; line-height: 1.45; text-align: center; }
-  .corp-enroll { background: #fff; }
+  .corp-enroll { background: #fff; display: flex; align-items: center; min-height: calc(100svh - var(--site-header-height) - var(--footer-height, 100px)); }
   .corp-enroll__inner {
     display: grid;
     grid-template-columns: .9fr 1fr;
     align-items: center;
     gap: clamp(42px, 8vw, 100px);
-    padding-block: clamp(64px, 9vh, 110px);
+    padding-block: clamp(28px, 4vh, 52px);
   }
   .corp-enroll h2 { font-size: clamp(38px, 4.6vw, 62px); }
   .corp-enroll__copy > p:not(.corp-eyebrow) { margin-bottom: 26px; }
-  .corp-enroll__aside { display: flex; align-items: flex-start; gap: 13px; max-width: 360px; color: #6a6481; }
-  .corp-enroll__aside span { color: var(--corp-purple); font-size: 24px; line-height: 1; }
-  .corp-enroll__aside p { margin: 0; font-size: 14px; line-height: 1.5; }
+  .corp-enroll__aside { display: flex; align-items: flex-start; max-width: 360px; color: #6a6481; }
+  .corp-enroll__aside p { margin: 0; font-size: 16px; line-height: 1.5; }
   .corp-form {
     padding: clamp(26px, 4vw, 44px);
     border: 1px solid #e6e7fb;
@@ -464,7 +455,7 @@ const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/ful
     }
     .corp-hero__art { grid-row: 1; min-height: 0; justify-content: flex-start; align-items: flex-end; padding-left: 20px; overflow: hidden; }
     .corp-orbit { left: 16px; bottom: 2%; width: min(76vw, 340px); }
-    .corp-hero__art img { height: 96%; max-height: 48svh; max-width: none; width: auto; object-position: left bottom; }
+    .corp-hero__art img { width: min(100vw, 420px); height: auto; max-height: 56svh; max-width: none; object-fit: contain; object-position: center bottom; }
     .corp-hero__copy { grid-row: 2; align-self: start; padding: 12px 22px 28px 32px; max-width: 640px; }
     .corp-hero .corp-eyebrow { margin-bottom: 10px; font-size: 10px; }
     .corp-hero h1 { max-width: 580px; margin-bottom: 13px; font-size: clamp(29px, 7vw, 42px); line-height: 1.02; }
@@ -508,7 +499,8 @@ const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/ful
     .corp-benefit h3 { margin-bottom: 7px; font-size: 16px; }
     .corp-benefit > p:last-child { font-size: 11px; line-height: 1.35; }
     .corp-benefits__footnote { margin-top: 10px; font-size: 9px; }
-    .corp-enroll__inner { grid-template-columns: minmax(0,1fr); gap: 24px; width: calc(100% - 36px); padding-block: 44px; }
+        .corp-enroll { min-height: 0; }
+    .corp-enroll__inner { grid-template-columns: minmax(0,1fr); gap: 24px; width: calc(100% - 36px); padding-block: 32px; }
     .corp-enroll h2 { margin-bottom: 14px; font-size: 42px; }
     .corp-enroll__copy > p:not(.corp-eyebrow) { margin-bottom: 14px; font-size: 15px; line-height: 1.5; }
     .corp-form { padding: 22px 18px; border-radius: 22px; }
@@ -517,9 +509,9 @@ const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/ful
   @media (max-width: 575px) {
     .corp-hero { height: calc(100svh - var(--site-header-height)); min-height: 590px; }
     .corp-hero__inner { grid-template-rows: 44% minmax(0,1fr); }
-    .corp-hero__art { padding-left: 16px; }
-    .corp-orbit { left: 8px; width: min(76vw, 310px); }
-    .corp-hero__art img { max-height: 44svh; }
+    .corp-hero__art { padding-left: 0; justify-content: center; }
+    .corp-orbit { left: 50%; transform: translateX(-50%); width: min(84vw, 340px); }
+    .corp-hero__art img { width: min(100vw, 440px); max-height: 50svh; }
     .corp-hero__copy { padding: 10px 20px 24px 32px; }
     .corp-hero h1 { font-size: 29px; }
     .corp-intro { font-size: 14px; }
