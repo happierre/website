@@ -60,6 +60,7 @@ const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/ful
       <div class="form-inner">
         <div class="form-copy">
           <h2>wish to contribute?</h2>
+          <div class="contribute-title-icon" aria-hidden="true">✦</div>
           <form
             name="contributor"
             method="POST"
@@ -226,5 +227,24 @@ const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/ful
     .legacy-contribute .form-copy h2 {
       font-size: var(--type-section) !important;
     }
+  }
+</style>
+
+
+<style>
+  /* Contributor sections: clear contrast and a simple mark beneath the form title. */
+  .legacy-contribute .feature-white .feature-copy h2 { color: var(--color-brand); }
+  .legacy-contribute .feature-blogging { background-image: linear-gradient(90deg, rgba(0,0,0,.28), rgba(0,0,0,.34)), url('https://raw.githubusercontent.com/srvplt/fullfill/main/images/is-blogging-still-relevant.jpg'); }
+  .legacy-contribute .feature-blogging .feature-copy-light h2 { color: #fff; }
+  .legacy-contribute .feature-clients .feature-copy h2 { color: #3d4268; }
+  .legacy-contribute .contribute-title-icon {
+    color: #fff;
+    font-size: 30px;
+    line-height: 1;
+    margin: -10px 0 24px;
+    text-align: center;
+  }
+  @media (min-width: 768px) {
+    .legacy-contribute .contribute-title-icon { text-align: left; }
   }
 </style>
