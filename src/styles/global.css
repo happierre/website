@@ -1396,7 +1396,9 @@ h6 {
   }
   .ll-heading-wrap {
     margin-top: 0 !important;
+    margin-bottom: 14px !important;
   }
+  .ll-pills { margin-top: 12px !important; }
 }
 
 /* Mobile comparison table: slimmer pinned feature column plus a persistent
@@ -1469,6 +1471,8 @@ h6 {
   .pom-heading {
     flex: 0 0 auto !important;
   }
+  .pom-card { margin-left: auto !important; margin-right: auto !important; }
+  .pom-day-labels, .pom-slot-row { width: 100%; max-width: 240px; margin-left: auto !important; margin-right: auto !important; }
   .pom-details {
     display: flex;
     flex: 1 1 auto;
@@ -1484,6 +1488,7 @@ h6 {
   .brain-cortex { justify-content: center !important; padding-top: 20px !important; padding-bottom: 20px !important; }
   .brain-cortex > .landing-container { width: 100%; flex: 0 0 auto; }
   .brain-cortex__grid { margin-top: 44px !important; }
+  .brain-cortex__title, .premium__title { position: relative !important; top: -30px !important; }
   .premium { justify-content: center !important; padding-top: 20px !important; padding-bottom: 20px !important; }
   .premium__inner { padding-top: 0 !important; }
   .premium__grid { margin-top: 30px !important; }
@@ -1491,7 +1496,7 @@ h6 {
   .have-everything__desc { margin-top: 27px !important; }
   .have-everything__content .btn-primary { margin-top: 34px !important; }
   .fun-section { background-color: #252653 !important; background-image: linear-gradient(135deg, #252653 0%, #34376c 100%) !important; background-attachment: scroll !important; }
-  .hf-grad { background: linear-gradient(90deg, #e3e5ff 0%, #cfd5ff 100%) !important; -webkit-background-clip: text !important; background-clip: text !important; }
+  .hf-grad { background: linear-gradient(90deg, #ae68f7 0%, #6a77ff 55%, #a9c9ff 100%) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; background-clip: text !important; }
 }
 @media (max-width: 575px) {
   .brain-cortex__grid { margin-top: 38px !important; }
