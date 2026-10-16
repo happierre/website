@@ -1,11 +1,11 @@
 body {
-  background-color: #ffffff !important;
+  background: linear-gradient(135deg, #f5f2ff 0%, #eef8ff 52%, #fff7f0 100%) fixed !important;
   margin: 0;
   padding: 0;
 }
 
 .blog-page {
-  background-color: #ffffff;
+  background: linear-gradient(135deg, #f5f2ff 0%, #eef8ff 52%, #fff7f0 100%);
   position: relative;
   width: 100%;
   font-family: var(--font-open-sans);
@@ -73,7 +73,7 @@ body {
 }
 
 .blog-list-section {
-  background-color: #ffffff;
+  background: transparent;
   position: relative;
   z-index: 10;
   padding: 96px var(--container-padding-desktop) 80px;
