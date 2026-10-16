@@ -1,7 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import happierreIcon from '../assets/images/FinalLogoShapeOnly.png';
+import happierreIcon from '../assets/images/2026.10.14. happierre-icon-white.png';
 
+const heartPatternSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="276.48" height="171.36" viewBox="0 0 276.48 171.36"><image href="${happierreIcon.src}" x="0" y="0" width="72" height="53.28" preserveAspectRatio="none" opacity=".12"/><image href="${happierreIcon.src}" x="138.24" y="0" width="72" height="53.28" preserveAspectRatio="none" opacity=".12"/><image href="${happierreIcon.src}" x="69.12" y="85.68" width="72" height="53.28" preserveAspectRatio="none" opacity=".12"/><image href="${happierreIcon.src}" x="207.36" y="85.68" width="72" height="53.28" preserveAspectRatio="none" opacity=".12"/></svg>`;
 const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/fullfill/main/images/${name}`;
 ---
 
@@ -12,7 +13,7 @@ const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/ful
   canonicalPath="/contribute/"
 >
   <div class="legacy-contribute">
-    <section class="hero" style={`--hero-pattern: url("${happierreIcon.src}")`}>
+    <section class="hero" style={`--hero-pattern: url("data:image/svg+xml,${encodeURIComponent(heartPatternSvg)}")`}>
       <div class="hero-inner">
         <div class="hero-phone"><img src={oldImage('01TopImagePhone.png')} alt="Happierre wellness app" /></div>
         <div class="hero-copy">
@@ -178,4 +179,14 @@ const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/ful
 
 
 
+
+  /* Contact-page heart mark pattern: H=72px, 1.92H horizontal pitch,
+     1.19H row pitch, alternate rows offset by 0.96H. */
+  .legacy-contribute .hero::before {
+    background-repeat: repeat;
+    background-size: 276.48px 171.36px;
+    background-position: center;
+    opacity: 1;
+    transform: rotate(-18deg) scale(1.4);
+  }
 </style>
