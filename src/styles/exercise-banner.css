@@ -157,3 +157,10 @@
     padding: 0 4px;
   }
 }
+
+
+/* Rotating hero: images change directly without a fade or flash. */
+.exercise-banner__bg--top,
+.exercise-banner__flash { display: none !important; }
+.exercise-banner__bg--bottom { transition: none !important; }
+.exercise-banner__label { transition: none !important; }
