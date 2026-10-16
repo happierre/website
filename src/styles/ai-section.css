@@ -223,3 +223,12 @@
   }
   .ai-section__image { order: 3; }
 }
+
+
+/* Animate Chat Now in sync with the left-hand heading and body copy. */
+.ai-section__chat-cta { opacity: 0; transform: translateX(calc(-50% - 300px)); transition: opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s; }
+.ai-section.ai-in .ai-section__chat-cta { opacity: 1; transform: translateX(-50%); }
+@media (max-width: 767px) {
+  .ai-section__chat-cta { transform: translateX(-300px); }
+  .ai-section.ai-in .ai-section__chat-cta { transform: translateX(0); }
+}
