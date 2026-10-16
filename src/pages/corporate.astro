@@ -1,12 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import happierreIcon from '../assets/images/FinalLogoShapeOnly.png';
+import happierreIcon from '../assets/images/2026.10.14. happierre-icon-white.png';
 import corpPhoneImage from '../assets/images/02.profilepage.png';
 import teamPhoto from '../assets/images/group-people-volunteering-foodbank-poor-people6-min.jpg';
 import learnIcon from '../assets/images/2222366-26491e6d.png';
 import supportIcon from '../assets/images/11031487-1c76bd0a.png';
 import connectIcon from '../assets/images/10303062-b214155b.png';
 import growIcon from '../assets/images/3234841-33a8600d.png';
+const heartPatternSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="276.48" height="171.36" viewBox="0 0 276.48 171.36"><image href="${happierreIcon.src}" x="0" y="0" width="72" height="53.28" preserveAspectRatio="none" opacity=".12"/><image href="${happierreIcon.src}" x="138.24" y="0" width="72" height="53.28" preserveAspectRatio="none" opacity=".12"/><image href="${happierreIcon.src}" x="69.12" y="85.68" width="72" height="53.28" preserveAspectRatio="none" opacity=".12"/><image href="${happierreIcon.src}" x="207.36" y="85.68" width="72" height="53.28" preserveAspectRatio="none" opacity=".12"/></svg>`;
 
 ---
 
@@ -16,7 +17,7 @@ import growIcon from '../assets/images/3234841-33a8600d.png';
   keywords="corporate wellness, corporate mental fitness, employee wellbeing, workplace stress, burnout prevention, mental fitness, Happierre corporate memberships"
   canonicalPath="/corporate/"
 >
-  <div class="corporate-page" style={`--hero-pattern: url("${happierreIcon.src}")`}>
+  <div class="corporate-page" style={`--hero-pattern: url("data:image/svg+xml,${encodeURIComponent(heartPatternSvg)}")`}>
     <section class="corp-hero">
       <div class="corp-hero__inner">
         <div class="corp-hero__art">
@@ -538,8 +539,10 @@ import growIcon from '../assets/images/3234841-33a8600d.png';
   .corp-hero::before {
     background-image: var(--hero-pattern);
     background-repeat: space;
-    background-size: 88px 88px;
+    background-size: 276.48px 171.36px;
+    background-repeat: repeat;
     background-position: center;
+    opacity: 1;
     transform: rotate(-18deg) scale(1.4);
   }
   .corp-button {
