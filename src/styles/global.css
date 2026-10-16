@@ -1,8 +1,20 @@
 :root {
-  --color-brand: #5e61d6;
-  --color-brand-hover: #4549d0;
+  /* Official Happierre gradient stops */
+  --stop-light-a: #BFA8F3;
+  --stop-light-b: #BDD6FF;
+  --stop-middle-a: #8A4BE1;
+  --stop-middle-b: #698CCF;
+  --stop-dark-a: #5118BA;
+  --stop-dark-b: #113890;
+
+  /* Gradient text: light on dark backgrounds, middle on light backgrounds */
+  --gradient-text-on-dark: linear-gradient(90deg, var(--stop-light-a) 0%, var(--stop-light-b) 100%);
+  --gradient-text-on-light: linear-gradient(90deg, var(--stop-middle-a) 0%, var(--stop-middle-b) 100%);
+
+  --color-brand: var(--stop-dark-a);
+  --color-brand-hover: color-mix(in srgb, var(--stop-dark-a) 85%, #000000);
   --color-bg-light: #ffffff;
-  --color-bg-tint: #a9c9ff;
+  --color-bg-tint: var(--stop-light-b);
   --color-text-dark: #111111;
   --color-text-body: #333333;
   --color-text-muted: #666666;
@@ -13,32 +25,32 @@
   --container-padding-mobile: 20px;
   --site-header-height: 80px;
 
-  /* Happierre gradient system */
-  --gradient-light: radial-gradient(circle at 0% 0%, #CAD0FB, transparent 75%), linear-gradient(225deg, #BDD6FF, #BFA8F3);
-  --gradient-middle: radial-gradient(circle at 0% 0%, #6C88DD, transparent 75%), linear-gradient(225deg, #698CCF, #8A4BE1);
-  --gradient-dark: radial-gradient(circle at 0% 0%, #2F45BA, transparent 75%), linear-gradient(225deg, #113890, #5118BA);
-  --gradient-super-dark: radial-gradient(circle at 0% 0%, #162F6F, transparent 75%), linear-gradient(225deg, #0B2462, #360568);
+  /* Brand gradients use only the official stops; the subtle glow is removed */
+  --gradient-light: linear-gradient(225deg, var(--stop-light-b), var(--stop-light-a));
+  --gradient-middle: linear-gradient(225deg, var(--stop-middle-b), var(--stop-middle-a));
+  --gradient-dark: linear-gradient(225deg, var(--stop-dark-b), var(--stop-dark-a));
+  --gradient-super-dark: linear-gradient(225deg, var(--stop-dark-b), var(--stop-dark-a));
 
-  /* Landing page extended palette */
-  --color-brand-light: #b8bfff;
-  --color-brand-pale: #d8dbff;
-  --color-brand-bg: #eceeff;
-  --color-gradient-start: #949bff;
-  --color-gradient-end: #99afff;
-  --color-dark-purple: #27113d;
+  /* Legacy semantic aliases retained for existing page styles */
+  --color-brand-light: var(--stop-light-a);
+  --color-brand-pale: rgba(191, 168, 243, 0.18);
+  --color-brand-bg: rgba(189, 214, 255, 0.22);
+  --color-gradient-start: var(--stop-middle-a);
+  --color-gradient-end: var(--stop-middle-b);
+  --color-dark-purple: var(--stop-dark-b);
   --color-accent-coral: #e05555;
-  --color-lavender: #c5caff;
-  --color-section-purple: #7b7edd;
+  --color-lavender: var(--stop-light-a);
+  --color-section-purple: var(--stop-middle-a);
 
   --color-white: #ffffff;
-  --color-brand-mid: #657ff9;
-  --color-purple-deep: #5f42c5;
-  --gradient-hero: linear-gradient(to right, rgba(169, 201, 255, 1), rgba(189, 197, 254, 1));
-  --gradient-header: linear-gradient(rgb(148, 155, 255), rgb(153, 175, 255));
-  --gradient-dark-overlay: linear-gradient(160deg, rgba(15, 8, 40, 0.92) 0%, rgba(30, 20, 80, 0.88) 45%, rgba(20, 30, 90, 0.92) 100%);
+  --color-brand-mid: var(--stop-middle-b);
+  --color-purple-deep: var(--stop-middle-a);
+  --gradient-hero: linear-gradient(to right, var(--stop-light-b), var(--stop-light-a));
+  --gradient-header: linear-gradient(var(--stop-middle-a), var(--stop-middle-b));
+  --gradient-dark-overlay: linear-gradient(160deg, rgba(17, 56, 144, 0.94) 0%, rgba(81, 24, 186, 0.90) 55%, rgba(17, 56, 144, 0.94) 100%);
   --color-phone-black: #000000;
   --color-phone-border: #1a1a1a;
-  --color-brand-light-end: #a4b4f8;
+  --color-brand-light-end: var(--stop-light-b);
 
   /* Fonts */
   --font-open-sans: 'Open Sans', sans-serif;
@@ -47,8 +59,8 @@
   /* mapped to Urbanist like original site */
 
   /* Button */
-  --btn-bg: #5e61d6;
-  --btn-bg-hover: #4a4dc2;
+  --btn-bg: var(--color-brand);
+  --btn-bg-hover: var(--color-brand-hover);
   --btn-color: #ffffff;
   --btn-padding: 18px 45px;
   --btn-radius: 50px;
@@ -56,7 +68,6 @@
   --btn-font-weight: 700;
   --btn-letter-spacing: 1px;
 }
-
 *,
 *::before,
 *::after {
@@ -252,7 +263,7 @@ h6 {
 }
 
 .btn-coral {
-  background: #5968c0;
+  background: var(--color-brand);
 }
 
 .btn-coral:hover {
@@ -1226,11 +1237,11 @@ h6 {
   z-index: 3;
   width: 156px !important;
   min-width: 156px !important;
-  background: #f8f8ff;
+  background: rgba(189, 214, 255, 0.12);
 }
 .ls-comparison thead th:first-child {
   z-index: 5;
-  background: linear-gradient(135deg, #eff0ff, #e6edff);
+  background: linear-gradient(135deg, rgba(191, 168, 243, 0.22), rgba(189, 214, 255, 0.28));
 }
 .ls-comparison thead th:nth-child(2),
 .ls-comparison tbody td:nth-child(2) {
@@ -1238,11 +1249,11 @@ h6 {
   left: 156px;
   z-index: 2;
   min-width: 78px;
-  background: #f0f1ff;
+  background: rgba(189, 214, 255, 0.16);
 }
 .ls-comparison thead th:nth-child(2) {
   z-index: 4;
-  background: linear-gradient(135deg, #e1e4ff, #d8e3ff);
+  background: linear-gradient(135deg, rgba(191, 168, 243, 0.28), rgba(189, 214, 255, 0.36));
 }
 .ls-comparison .yes,
 .ls-comparison .partial {
@@ -1260,12 +1271,12 @@ h6 {
   vertical-align: middle;
 }
 .ls-comparison .yes::before {
-  background: #5e61d6;
-  border: 1.5px solid #5e61d6;
+  background: var(--color-brand);
+  border: 1.5px solid var(--color-brand);
 }
 .ls-comparison .partial::before {
   background: transparent;
-  border: 1.5px solid #9699db;
+  border: 1.5px solid var(--stop-middle-b);
 }
 @media (min-width: 768px) {
   .ls-container {
@@ -1418,8 +1429,8 @@ h6 {
     gap: 6px;
     padding: 5px 10px;
     border-radius: 999px;
-    background: rgba(94, 97, 214, 0.12);
-    color: #4549b5;
+    background: rgba(191, 168, 243, 0.22);
+    color: var(--stop-dark-a);
     font-size: 12px;
     font-weight: 700;
     line-height: 1;
@@ -1495,8 +1506,8 @@ h6 {
   .stat-card { margin-top: 0 !important; }
   .have-everything__desc { margin-top: 27px !important; }
   .have-everything__content .btn-primary { margin-top: 34px !important; }
-  .fun-section { background-color: #252653 !important; background-image: linear-gradient(135deg, #252653 0%, #34376c 100%) !important; background-attachment: scroll !important; }
-  .hf-grad { background: linear-gradient(90deg, #ae68f7 0%, #6a77ff 55%, #a9c9ff 100%) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; background-clip: text !important; }
+  .fun-section { background-color: var(--stop-dark-b) !important; background-image: var(--gradient-dark) !important; background-attachment: scroll !important; }
+  .hf-grad { background: var(--gradient-text-on-light) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; background-clip: text !important; }
 }
 @media (max-width: 575px) {
   .brain-cortex__grid { margin-top: 38px !important; }
