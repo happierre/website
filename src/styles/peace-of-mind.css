@@ -336,3 +336,20 @@
     margin-right: auto !important;
   }
 }
+
+
+/* Restore the original solid two-tone Peace of Mind heading. */
+.pom-heading {
+  background: none !important;
+  -webkit-text-fill-color: var(--color-text-dark) !important;
+  color: var(--color-text-dark) !important;
+  text-shadow: 0 0 40px rgba(95, 66, 197, 0.3) !important;
+}
+.pom-heading span {
+  -webkit-text-fill-color: var(--color-purple-deep) !important;
+  color: var(--color-purple-deep) !important;
+}
+.pom-card { transform: translateY(-12px); }
+@media (max-width: 767px) {
+  .pom-card { transform: translateY(-8px); }
+}
