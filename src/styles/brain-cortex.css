@@ -248,3 +248,12 @@
   .brain-cortex__grid { margin-top: 44px !important; }
 }
 @media (max-width: 575px) { .brain-cortex__grid { margin-top: 38px !important; } }
+
+
+/* Landing-page 4C refinements: match the Happiness Compounds title and nav gradient. */
+.brain-cortex__title {
+  background: none !important;
+  -webkit-text-fill-color: var(--color-brand) !important;
+  color: var(--color-brand) !important;
+}
+.cortex-card__icon { background: var(--gradient-middle) !important; }
