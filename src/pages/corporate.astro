@@ -22,25 +22,22 @@ import growIcon from '../assets/images/3234841-33a8600d.png';
           <img src={corpPhoneImage.src} alt="Happierre mental fitness app on a phone" />
         </div>
         <div class="corp-hero__copy">
-          <h1>help your team feel better, <span>at work and beyond.</span></h1>
-          <a class="corp-button" href="#enroll">GET IT FOR MY TEAM</a>
+          <h1>help your team feel better</h1>
+          <a class="corp-button" href="#enroll">start today</a>
         </div>
       </div>
     </section>
 
     <div class="page-sticky-wrapper">
-      <section class="corp-pressure">
+      <section class="corp-pressure" style={`--corp-pressure-image: url('${teamPhoto.src}')`}>
         <div class="corp-panel-inner corp-pressure__layout">
           <div class="corp-pressure__copy">
             <h2>work is changing.<br /><span>people need support.</span></h2>
             <p>Uncertainty, constant change, and pressure to keep up can make it harder to focus, connect, and recover. Supporting mental fitness helps people build the everyday skills to meet those moments.</p>
           </div>
-          <div class="corp-pressure__visual" style={`background-image: linear-gradient(rgba(0,0,0,.08), rgba(0,0,0,.08)), url(${teamPhoto.src})`}>
-            <img src={teamPhoto.src} alt="People coming together to support their community" loading="lazy" />
-            <div class="corp-pullquote">
-              <span class="corp-pullquote__mark">“</span>
-              <p>Happierre helped me build small habits that made stressful workdays feel more manageable.</p>
-            </div>
+          <div class="corp-pullquote">
+            <span class="corp-pullquote__mark">“</span>
+            <p>Happierre helped me build small habits that made stressful workdays feel more manageable.</p>
           </div>
           <div class="corp-pressure__chips" aria-label="Areas where teams may need support">
             <span>Stress &amp; recovery</span><span>Focus &amp; clarity</span><span>Resilience</span><span>Connection</span>
@@ -774,6 +771,62 @@ import growIcon from '../assets/images/3234841-33a8600d.png';
   /* Corporate hero and benefit cards use the same navigation gradient and crisp white iconography. */
   .corporate-page .corp-hero h1,
   .corporate-page .corp-hero h1 span { color: #fff !important; }
+
+  /* The work-is-changing panel follows the landing page's full-bleed
+     Have Everything treatment: photo fills the entire panel behind its content. */
+  .corporate-page .corp-pressure {
+    position: relative;
+    isolation: isolate;
+    background-image: var(--corp-pressure-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+  }
+  .corporate-page .corp-pressure::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(120deg, rgba(18, 28, 76, .82), rgba(43, 31, 94, .58));
+    pointer-events: none;
+  }
+  .corporate-page .corp-pressure__layout {
+    position: relative;
+    z-index: 1;
+    grid-template-columns: minmax(0, 1.15fr) minmax(240px, .75fr);
+    grid-template-rows: auto auto;
+    align-items: center;
+    gap: 28px 7%;
+  }
+  .corporate-page .corp-pressure__copy h2,
+  .corporate-page .corp-pressure__copy h2 span {
+    color: #fff !important;
+  }
+  .corporate-page .corp-pressure__copy > p:last-child {
+    color: rgba(255,255,255,.94) !important;
+  }
+  .corporate-page .corp-pressure__visual { display: none !important; }
+  .corporate-page .corp-pressure .corp-pullquote {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    max-width: 340px;
+    justify-self: end;
+    align-self: center;
+    border: 1px solid rgba(255,255,255,.4);
+    background: rgba(255,255,255,.16);
+    color: #fff;
+    box-shadow: 0 14px 35px rgba(0,0,0,.12);
+    backdrop-filter: blur(12px);
+  }
+  .corporate-page .corp-pressure .corp-pullquote__mark { color: #fff; }
+  .corporate-page .corp-pressure .corp-pullquote p { color: #fff; }
+  .corporate-page .corp-pressure__chips span {
+    border-color: rgba(255,255,255,.45);
+    background: rgba(255,255,255,.14);
+    color: #fff;
+  }
   .corporate-page .corp-pressure__visual {
     background-size: cover;
     background-position: center;
@@ -807,9 +860,15 @@ import growIcon from '../assets/images/3234841-33a8600d.png';
   }
   .corporate-page .corp-enroll__aside { display: none !important; }
   @media (max-width: 767px) {
-    .corporate-page .corp-pressure__visual {
-      background-size: cover;
-      background-position: center;
+    .corporate-page .corp-pressure__layout {
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-rows: auto auto auto;
+      gap: 16px;
+    }
+    .corporate-page .corp-pressure .corp-pullquote {
+      justify-self: start;
+      max-width: 100%;
+      margin: 0;
     }
     .corporate-page .corp-benefit__icon { margin-bottom: 12px; }
     .corporate-page .corp-offer__number,
