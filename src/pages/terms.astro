@@ -123,3 +123,28 @@ import Layout from '../layouts/Layout.astro';
     }
   }
 </style>
+
+<style>
+  .terms-section { color: var(--color-text-body); }
+  .terms-section h1 {
+    font-family: var(--font-urbanist);
+    font-size: var(--type-hero) !important;
+    line-height: 1.15;
+    color: var(--color-dark-purple);
+  }
+  .terms-section h2 {
+    font-family: var(--font-urbanist);
+    font-size: var(--type-card) !important;
+    line-height: 1.2;
+    color: var(--color-brand);
+  }
+  .terms-section p,
+  .terms-section li { font-size: var(--type-body) !important; line-height: 1.5; }
+  .terms-section a { color: var(--color-brand); }
+  @media (max-width: 767px) {
+    .terms-section h1 { font-size: var(--type-section) !important; }
+  }
+  @media (max-width: 575px) {
+    .terms-section h1 { font-size: var(--type-section) !important; }
+  }
+</style>
