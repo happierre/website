@@ -87,7 +87,7 @@
 .ll-sub {
   font-family: var(--font-urbanist);
   max-width: 520px;
-  margin: 0 auto;
+  margin: 16px auto 0;
   font-style: italic;
   font-weight: 400;
   opacity: 0.8;
