@@ -499,8 +499,8 @@ import growIcon from '../assets/images/3234841-33a8600d.png';
     .corp-benefit h3 { margin-bottom: 7px; font-size: 16px; }
     .corp-benefit > p:last-child { font-size: 11px; line-height: 1.35; }
     .corp-benefits__footnote { margin-top: 10px; font-size: 9px; }
-        .corp-enroll { min-height: 0; }
-    .corp-enroll__inner { grid-template-columns: minmax(0,1fr); gap: 24px; width: calc(100% - 36px); padding-block: 32px; }
+        .corp-enroll { min-height: calc(100svh - var(--site-header-height) - var(--footer-height, 100px)); }
+    .corp-enroll__inner { grid-template-columns: minmax(0,1fr); gap: 20px; width: calc(100% - 36px); padding-block: clamp(20px, 3vh, 30px); }
     .corp-enroll h2 { margin-bottom: 14px; font-size: 42px; }
     .corp-enroll__copy > p:not(.corp-eyebrow) { margin-bottom: 14px; font-size: 15px; line-height: 1.5; }
     .corp-form { padding: 22px 18px; border-radius: 22px; }
