@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import happierreIcon from '../assets/images/2026.10.14. happierre-icon-white.png';
 const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/fullfill/main/images/${name}`;
 ---
 
@@ -60,7 +61,7 @@ const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/ful
       <div class="form-inner">
         <div class="form-copy">
           <h2>wish to contribute?</h2>
-          <div class="contribute-title-icon" aria-hidden="true">✦</div>
+          <img class="contribute-title-icon" src={happierreIcon.src} alt="" aria-hidden="true" />
           <form
             name="contributor"
             method="POST"
@@ -238,13 +239,13 @@ const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/ful
   .legacy-contribute .feature-blogging .feature-copy-light h2 { color: #fff; }
   .legacy-contribute .feature-clients .feature-copy h2 { color: #3d4268; }
   .legacy-contribute .contribute-title-icon {
-    color: #fff;
-    font-size: 30px;
-    line-height: 1;
-    margin: -10px 0 24px;
-    text-align: center;
+    display: block;
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    margin: -10px auto 24px;
   }
   @media (min-width: 768px) {
-    .legacy-contribute .contribute-title-icon { text-align: left; }
+    .legacy-contribute .contribute-title-icon { margin-left: 0; margin-right: 0; }
   }
 </style>
