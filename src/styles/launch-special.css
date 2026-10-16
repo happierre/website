@@ -178,3 +178,35 @@
     font-size: 12px;
   }
 }
+
+
+/* Comparison refinements: lift the heading and place the swipe hint over the table edge. */
+.ls-container { gap: 16px; }
+@media (max-width: 767px) {
+  .ls-container { padding-top: 18px !important; gap: 12px !important; }
+  .ls-heading { transform: translateY(-10px); }
+  .ls-table-frame { padding-top: 0 !important; }
+  .ls-scroll-cue {
+    top: 50% !important;
+    right: 12px !important;
+    transform: translateY(-50%);
+    z-index: 20;
+  }
+  .ls-comparison thead th:first-child,
+  .ls-comparison tbody th {
+    position: sticky;
+    left: 0;
+    z-index: 5;
+    background: #fff !important;
+  }
+  .ls-comparison tbody th { background: #f8f8ff !important; }
+  .ls-comparison thead th:first-child { background: #eff0ff !important; }
+  .ls-comparison thead th:nth-child(2),
+  .ls-comparison tbody td:nth-child(2) {
+    position: sticky;
+    left: 104px !important;
+    z-index: 4;
+    background: #fff !important;
+  }
+  .ls-comparison thead th:nth-child(2) { background: #e6edff !important; }
+}
