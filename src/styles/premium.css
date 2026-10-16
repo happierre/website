@@ -170,3 +170,12 @@
   .stat-card { margin-top: 0 !important; }
 }
 @media (max-width: 575px) { .premium__grid { margin-top: 24px !important; } }
+
+
+/* Keep the title white and use the top-navigation gradient on all four content cards. */
+.premium__title {
+  background: none !important;
+  -webkit-text-fill-color: #fff !important;
+  color: #fff !important;
+}
+.premium .stat-card { background: var(--gradient-middle) !important; }
