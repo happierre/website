@@ -180,11 +180,11 @@
 @media (max-width: 575px) {
   .site-footer__inner {
     min-height: 101px;
-    padding: 10px 16px 4px;
+    padding: 10px 16px 0;
   }
 
   .site-footer__grid {
-    min-height: 87px;
+    min-height: 91px;
     grid-template-rows: minmax(0, 1fr) auto;
     align-content: stretch;
     gap: 8px 16px;
