@@ -255,3 +255,19 @@
   }
   .ai-section__layout { gap: 14px !important; }
 }
+
+
+/* Further reduce Pierre artwork, especially on narrow mobile screens. */
+@media (max-width: 767px) {
+  .ai-section__book-img {
+    width: min(100%, 300px) !important;
+    max-width: 76vw !important;
+    margin-inline: auto !important;
+  }
+}
+@media (max-width: 420px) {
+  .ai-section__book-img {
+    width: min(100%, 260px) !important;
+    max-width: 68vw !important;
+  }
+}
