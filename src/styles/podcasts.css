@@ -381,3 +381,12 @@
   .ll-heading-wrap { margin-bottom: 8px !important; }
   .ll-pills { margin-top: 12px !important; padding-bottom: 30px !important; }
 }
+
+
+/* Keep “hand-picked…” visually attached to the card stack on mobile. */
+@media (max-width: 767px) {
+  .ll-heading-wrap { margin-bottom: 4px !important; }
+  .ll-heading { margin-bottom: 8px !important; }
+  .ll-sub { margin-top: 8px !important; margin-bottom: 0 !important; }
+  .ll-stack-outer { margin-top: 0 !important; }
+}
