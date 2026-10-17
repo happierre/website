@@ -103,4 +103,25 @@ const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/ful
   @media (max-width: 575px) {
     .legacy-contact .contact-copy h2 { font-size: var(--type-section) !important; }
   }
+
+  /* Match the contributor form's browser-autofill treatment. */
+  .legacy-contact .legacy-form input:not([type='hidden']):autofill,
+  .legacy-contact .legacy-form textarea:autofill,
+  .legacy-contact .legacy-form input:not([type='hidden']):-webkit-autofill,
+  .legacy-contact .legacy-form textarea:-webkit-autofill,
+  .legacy-contact .legacy-form input:not([type='hidden']):-webkit-autofill:hover,
+  .legacy-contact .legacy-form input:not([type='hidden']):-webkit-autofill:focus,
+  .legacy-contact .legacy-form textarea:-webkit-autofill:hover,
+  .legacy-contact .legacy-form textarea:-webkit-autofill:focus {
+    -webkit-text-fill-color: #fff !important;
+    caret-color: #fff;
+    background-color: transparent !important;
+    border-bottom-color: rgba(255,255,255,.75) !important;
+    box-shadow: 0 0 0 1000px transparent inset !important;
+    transition: background-color 99999s ease-out 0s;
+  }
+  .legacy-contact .legacy-form input:not([type='hidden']):focus,
+  .legacy-contact .legacy-form textarea:focus {
+    color: #fff;
+  }
 </style>
