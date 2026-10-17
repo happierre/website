@@ -4,22 +4,36 @@ import '../styles/launch-special.css';
 
 <section class="ls-section" id="sec-launch-special" aria-labelledby="ls-heading">
   <h2 class="ls-visually-hidden" id="ls-heading">Happierre in action</h2>
-  <div class="ls-video-frame">
-    <iframe
-      class="ls-video ls-video--mobile"
-      src="https://www.youtube-nocookie.com/embed/InRmhsLv2NQ?autoplay=1&mute=1&playsinline=1&controls=1&rel=0"
-      title="Happierre mobile app video"
-      allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-    ></iframe>
-    <iframe
-      class="ls-video ls-video--desktop"
-      src="https://www.youtube-nocookie.com/embed/HCBZhlPYVIM?autoplay=1&mute=1&playsinline=1&controls=1&rel=0"
-      title="Happierre desktop app video"
-      allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-    ></iframe>
-  </div>
+  <div class="ls-video-frame" id="ls-video-frame"></div>
 </section>
+
+<script>
+  const frame = document.querySelector('#ls-video-frame');
+  if (frame) {
+    const mobileQuery = window.matchMedia('(max-width: 767px)');
+    const renderVideo = () => {
+      const isMobile = mobileQuery.matches;
+      const videoId = isMobile ? 'InRmhsLv2NQ' : 'HCBZhlPYVIM';
+      const title = isMobile ? 'Happierre mobile app video' : 'Happierre desktop app video';
+      const current = frame.querySelector('iframe');
+      if (current?.dataset.videoId === videoId) return;
+
+      const iframe = document.createElement('iframe');
+      iframe.className = 'ls-video';
+      iframe.dataset.videoId = videoId;
+      iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&mute=1&playsinline=1&controls=1&rel=0`;
+      iframe.title = title;
+      iframe.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+      iframe.allowFullscreen = true;
+      frame.replaceChildren(iframe);
+    };
+
+    renderVideo();
+    if (mobileQuery.addEventListener) {
+      mobileQuery.addEventListener('change', renderVideo);
+    } else {
+      mobileQuery.addListener(renderVideo);
+    }
+  }
+</script>
