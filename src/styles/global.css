@@ -1646,3 +1646,13 @@ main > section:not(.corp-hero):not(.legacy-contact .contact-main) .container > h
   -webkit-text-fill-color: var(--color-purple-deep) !important;
   color: var(--color-purple-deep) !important;
 }
+
+
+/* Final mobile spacing pass: avoid older shared rules pushing podcast cards down. */
+@media (max-width: 767px) {
+  .hf-container { padding-top: 0 !important; }
+  .ll-heading-wrap { margin-bottom: 4px !important; }
+  .ll-heading { margin-bottom: 8px !important; }
+  .ll-sub { margin-top: 8px !important; margin-bottom: 0 !important; }
+  .ll-stack-outer { margin-top: 0 !important; }
+}
