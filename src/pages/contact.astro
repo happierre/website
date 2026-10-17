@@ -113,11 +113,15 @@ const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/ful
   .legacy-contact .legacy-form input:not([type='hidden']):-webkit-autofill:focus,
   .legacy-contact .legacy-form textarea:-webkit-autofill:hover,
   .legacy-contact .legacy-form textarea:-webkit-autofill:focus {
+    color: #fff !important;
     -webkit-text-fill-color: #fff !important;
-    caret-color: #fff;
-    background-color: transparent !important;
+    caret-color: #fff !important;
+    background-color: #7c8cff !important;
+    background-image: none !important;
     border-bottom-color: rgba(255,255,255,.75) !important;
-    box-shadow: 0 0 0 1000px transparent inset !important;
+    -webkit-box-shadow: 0 0 0 1000px #7c8cff inset !important;
+    box-shadow: 0 0 0 1000px #7c8cff inset !important;
+    -webkit-background-clip: padding-box !important;
     transition: background-color 99999s ease-out 0s;
   }
   .legacy-contact .legacy-form input:not([type='hidden']):focus,
