@@ -274,3 +274,21 @@
 /* A quieter headline gradient and a clean, uncluttered section background. */
 .fun-section { background-color: #252653; background-image: linear-gradient(135deg, #252653 0%, #34376c 100%) !important; background-attachment: scroll; }
 .hf-grad { background: linear-gradient(90deg, #ae68f7 0%, #6a77ff 55%, #a9c9ff 100%) !important; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+
+/* Mobile composition: centre the headline, copy and phone as one balanced group. */
+@media (max-width: 767px) {
+  .fun-section {
+    min-height: 100svh !important;
+    padding: 20px 16px !important;
+    align-items: center !important;
+  }
+  .hf-container {
+    min-height: calc(100svh - 40px);
+    justify-content: center !important;
+    padding-top: 0 !important;
+    gap: 20px !important;
+  }
+  .hf-heading-group { gap: 10px !important; }
+  .hf-phone-area { flex: 0 0 auto; }
+}
