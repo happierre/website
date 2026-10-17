@@ -284,3 +284,14 @@ body.menu-open .site-header__mobile-panel,
 @media (max-width: 360px) {
   .site-header__logo img { width: 118px; max-width: 100%; }
 }
+
+
+/* The app download link belongs only in the mobile hamburger menu. */
+.site-header__links .site-header__mobile-only {
+  display: none !important;
+}
+@media (max-width: 939px) {
+  .site-header__mobile-links .site-header__mobile-only {
+    display: list-item !important;
+  }
+}
