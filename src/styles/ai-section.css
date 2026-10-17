@@ -1,19 +1,22 @@
 .ai-section {
-  background: var(--color-bg-light);
+  position: relative;
   display: flex;
   align-items: center;
+  background: var(--color-bg-light);
   overflow: visible;
+  padding-bottom: 104px;
 }
 
 .ai-section__layout {
   display: flex;
   align-items: center;
   width: 100%;
+  min-width: 0;
   padding: 24px 0;
   gap: 40px;
 }
 
-/* ANIMATION STATES */
+/* Entrance animations */
 .ai-animate-left {
   opacity: 0;
   transform: translateX(-300px);
@@ -32,62 +35,77 @@
   transform: translateX(0);
 }
 
-/* LEFT: text content */
+/* Copy */
 .ai-section__content {
-  flex: 1;
+  flex: 1 1 0;
+  min-width: 0;
   padding: 30px 30px 30px 27px;
   padding-top: 93px;
   text-align: left;
 }
 
 .ai-section__title {
+  margin: 0;
   font-family: var(--font-urbanist);
   font-size: 36px;
   font-weight: 700;
-  color: var(--color-brand-mid);
   line-height: 1.1;
-  margin: 0;
+  color: var(--color-brand-mid);
 }
 
 .ai-section__desc {
+  margin: 58px 0 0;
   font-family: var(--font-urbanist);
   font-size: 18px;
   font-weight: 400;
   line-height: 1.4;
   color: var(--color-brand);
-  margin: 58px 0 0 0;
 }
 
-/* section-specific margin only — styling comes from global .btn-primary */
 .ai-section__content .btn-primary {
   margin-top: 69px;
+  display: none;
 }
 
-/* RIGHT: book image */
+/* Pierre artwork: preserve the source aspect ratio and fit within its column. */
 .ai-section__image {
-  flex: 0 0 auto;
   display: flex;
+  flex: 0 1 46%;
   align-items: center;
   justify-content: center;
+  min-width: 0;
+  max-width: 46%;
 }
 
 .ai-section__book-img {
-  width: 892px;
-  height: 1086px;
-  object-fit: contain;
   display: block;
-  margin: 3px auto -9px;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+/* Chat Now placement and entrance animation */
+.ai-section__chat-cta {
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  bottom: 28px;
+  margin: 0 !important;
+  opacity: 0;
+  transform: translateX(calc(-50% - 300px));
+  transition: opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s;
+}
+
+.ai-section.ai-in .ai-section__chat-cta {
+  opacity: 1;
+  transform: translateX(-50%);
 }
 
 @media (max-width: 1199px) {
   .ai-section__content {
     padding-top: 60px;
-  }
-
-  .ai-section__book-img {
-    width: 720px;
-    max-width: 52vw;
-    height: auto;
   }
 }
 
@@ -98,6 +116,7 @@
   }
 
   .ai-section__content {
+    flex: 0 0 auto;
     width: 100%;
     padding-top: 40px;
     padding-left: 0;
@@ -112,48 +131,34 @@
     margin-top: 30px;
   }
 
-  .ai-btn {
-    margin-top: 40px;
-  }
-
   .ai-section__image {
+    flex: 0 0 auto;
     width: 100%;
+    max-width: 100%;
   }
 
   .ai-section__book-img {
-    width: 600px;
-    max-width: 80vw;
-    height: auto;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 420px;
   }
 }
 
 @media (max-width: 767px) {
   .ai-section {
     min-height: auto;
-    padding: 40px 0;
+    padding: 40px 0 !important;
+    padding-bottom: 40px !important;
+    flex-direction: column;
   }
 
-  .ai-section__title {
-    font-size: 28px;
-    padding-top: 0;
-    margin-top: 0;
-    line-height: 1.15;
-  }
-
-  .ai-section__desc {
-    font-size: 18px;
-    margin-top: 24px;
-  }
-}
-
-@media (max-width: 575px) {
-  .ai-section {
-    padding: 32px 0;
+  .ai-section__layout {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
   }
 
   .ai-section__content {
-    width: 100%;
+    order: 1 !important;
     padding: 24px 20px 0;
     align-self: stretch;
     text-align: left;
@@ -162,159 +167,74 @@
   .ai-section__title {
     width: 100%;
     max-width: 340px;
-    font-size: 24px;
-    line-height: 1.15;
-    padding-top: 0;
     margin: 0;
+    padding-top: 0;
+    font-size: 28px;
+    line-height: 1.15;
     text-align: left;
   }
 
   .ai-section__desc {
-    font-size: 16px;
-    margin-top: 18px;
+    margin-top: 24px;
+    font-size: 18px;
   }
 
-  .ai-btn {
-    margin-top: 28px;
-    padding: 12px 28px;
-  }
-
-  .ai-section__book-img {
-    width: 526px;
-    max-width: 86vw;
-  }
-}
-
-/* Chat CTA is anchored to the bottom centre of the AI panel. */
-.ai-section { position: relative; padding-bottom: 104px; }
-.ai-section__content .btn-primary { display: none; }
-.ai-section__chat-cta {
-  position: absolute;
-  left: 50%;
-  bottom: 28px;
-  transform: translateX(-50%);
-  margin: 0 !important;
-  z-index: 5;
-}
-@media (max-width: 767px) {
-  .ai-section {
-    padding-bottom: 40px !important;
-    flex-direction: column;
-  }
-  .ai-section__layout {
-    display: flex;
-    flex-direction: column;
-  }
   .ai-section__chat-cta {
     position: relative;
     left: auto;
     bottom: auto;
-    transform: none;
-    align-self: center;
-    order: 2;
-    margin: 0 0 8px !important;
-  }
-  .ai-section__book-img {
-    width: 620px !important;
-    max-width: 128vw !important;
-    height: auto !important;
-    margin-left: -14vw !important;
-    margin-right: -14vw !important;
-  }
-  .ai-section__image { order: 3; }
-}
-
-
-/* Animate Chat Now in sync with the left-hand heading and body copy. */
-.ai-section__chat-cta { opacity: 0; transform: translateX(calc(-50% - 300px)); transition: opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s; }
-.ai-section.ai-in .ai-section__chat-cta { opacity: 1; transform: translateX(-50%); }
-@media (max-width: 767px) {
-  .ai-section__chat-cta { transform: translateX(-300px); }
-  .ai-section.ai-in .ai-section__chat-cta { transform: translateX(0); }
-}
-
-
-/* Mobile order: title and copy first, Chat Now second, Pierre artwork third. */
-@media (max-width: 767px) {
-  .ai-section__content { order: 1 !important; }
-  .ai-section__chat-cta {
     order: 2 !important;
     align-self: center !important;
     margin: 4px 0 0 !important;
+    transform: translateX(-300px);
   }
+
+  .ai-section.ai-in .ai-section__chat-cta {
+    transform: translateX(0);
+  }
+
   .ai-section__image {
     order: 3 !important;
-    width: 100% !important;
-    overflow: hidden;
-  }
-  .ai-section__book-img {
-    width: min(100%, 390px) !important;
-    max-width: 90vw !important;
-    height: auto !important;
-    margin: 0 auto !important;
-  }
-  .ai-section__layout { gap: 14px !important; }
-}
-
-
-/* Further reduce Pierre artwork, especially on narrow mobile screens. */
-@media (max-width: 767px) {
-  .ai-section__book-img {
-    width: min(100%, 300px) !important;
-    max-width: 76vw !important;
-    margin-inline: auto !important;
-  }
-}
-@media (max-width: 420px) {
-  .ai-section__book-img {
-    width: min(100%, 260px) !important;
-    max-width: 68vw !important;
-  }
-}
-
-
-/* Keep the complete Pierre artwork inside the Ask Pierre panel at every size. */
-.ai-section__layout {
-  min-width: 0;
-}
-.ai-section__image {
-  flex: 0 1 48%;
-  min-width: 0;
-  max-width: 48%;
-  overflow: visible;
-}
-.ai-section__book-img {
-  display: block;
-  width: min(100%, 520px) !important;
-  max-width: 100% !important;
-  height: auto !important;
-  object-fit: contain !important;
-  margin: 0 auto !important;
-}
-@media (max-width: 991px) {
-  .ai-section__image {
-    flex: 0 1 auto;
     width: 100%;
     max-width: 100%;
+    min-width: 0;
+    overflow: visible;
   }
+
   .ai-section__book-img {
-    width: min(100%, 420px) !important;
-    max-width: 100% !important;
-    height: auto !important;
-    margin: 0 auto !important;
+    width: 100%;
+    max-width: min(390px, 100%);
+    height: auto;
+    margin: 0 auto;
   }
 }
-@media (max-width: 767px) {
-  .ai-section__image {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow: visible !important;
+
+@media (max-width: 575px) {
+  .ai-section {
+    padding: 32px 0 !important;
   }
+
+  .ai-section__content {
+    padding: 24px 16px 0;
+  }
+
+  .ai-section__title {
+    font-size: 24px;
+    max-width: 340px;
+  }
+
+  .ai-section__desc {
+    margin-top: 18px;
+    font-size: 16px;
+  }
+
   .ai-section__book-img {
-    width: min(100%, 390px) !important;
-    max-width: 100% !important;
-    height: auto !important;
-    object-fit: contain !important;
-    margin: 0 auto !important;
+    max-width: min(300px, 100%);
+  }
+}
+
+@media (max-width: 420px) {
+  .ai-section__book-img {
+    max-width: min(260px, 100%);
   }
 }
