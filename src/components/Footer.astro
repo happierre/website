@@ -2,6 +2,7 @@
 import "../styles/footer.css";
 import { Image } from "astro:assets";
 import logo from "../assets/images/2026.10.14 happierre-wordmark-white.png";
+import happierreIcon from "../assets/images/2026.10.14. happierre-icon-white.png";
 import facebookIcon from "../assets/images/facebook-new.png";
 import instagramIcon from "../assets/images/instagram-new--v2.png";
 
@@ -20,7 +21,8 @@ const currentYear = new Date().getFullYear();
       </div>
 
       <div class="site-footer__logo">
-        <a href="/">
+        <a href="/" aria-label="Happierre home">
+          <Image src={happierreIcon} alt="" width={happierreIcon.width} height={happierreIcon.height} />
           <Image src={logo} alt="Happierre" width={logo.width} height={logo.height} />
         </a>
       </div>
