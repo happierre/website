@@ -266,3 +266,28 @@ const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/ful
     color: var(--color-brand) !important;
   }
 </style>
+
+
+<style>
+  /* Keep browser autofill from replacing the transparent contributor form fields
+     with the browser's default white background and dark text. */
+  .legacy-contribute .legacy-form input:not([type='hidden']):autofill,
+  .legacy-contribute .legacy-form textarea:autofill,
+  .legacy-contribute .legacy-form input:not([type='hidden']):-webkit-autofill,
+  .legacy-contribute .legacy-form textarea:-webkit-autofill,
+  .legacy-contribute .legacy-form input:not([type='hidden']):-webkit-autofill:hover,
+  .legacy-contribute .legacy-form input:not([type='hidden']):-webkit-autofill:focus,
+  .legacy-contribute .legacy-form textarea:-webkit-autofill:hover,
+  .legacy-contribute .legacy-form textarea:-webkit-autofill:focus {
+    -webkit-text-fill-color: #fff !important;
+    caret-color: #fff;
+    background-color: transparent !important;
+    border-bottom-color: rgba(255,255,255,.75) !important;
+    box-shadow: 0 0 0 1000px transparent inset !important;
+    transition: background-color 99999s ease-out 0s;
+  }
+  .legacy-contribute .legacy-form input:not([type='hidden']):focus,
+  .legacy-contribute .legacy-form textarea:focus {
+    color: #fff;
+  }
+</style>
