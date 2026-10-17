@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import corpPhoneImage from '../assets/images/02.profilepage.png';
-import teamPhoto from '../assets/images/group-people-volunteering-foodbank-poor-people6-min.jpg';
+const teamPhotoUrl = 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=2400&q=85';
 import learnIcon from '../assets/images/2222366-26491e6d.png';
 import supportIcon from '../assets/images/11031487-1c76bd0a.png';
 import connectIcon from '../assets/images/10303062-b214155b.png';
@@ -23,14 +23,14 @@ import growIcon from '../assets/images/3234841-33a8600d.png';
         </div>
         <div class="corp-hero__copy">
           <h1>help your team feel better</h1>
-          <a class="corp-button" href="#enroll">start today</a>
+          <a class="corp-button" href="#enroll">GET IT FOR MY TEAM</a>
         </div>
       </div>
     </section>
 
     <div class="page-sticky-wrapper corp-pressure-sticky-wrapper">
       <section class="corp-pressure">
-        <div class="corp-pressure__bg" aria-hidden="true"><img src={teamPhoto.src} alt="" /></div>
+        <div class="corp-pressure__bg" aria-hidden="true"><img src={teamPhotoUrl} alt="People working together at desks in a modern office" /></div>
         <div class="corp-panel-inner corp-pressure__layout">
           <div class="corp-pressure__copy">
             <h2>work is changing.<br /><span>people need support.</span></h2>
@@ -51,13 +51,12 @@ import growIcon from '../assets/images/3234841-33a8600d.png';
       <section class="corp-offer">
         <div class="corp-panel-inner corp-offer__layout">
           <div class="corp-offer__copy">
-            <h2>make wellbeing<br /><span>part of the everyday.</span></h2>
+            <h2>add happierre to your<br /><span>corporate wellness plan.</span></h2>
             <p>Happierre brings bite-sized guidance and practical exercises into one approachable app, so people can make space for their mental fitness whenever it fits their day.</p>
           </div>
           <div class="corp-offer__card">
             <p class="corp-offer__label">INTRODUCTORY OFFER</p>
-            <p class="corp-offer__number">12 months</p>
-             <p class="corp-offer__free">free</p>
+            <p class="corp-offer__number">12 months free</p>
             <div class="corp-offer__rule"></div>
             <p class="corp-offer__detail">For 200 employees</p>
             <a class="corp-button" href="#enroll">CLAIM NOW</a>
@@ -101,7 +100,7 @@ import growIcon from '../assets/images/3234841-33a8600d.png';
     <section class="corp-enroll" id="enroll">
       <div class="corp-enroll__inner">
         <div class="corp-enroll__copy">
-          <h2>let’s talk</h2>
+          <h2>let’s connect</h2>
           
         </div>
         <form
@@ -899,5 +898,27 @@ import growIcon from '../assets/images/3234841-33a8600d.png';
     .corporate-page .corp-pressure__layout { height: auto; padding-top: 32px; padding-bottom: 28px; grid-template-rows: auto auto auto; }
     .corporate-page .corp-pressure__chips { margin-top: 8px; }
     .corporate-page .corp-offer__card { transform: none; }
+  }
+</style>
+
+
+<style>
+  /* Final corporate-page refinements requested for the current pass. */
+  .corporate-page .corp-hero h1,
+  .corporate-page .corp-hero h1 span { color: #fff !important; }
+  .corporate-page .corp-button { text-transform: uppercase; }
+  .corporate-page .corp-offer__number {
+    white-space: nowrap;
+    font-size: clamp(21px, 2.2vw, 28px) !important;
+  }
+  .corporate-page .corp-offer__free { display: none; }
+  @media (max-width: 767px) {
+    .corporate-page .corp-offer__card {
+      justify-self: center;
+      align-self: center;
+      width: min(100%, 390px);
+      margin-inline: auto;
+    }
+    .corporate-page .corp-offer__number { font-size: 22px !important; }
   }
 </style>
