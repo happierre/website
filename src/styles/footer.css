@@ -21,7 +21,7 @@
   max-width: 1140px;
   min-height: 105px;
   margin: 0 auto;
-  padding: 28px 30px 0;
+  padding: 28px 30px 20px;
 }
 
 .site-footer__grid {
@@ -62,14 +62,14 @@
 .site-footer__logo img:first-child {
   display: block;
   flex: 0 0 auto;
-  width: 27px;
-  height: 27px;
+  width: 34px;
+  height: 34px;
   object-fit: contain;
 }
 
 .site-footer__logo img:last-child {
   display: block;
-  width: 79px;
+  width: 90px;
   height: auto;
 }
 
@@ -88,17 +88,20 @@
   line-height: 0;
 }
 
-.site-footer__social img {
+.site-footer__social svg {
   display: block;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  opacity: 0.7;
+  overflow: visible;
 }
 
 /* Large tablet */
 @media (max-width: 1199px) {
   .site-footer__inner {
     min-height: auto;
-    padding: 24px 25px 20px;
+    padding: 24px 25px 24px;
   }
 
   .site-footer__copyright p {
@@ -110,7 +113,7 @@
 @media (max-width: 991px) {
   .site-footer__inner {
     min-height: 97px;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
   }
 
   .site-footer__copyright p {
@@ -126,7 +129,7 @@
 @media (max-width: 767px) {
   .site-footer__inner {
     min-height: 130px;
-    padding: 20px 16px 24px;
+    padding: 20px 16px 28px;
   }
 
   .site-footer__grid {
@@ -166,21 +169,26 @@
   }
 
   .site-footer__logo img:first-child {
-    width: 30px;
-    height: 30px;
-    margin-top: 2px;
+    width: 38px;
+    height: 38px;
+    margin: 0;
   }
 
   .site-footer__logo img:last-child {
-    width: 79px;
-    margin-top: 2px;
+    width: 90px;
+    margin: 0;
+  }
+
+  .site-footer__social svg {
+    width: 21px;
+    height: 21px;
   }
 }
 
 @media (max-width: 575px) {
   .site-footer__inner {
     min-height: 101px;
-    padding: 10px 16px 4px;
+    padding: 10px 16px 18px;
   }
 
   .site-footer__grid {
@@ -192,7 +200,7 @@
 
   .site-footer__logo,
   .site-footer__social {
-    align-self: start;
+    align-self: center;
   }
 
   .site-footer__copyright {
@@ -206,8 +214,8 @@
   }
 
   .site-footer__logo img:first-child {
-    width: 33px;
-    height: 33px;
+    width: 38px;
+    height: 38px;
   }
 
   .site-footer__logo img:last-child {
@@ -215,12 +223,12 @@
   }
 
   .site-footer__social {
-    gap: 12px;
+    gap: 10px;
   }
 
-  .site-footer__social img {
-    width: 26px;
-    height: 26px;
+  .site-footer__social svg {
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -231,24 +239,11 @@
   }
 
   .site-footer__logo img:first-child {
-    width: 25px;
-    height: 25px;
+    width: 32px;
+    height: 32px;
   }
 
   .site-footer__logo img:last-child {
     width: 88px;
   }
-}
-
-
-/* Crisp outline social marks replace the filled image assets. */
-.site-footer__social svg {
-  display: block;
-  width: 26px;
-  height: 26px;
-  color: #fff;
-  overflow: visible;
-}
-@media (max-width: 575px) {
-  .site-footer__social svg { width: 28px; height: 28px; }
 }
