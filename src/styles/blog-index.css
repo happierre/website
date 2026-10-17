@@ -285,6 +285,11 @@
   font-size: var(--type-hero);
   line-height: 1.15;
   letter-spacing: 0;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  -webkit-text-fill-color: var(--color-brand) !important;
+  color: var(--color-brand) !important;
 }
 .blog-page .blog-hero__subtitle,
 .blog-page .blog-card__excerpt {
