@@ -21,7 +21,16 @@ import '../styles/launch-special.css';
       const iframe = document.createElement('iframe');
       iframe.className = 'ls-video';
       iframe.dataset.videoId = videoId;
-      iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&mute=1&playsinline=1&controls=1&rel=0`;
+      const params = new URLSearchParams({
+        autoplay: '1',
+        mute: '1',
+        playsinline: '1',
+        controls: '1',
+        rel: '0',
+        loop: '1',
+        playlist: videoId,
+      });
+      iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?${params.toString()}`;
       iframe.title = title;
       iframe.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
       iframe.referrerPolicy = 'strict-origin-when-cross-origin';
