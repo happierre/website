@@ -1598,14 +1598,23 @@ main > section:not(.corp-hero):not(.legacy-contact .contact-main) .container > h
   color: var(--title-color-on-white);
 }
 
-/* Dark/image-backed page heroes use the podcast title gradient when the backdrop is very dark. */
-.blog-page .blog-hero__title,
-.corp-hero__copy h1 {
+/* The blog hero uses the title gradient; the corporate hero uses solid white text. */
+.blog-page .blog-hero__title {
   background: var(--title-gradient-on-dark);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
+}
+
+/* Corporate hero is on a light background: keep the heading solid white. */
+.corporate-page .corp-hero__copy h1 {
+  background: none !important;
+  background-image: none !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  -webkit-text-fill-color: #fff !important;
+  color: #fff !important;
 }
 
 /* The contributor hero is image-backed but not a very-dark gradient panel: use white. */
