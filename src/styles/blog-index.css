@@ -1,27 +1,22 @@
-body {
-  background: linear-gradient(135deg, #f5f2ff 0%, #eef8ff 52%, #fff7f0 100%) fixed !important;
-  margin: 0;
-  padding: 0;
-}
-
 .blog-page {
-  background: linear-gradient(135deg, #f5f2ff 0%, #eef8ff 52%, #fff7f0 100%);
+  background: var(--gradient-light);
   position: relative;
   width: 100%;
-  font-family: var(--font-open-sans);
+  min-height: 100vh;
+  font-family: var(--font-urbanist);
 }
 
 .blog-hero {
-  color: #ffffff;
+  color: var(--color-brand);
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   text-align: center;
-  padding: 0 20px 56px;
+  padding: 64px 20px 72px;
   position: relative;
-  min-height: 380px;
+  min-height: 300px;
   overflow: hidden;
-  background-color: #ffffff;
+  background: var(--gradient-light);
 }
 
 .blog-hero__bg {
@@ -35,14 +30,7 @@ body {
   z-index: 1;
 }
 
-.blog-hero__overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(0deg,
-      rgba(14, 0, 0, 0.35),
-      rgba(17, 18, 38, 0.35));
-  z-index: 2;
-}
+.blog-hero__overlay { display: none; }
 
 .blog-hero__content {
   width: 100%;
@@ -53,8 +41,9 @@ body {
 }
 
 .blog-hero__title {
-  font-size: 40px;
-  font-weight: 600;
+  font-family: var(--font-urbanist);
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 750;
   margin: 0 0 20px;
   letter-spacing: -0.5px;
   text-transform: lowercase;
@@ -76,7 +65,7 @@ body {
   background: transparent;
   position: relative;
   z-index: 10;
-  padding: 96px var(--container-padding-desktop) 80px;
+  padding: 48px var(--container-padding-desktop) 80px;
   width: 100%;
   max-width: var(--container-max-width);
   margin: 0 auto;
@@ -164,8 +153,10 @@ body {
   flex-grow: 1;
   text-align: center;
   width: 100%;
-  background-color: #f5f5f5;
-  border: 1px solid #e5e5e5;
+  background-color: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+  box-shadow: 0 12px 30px rgba(55, 53, 132, 0.06);
   margin: 0;
   box-sizing: border-box;
 }
@@ -255,8 +246,8 @@ body {
 
 @media (max-width: 575px) {
   .blog-hero {
-    min-height: 280px;
-    padding-bottom: 40px;
+    min-height: 250px;
+    padding: 48px 20px 52px;
   }
 
   .blog-hero__title {
