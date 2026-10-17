@@ -291,3 +291,98 @@ const oldImage = (name: string) => `https://raw.githubusercontent.com/srvplt/ful
     color: #fff;
   }
 </style>
+
+
+
+<style>
+  /* Shared, restrained scroll-reveal motion matching the landing page's entrance effects. */
+  @media (prefers-reduced-motion: no-preference) {
+    html.page-motion-ready .page-motion-reveal:not(.page-motion-visible) {
+      opacity: 0;
+      transform: translate3d(0, 26px, 0);
+    }
+    html.page-motion-ready .page-motion-reveal.page-motion-visible {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+      transition: opacity 700ms cubic-bezier(.2,.7,.2,1), transform 700ms cubic-bezier(.2,.7,.2,1);
+      transition-delay: var(--motion-delay, 0ms);
+    }
+    html.page-motion-ready .page-motion-from-left:not(.page-motion-visible) {
+      transform: translate3d(-32px, 0, 0);
+    }
+    html.page-motion-ready .page-motion-from-right:not(.page-motion-visible) {
+      transform: translate3d(32px, 0, 0);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .page-motion-reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+  }
+</style>
+<script>
+  (() => {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reducedMotion || !('IntersectionObserver' in window)) return;
+
+    const root = document.documentElement;
+    const page = document.querySelector('.legacy-contribute, .corporate-page');
+    if (!page) return;
+
+    const selectors = page.classList.contains('legacy-contribute')
+      ? [
+          ['.hero-phone', 'page-motion-from-left'],
+          ['.hero-copy', 'page-motion-from-right'],
+          ['.feature-white .feature-copy', ''],
+          ['.feature-white .feature-art', 'page-motion-from-right'],
+          ['.feature-blogging .feature-copy', 'page-motion-from-left'],
+          ['.feature-clients .feature-copy', ''],
+          ['.feature-clients .clients-art', 'page-motion-from-right'],
+          ['.form-copy', ''],
+          ['.form-art', 'page-motion-from-right']
+        ]
+      : [
+          ['.corp-hero__art', 'page-motion-from-left'],
+          ['.corp-hero__copy', 'page-motion-from-right'],
+          ['.corp-pressure__copy', ''],
+          ['.corp-pullquote', 'page-motion-from-right'],
+          ['.corp-pressure__chips', ''],
+          ['.corp-offer__copy', 'page-motion-from-left'],
+          ['.corp-offer__card', 'page-motion-from-right'],
+          ['.corp-section-heading', ''],
+          ['.corp-benefit', ''],
+          ['.corp-enroll__copy', 'page-motion-from-left'],
+          ['.corp-enroll__form', 'page-motion-from-right']
+        ];
+
+    const targets = [];
+    selectors.forEach(([selector, direction]) => {
+      page.querySelectorAll(selector).forEach((el, index) => {
+        if (el.dataset.pageMotionReady) return;
+        el.dataset.pageMotionReady = 'true';
+        el.classList.add('page-motion-reveal');
+        if (direction) el.classList.add(direction);
+        if (selector === '.corp-benefit') el.style.setProperty('--motion-delay', (index % 4) * 90 + 'ms');
+        targets.push(el);
+      });
+    });
+
+    if (!targets.length) return;
+    root.classList.add('page-motion-ready');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('page-motion-visible');
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -45px 0px' });
+
+    targets.forEach(el => {
+      observer.observe(el);
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.92 && rect.bottom > 0) {
+        el.classList.add('page-motion-visible');
+        observer.unobserve(el);
+      }
+    });
+  })();
+</script>
