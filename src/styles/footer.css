@@ -180,11 +180,24 @@
 @media (max-width: 575px) {
   .site-footer__inner {
     min-height: 101px;
-    padding: 10px 16px 19px;
+    padding: 10px 16px 4px;
   }
 
   .site-footer__grid {
-    gap: 10px 16px;
+    min-height: 87px;
+    grid-template-rows: minmax(0, 1fr) auto;
+    align-content: stretch;
+    gap: 8px 16px;
+  }
+
+  .site-footer__logo,
+  .site-footer__social {
+    align-self: start;
+  }
+
+  .site-footer__copyright {
+    align-self: end;
+    padding-bottom: 0;
   }
 
   .site-footer__copyright p {
@@ -193,12 +206,12 @@
   }
 
   .site-footer__logo img:first-child {
-    width: 23px;
-    height: 23px;
+    width: 29px;
+    height: 29px;
   }
 
   .site-footer__logo img:last-child {
-    width: 72px;
+    width: 90px;
   }
 
   .site-footer__social {
@@ -218,11 +231,11 @@
   }
 
   .site-footer__logo img:first-child {
-    width: 21px;
-    height: 21px;
+    width: 25px;
+    height: 25px;
   }
 
   .site-footer__logo img:last-child {
-    width: 64px;
+    width: 78px;
   }
 }
