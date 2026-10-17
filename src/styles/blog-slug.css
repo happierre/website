@@ -254,3 +254,19 @@ h4 {
 @media (max-width: 575px) {
   .blog-post__title { font-size: var(--type-section); }
 }
+
+
+/* Apply the same cool blue-purple wash to article cover photography. */
+.blog-post__image-container {
+  position: relative;
+}
+.blog-post__image-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(125deg, rgba(17, 56, 144, 0.34) 0%, rgba(81, 24, 186, 0.30) 100%);
+}
+.blog-post__image {
+  display: block;
+}
