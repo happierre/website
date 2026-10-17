@@ -106,56 +106,63 @@
   }
 }
 
-/* Mobile – stack: links → logo → social (fb then insta) */
+/* Mobile: brand left, social icons right, legal links anchored on the bottom row. */
 @media (max-width: 767px) {
   .site-footer__inner {
-    min-height: auto;
+    min-height: 130px;
     padding: 20px 16px 24px;
   }
 
   .site-footer__grid {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    text-align: center;
-    gap: 14px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    justify-items: stretch;
+    text-align: initial;
+    gap: 10px 16px;
+  }
+
+  .site-footer__logo {
+    order: 1;
+    justify-self: start;
+    text-align: left;
+  }
+
+  .site-footer__social {
+    order: 2;
+    justify-content: flex-end;
+    justify-self: end;
+    width: auto;
+    padding-right: 0;
   }
 
   .site-footer__copyright {
-    order: 1;
+    order: 3;
+    grid-column: 1 / -1;
     justify-self: center;
     width: 100%;
+    align-self: end;
   }
 
   .site-footer__copyright p {
     margin: 0 auto;
     max-width: 340px;
-  }
-
-  .site-footer__logo {
-    order: 2;
+    text-align: center;
   }
 
   .site-footer__logo img {
     width: 79px;
     margin-top: 2px;
   }
-
-  .site-footer__social {
-    order: 3;
-    justify-content: center;
-    justify-self: center;
-    width: 100%;
-    padding-right: 0;
-  }
 }
 
 @media (max-width: 575px) {
   .site-footer__inner {
+    min-height: 101px;
     padding: 10px 16px 19px;
   }
 
   .site-footer__grid {
-    gap: 10px;
+    gap: 10px 16px;
   }
 
   .site-footer__copyright p {
