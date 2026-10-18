@@ -292,3 +292,11 @@
   .hf-heading-group { gap: 10px !important; }
   .hf-phone-area { flex: 0 0 auto; }
 }
+
+
+/* Mobile: bring the phone preview closer to the heading and supporting copy. */
+@media (max-width: 767px) {
+  .hf-container {
+    gap: 8px !important;
+  }
+}
