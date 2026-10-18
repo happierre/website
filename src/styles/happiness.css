@@ -17,8 +17,8 @@
   .happiness {
     position: -webkit-sticky !important;
     position: sticky !important;
-    top: 80px;
-    height: calc(100vh - 80px) !important;
+    top: var(--site-header-height);
+    height: calc(100vh - var(--site-header-height)) !important;
     min-height: unset !important;
     width: 100%;
   }
