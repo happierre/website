@@ -109,18 +109,12 @@
 }
 
 @media (max-width: 767px) {
-  .exercise-banner {
-    min-height: 500px;
-  }
-
-  .exercise-banner__title { top: 16%; left: 20px; right: 20px; }
+.exercise-banner__title { top: 16%; left: 20px; right: 20px; }
 
   .exercise-banner__label { font-size: 42px; }
 }
 
 @media (max-width: 575px) {
-  .exercise-banner {
-  }
 
   .exercise-banner__title { top: 14%; left: 16px; right: 16px; }
 
