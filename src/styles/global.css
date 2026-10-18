@@ -1,4 +1,773 @@
+:root {
+  /* Official Happierre gradient stops */
+  --stop-light-a: #BFA8F3;
+  --stop-light-b: #BDD6FF;
+  --stop-middle-a: #8A4BE1;
+  --stop-middle-b: #698CCF;
+  --stop-dark-a: #5118BA;
+  --stop-dark-b: #113890;
 
+  /* Gradient text: light on dark backgrounds, middle on light backgrounds */
+  --gradient-text-on-dark: linear-gradient(90deg, var(--stop-light-a) 0%, var(--stop-light-b) 100%);
+  --gradient-text-on-light: linear-gradient(90deg, var(--stop-middle-a) 0%, var(--stop-middle-b) 100%);
+
+  --color-brand: #5e61d6;
+  --color-brand-hover: #4a4dc2;
+  --color-bg-light: #ffffff;
+  --color-bg-tint: var(--stop-light-b);
+  --color-text-dark: #113890;
+  --color-text-body: #243b68;
+  --color-text-muted: #52678f;
+  --color-text-light: #999999;
+  --container-max-width: 1140px;
+  --container-padding-desktop: 42px;
+  --container-padding-tablet: 33px;
+  --container-padding-mobile: 20px;
+  --site-header-height: 80px;
+  --footer-height: 100px;
+
+  /* Brand gradients use only the official stops; the subtle glow is removed */
+  --gradient-light: radial-gradient(circle at 0% 0%, #CAD0FB, transparent 75%), linear-gradient(225deg, var(--stop-light-b), var(--stop-light-a));
+  --gradient-middle: radial-gradient(circle at 0% 0%, #6C88DD, transparent 75%), linear-gradient(225deg, var(--stop-middle-b), var(--stop-middle-a));
+  --gradient-dark: radial-gradient(circle at 0% 0%, #2F45BA, transparent 75%), linear-gradient(225deg, var(--stop-dark-b), var(--stop-dark-a));
+  --gradient-super-dark: radial-gradient(circle at 0% 0%, #162F6F, transparent 75%), linear-gradient(225deg, #0B2462, #360568);
+
+  /* Legacy semantic aliases retained for existing page styles */
+  --color-brand-light: var(--stop-light-a);
+  --color-brand-pale: rgba(191, 168, 243, 0.18);
+  --color-brand-bg: rgba(189, 214, 255, 0.22);
+  --color-gradient-start: var(--stop-middle-a);
+  --color-gradient-end: var(--stop-middle-b);
+  --color-dark-purple: var(--stop-dark-b);
+  --color-accent-coral: #e05555;
+  --color-lavender: var(--stop-light-a);
+  --color-section-purple: var(--stop-middle-a);
+
+  --color-white: #ffffff;
+  --color-brand-mid: var(--stop-middle-b);
+  --color-purple-deep: var(--stop-middle-a);
+  --gradient-hero: linear-gradient(to right, var(--stop-light-b), var(--stop-light-a));
+  --gradient-header: linear-gradient(var(--stop-middle-a), var(--stop-middle-b));
+  --gradient-dark-overlay: linear-gradient(160deg, rgba(17, 56, 144, 0.94) 0%, rgba(81, 24, 186, 0.90) 55%, rgba(17, 56, 144, 0.94) 100%);
+  --color-phone-black: #000000;
+  --color-phone-border: #1a1a1a;
+  --color-brand-light-end: var(--stop-light-b);
+
+  /* Fonts */
+  --font-open-sans: 'Open Sans', sans-serif;
+  --font-urbanist: 'Urbanist', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+  /* mapped to Urbanist like original site */
+
+  /* Button */
+  --btn-bg: #5e61d6;
+  --btn-bg-hover: var(--color-brand-hover);
+  --btn-color: #ffffff;
+  --btn-padding: 18px 45px;
+  --btn-radius: 50px;
+  --btn-font-size: 14px;
+  --btn-font-weight: 700;
+  --btn-letter-spacing: 1px;
+}
+
+/* Single source of truth for the fixed site header offset. */
+@media (max-width: 1199px) {
+  :root { --site-header-height: 75px; }
+}
+@media (max-width: 575px) {
+  :root { --site-header-height: 72px; }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-height: 100%;
+  overflow-x: clip;
+}
+
+/* Reduce Safari's rubber-band overscroll at the document boundaries.
+   Scoped to WebKit-based browsers so Android behavior remains unchanged. */
+@supports (-webkit-touch-callout: none) {
+  html,
+  body {
+    overscroll-behavior-y: none;
+  }
+}
+
+@media (min-width: 769px) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-open-sans);
+  color: var(--color-text-dark);
+  background: var(--color-bg-light);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+  overflow-x: clip;
+}
+
+main {
+  padding-top: var(--site-header-height);
+  flex: 1;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: clip;
+}
+
+/* ── Global heading defaults — matches reference site nicepage.css ── */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-urbanist);
+  font-weight: 500;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.125rem;
+}
+
+h6 {
+  font-size: 1.125rem;
+}
+
+.site-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding-left: var(--container-padding-desktop);
+  padding-right: var(--container-padding-desktop);
+  width: 100%;
+}
+
+@media (max-width: 1199px) {
+  .site-container {
+    padding-left: var(--container-padding-tablet);
+    padding-right: var(--container-padding-tablet);
+  }
+}
+
+@media (max-width: 767px) {
+  .site-container {
+    padding-left: var(--container-padding-mobile);
+    padding-right: var(--container-padding-mobile);
+  }
+}
+
+/* ── Shared utilities ── */
+.landing-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding-left: var(--container-padding-desktop);
+  padding-right: var(--container-padding-desktop);
+  align-items: center;
+}
+
+@media (max-width: 1199px) {
+  .landing-container {
+    padding-left: var(--container-padding-tablet);
+    padding-right: var(--container-padding-tablet);
+  }
+}
+
+@media (max-width: 767px) {
+  .landing-container {
+    padding-left: var(--container-padding-mobile);
+    padding-right: var(--container-padding-mobile);
+  }
+}
+
+@media (max-width: 575px) {
+
+  .site-container,
+  .landing-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* ── Button responsive padding (tablet + mobile only) ── */
+@media (max-width: 991px) {
+  :root {
+    --btn-padding: 16px 36px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --btn-padding: 14px 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  :root {
+    --btn-padding: 13px 24px;
+  }
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: var(--btn-padding);
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  font-family: var(--font-open-sans);
+  font-size: var(--btn-font-size);
+  font-weight: var(--btn-font-weight);
+  letter-spacing: var(--btn-letter-spacing);
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: var(--btn-radius);
+  border: none;
+  cursor: pointer;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  transition: background-color 0.25s, transform 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: var(--btn-bg-hover);
+  color: var(--btn-color);
+}
+
+.btn-brand {
+  background: var(--color-brand);
+}
+
+.btn-brand:hover {
+  background-color: black;
+}
+
+.btn-coral {
+  background: var(--color-brand);
+}
+
+.btn-coral:hover {
+  background: #000000;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--color-brand);
+  color: var(--color-brand);
+}
+
+.btn-outline:hover {
+  background: var(--color-brand);
+  color: #fff;
+}
+
+/* ══════════════════════════════════════════════════════════
+   DESKTOP: Every section = exactly 100vh (full screen)
+   ══════════════════════════════════════════════════════════ */
+@media (min-width: 769px) {
+
+  .hero,
+  .exercise-banner,
+  .brain-cortex,
+  .have-everything,
+  .happiness,
+  .premium,
+  .fun-section,
+  .ai-section,
+  .ll-section,
+  .gh-section,
+  .na-section,
+  .ls-section,
+  .pom-section {
+    height: 100vh !important;
+    max-height: 100vh !important;
+    min-height: unset !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Hero: subtract header height (80px sticky nav) */
+  .hero {
+    height: calc(100vh - var(--site-header-height)) !important;
+    max-height: calc(100vh - var(--site-header-height)) !important;
+  }
+
+  /* Sections that need flex centering added (don't have it in their own CSS) */
+  .happiness,
+  .gh-section,
+  .na-section,
+  .pom-section {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .ls-section {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════
+   MOBILE LAYOUT & OVERFLOW PROTECTION
+   ══════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  .hero,
+  .exercise-banner,
+  .brain-cortex,
+  .have-everything,
+  .happiness,
+  .premium,
+  .fun-section,
+  .ai-section,
+  .ll-section,
+  .gh-section,
+  .na-section,
+  .ls-section,
+  .pom-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+
+  .section-sticky-wrapper,
+  .he-sticky-wrapper,
+  .na-sticky-wrapper,
+  .exercise-banner-wrapper,
+  .brain-cortex-wrapper,
+  .happiness-compounds-wrapper {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .ls-section {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+  }
+}
+
+/* ── Mobile: keep ordinary landing sections at least one stable screen tall ── */
+@media (max-width: 768px) {
+  .hero,
+  .have-everything,
+  .happiness,
+  .premium,
+  .fun-section,
+  .ai-section,
+  .ll-section,
+  .gh-section,
+  .na-section,
+  .ls-section,
+  .pom-section {
+  }
+}
+
+
+/* ── Full-screen sticky landing panels ────────────────────────────────
+   Every major section after the hero is a full-screen sticky panel.
+   The wrapper provides the dwell/overlap time; the section tracks the
+   dynamic visible viewport while the browser chrome expands/collapses.
+*/
+.fullpage-sticky-wrapper {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 140svh;
+  margin: 0;
+  padding: 0;
+}
+
+.fullpage-sticky-wrapper > section {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: var(--site-header-height) !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+@media (min-width: 768px) {
+  .fullpage-sticky-wrapper > section {
+    height: calc(100svh - var(--site-header-height)) !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+}
+
+.exercise-banner-wrapper,
+.brain-cortex-wrapper,
+.he-sticky-wrapper,
+.happiness-compounds-wrapper,
+.na-sticky-wrapper,
+.section-sticky-wrapper {
+  height: 140svh !important;
+}
+
+.exercise-banner-wrapper {
+  height: 160svh !important;
+}
+
+@media (min-width: 768px) {
+  .exercise-banner,
+  .brain-cortex,
+  .have-everything,
+  .happiness,
+  .na-section,
+  .pom-section {
+    height: calc(100svh - var(--site-header-height)) !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+}
+
+@media (max-width: 1199px) {
+  .fullpage-sticky-wrapper > section {
+    top: var(--site-header-height) !important;
+  }
+
+  .exercise-banner-wrapper,
+  .brain-cortex-wrapper,
+  .he-sticky-wrapper,
+  .happiness-compounds-wrapper,
+  .na-sticky-wrapper,
+  .section-sticky-wrapper {
+    height: 140svh !important;
+  }
+
+  .exercise-banner-wrapper {
+    height: 160svh !important;
+  }
+
+  .exercise-banner,
+  .brain-cortex,
+  .have-everything,
+  .happiness,
+  .na-section,
+  .pom-section {
+    top: var(--site-header-height) !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .fullpage-sticky-wrapper > section {
+    top: var(--site-header-height) !important;
+  }
+
+  .exercise-banner,
+  .brain-cortex,
+  .have-everything,
+  .happiness,
+  .na-section,
+  .pom-section {
+    top: var(--site-header-height) !important;
+  }
+}
+
+/* Keep the existing card/content overflow behavior inside the panel. */
+.fullpage-sticky-wrapper > section {
+  overflow: hidden;
+}
+
+
+/* Existing section wrappers use the same sticky panel contract. */
+.exercise-banner,
+.brain-cortex,
+.have-everything,
+.happiness,
+.na-section,
+.pom-section {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: var(--site-header-height) !important;
+}
+
+@media (max-width: 1199px) {
+  .exercise-banner,
+  .brain-cortex,
+  .have-everything,
+  .happiness,
+  .na-section,
+  .pom-section {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: var(--site-header-height) !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .exercise-banner,
+  .brain-cortex,
+  .have-everything,
+  .happiness,
+  .na-section,
+  .pom-section {
+    top: var(--site-header-height) !important;
+  }
+}
+
+
+/* ── Mobile sticky refinements ─────────────────────────────────────── */
+@media (max-width: 767px) {
+  /* Give each sticky panel a little more scroll dwell so it catches reliably. */
+  .fullpage-sticky-wrapper {
+    height: 205svh !important;
+  }
+
+  .exercise-banner-wrapper {
+  }
+
+  .exercise-banner-wrapper,
+  .brain-cortex-wrapper,
+  .he-sticky-wrapper,
+  .happiness-compounds-wrapper,
+  .na-sticky-wrapper,
+  .section-sticky-wrapper {
+  }
+
+  .exercise-banner-wrapper {
+  }
+}
+
+/* Final panel: leave room for the footer while preserving the sticky hand-off. */
+
+
+@media (max-width: 575px) {
+  .pom-section {
+  }
+
+  .section-sticky-wrapper:has(.pom-section) {
+  }
+}
+
+/* Mobile panel geometry: use the large viewport so panels remain full-height
+   after Safari's browser chrome is out of the way. */
+@media (max-width: 767px) {
+  .fullpage-sticky-wrapper > section {
+  }
+
+  .exercise-banner,
+  .brain-cortex,
+  .have-everything,
+  .happiness,
+  .na-section,
+  .pom-section {
+  }
+
+  .pom-section {
+  }
+
+  .section-sticky-wrapper:has(.pom-section) {
+  }
+}
+
+
+/* ── Unified landing-page typography ───────────────────────────────
+   Section colours remain intentionally section-specific. */
+.hero__headline,
+.exercise-banner__title,
+.brain-cortex__title,
+.have-everything__title,
+.happiness__title,
+.premium__title,
+.hf-heading,
+.ai-section__title,
+.ll-heading,
+.gh-heading,
+.na-heading,
+.ls-heading,
+.pom-heading {
+  font-family: var(--font-urbanist) !important;
+  font-size: 40px !important;
+  font-weight: 700 !important;
+  line-height: 1.15 !important;
+  letter-spacing: 0 !important;
+}
+
+.hero__subtext,
+.have-everything__desc,
+.happiness__timeline li,
+.cortex-card__desc,
+.stat-card__label,
+.hf-text,
+.ai-section__desc,
+.ll-sub,
+.gh-sub,
+.na-card-body,
+.ls-sub,
+.pom-subtitle {
+  font-family: var(--font-urbanist) !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0 !important;
+}
+
+@media (max-width: 767px) {
+  .hero__headline,
+  .exercise-banner__title,
+  .brain-cortex__title,
+  .have-everything__title,
+  .happiness__title,
+  .premium__title,
+  .hf-heading,
+  .ai-section__title,
+  .ll-heading,
+  .gh-heading,
+  .na-heading,
+  .ls-heading,
+  .pom-heading {
+    font-size: 32px !important;
+  }
+
+  .hero__subtext,
+  .have-everything__desc,
+  .happiness__timeline li,
+  .cortex-card__desc,
+  .stat-card__label,
+  .hf-text,
+  .ai-section__desc,
+  .ll-sub,
+  .gh-sub,
+  .na-card-body,
+  .ls-sub,
+  .pom-subtitle {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero__headline,
+  .exercise-banner__title,
+  .brain-cortex__title,
+  .have-everything__title,
+  .happiness__title,
+  .premium__title,
+  .hf-heading,
+  .ai-section__title,
+  .ll-heading,
+  .gh-heading,
+  .na-heading,
+  .ls-heading,
+  .pom-heading {
+    font-size: 28px !important;
+  }
+}
+
+
+/* Shared full-screen sticky panels for secondary pages. Top and bottom sections stay natural-flow. */
+.page-sticky-wrapper {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 140svh;
+  margin: 0;
+  padding: 0;
+}
+.page-sticky-wrapper > section {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: var(--site-header-height) !important;
+  height: calc(100svh - var(--site-header-height)) !important;
+  min-height: 0 !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+.page-sticky-wrapper > section::-webkit-scrollbar { display: none; }
+@media (max-width: 767px) {
+  .page-sticky-wrapper { height: 240svh !important; }
+  .page-sticky-wrapper > section { height: calc(100lvh - var(--site-header-height)) !important; }
+}
+
+/* Consistent mobile heading placement across the landing-page panels.
+   4C Cortex is the reference: a clean, centered heading with no inherited
+   heading margins or extra title padding. Keep the hero's left-aligned layout. */
+@media (max-width: 767px) {
+  .exercise-banner__title,
+  .brain-cortex__title,
+  .have-everything__title,
+  .happiness__title,
+  .premium__title,
+  .hf-heading,
+  .ai-section__title,
+  .ll-heading,
+  .gh-heading,
+  .na-heading,
+  .ls-heading,
+  .pom-heading {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    text-align: center !important;
+    box-sizing: border-box;
+  }
+
+  /* Increase the scroll distance before a panel is released, so a normal
+     swipe is less likely to pass through a sticky panel in one go. */
+  .fullpage-sticky-wrapper,
+  .brain-cortex-wrapper,
+  .he-sticky-wrapper,
+  .happiness-compounds-wrapper,
+  .na-sticky-wrapper,
+  .section-sticky-wrapper,
+  .page-sticky-wrapper {
+  }
+
+  .exercise-banner-wrapper {
+  }
+}
+
+
+/* The final panel gets only a short sticky runway equal to the footer
+   height. This keeps it sticky, while the footer follows directly after it. */
+@media (max-width: 767px) {
+  .section-sticky-wrapper:has(.pom-section) {
+  }
+
+  .section-sticky-wrapper:has(.pom-section) > .pom-section {
+  }
+}
 
 /* ── Mobile layout correction: align section headings to the 4C Cortex top edge ──
    Use a shared 36px top inset for the content groups. Preserve each section's
@@ -87,6 +856,10 @@
     padding: 24px 0 14px !important;
     align-items: flex-start !important;
   }
+  .section-sticky-wrapper:has(.pom-section) {
+  }
+  .section-sticky-wrapper:has(.pom-section) > .pom-section {
+  }
   .pom-inner {
     gap: 14px !important;
     padding: 0 18px !important;
@@ -115,6 +888,10 @@
 @media (max-width: 575px) {
   .pom-section {
     padding: 18px 0 10px !important;
+  }
+  .section-sticky-wrapper:has(.pom-section) {
+  }
+  .section-sticky-wrapper:has(.pom-section) > .pom-section {
   }
   .pom-inner {
     gap: 10px !important;
@@ -493,6 +1270,8 @@
   }
 }
 @media (max-width: 767px) {
+  .ls-section {
+  }
   .ls-container {
     height: auto !important;
     justify-content: flex-start !important;
