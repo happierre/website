@@ -399,7 +399,6 @@ h6 {
   .na-section,
   .ls-section,
   .pom-section {
-    min-height: 100svh !important;
   }
 }
 
@@ -486,7 +485,6 @@ h6 {
 @media (max-width: 575px) {
   .fullpage-sticky-wrapper > section {
     top: var(--site-header-height) !important;
-    height: calc(100svh - var(--site-header-height)) !important;
   }
 
   .exercise-banner,
@@ -496,7 +494,6 @@ h6 {
   .na-section,
   .pom-section {
     top: var(--site-header-height) !important;
-    height: calc(100svh - var(--site-header-height)) !important;
   }
 }
 
@@ -551,7 +548,6 @@ h6 {
   }
 
   .exercise-banner-wrapper {
-    height: 215svh !important;
   }
 
   .exercise-banner-wrapper,
@@ -560,34 +556,27 @@ h6 {
   .happiness-compounds-wrapper,
   .na-sticky-wrapper,
   .section-sticky-wrapper {
-    height: 180svh !important;
   }
 
   .exercise-banner-wrapper {
-    height: 195svh !important;
   }
 }
 
 /* Final panel: leave room for the footer while preserving the sticky hand-off. */
 @media (max-width: 767px) {
   .pom-section {
-    height: calc(100svh - var(--site-header-height) - var(--footer-height)) !important;
     min-height: 0 !important;
-    max-height: none !important;
   }
 
   .section-sticky-wrapper:has(.pom-section) {
-    height: calc(100svh - var(--footer-height)) !important;
   }
 }
 
 @media (max-width: 575px) {
   .pom-section {
-    height: calc(100dvh - 52px - var(--footer-height)) !important;
   }
 
   .section-sticky-wrapper:has(.pom-section) {
-    height: calc(100svh - var(--footer-height)) !important;
   }
 }
 
@@ -595,7 +584,6 @@ h6 {
    after Safari's browser chrome is out of the way. */
 @media (max-width: 767px) {
   .fullpage-sticky-wrapper > section {
-    height: calc(100lvh - var(--site-header-height)) !important;
   }
 
   .exercise-banner,
@@ -604,15 +592,12 @@ h6 {
   .happiness,
   .na-section,
   .pom-section {
-    height: calc(100lvh - var(--site-header-height)) !important;
   }
 
   .pom-section {
-    height: calc(100lvh - var(--site-header-height) - var(--footer-height)) !important;
   }
 
   .section-sticky-wrapper:has(.pom-section) {
-    height: calc(100lvh - var(--footer-height)) !important;
   }
 }
 
@@ -770,11 +755,9 @@ h6 {
   .na-sticky-wrapper,
   .section-sticky-wrapper,
   .page-sticky-wrapper {
-    height: 240svh !important;
   }
 
   .exercise-banner-wrapper {
-    height: 260svh !important;
   }
 }
 
@@ -783,11 +766,9 @@ h6 {
    height. This keeps it sticky, while the footer follows directly after it. */
 @media (max-width: 767px) {
   .section-sticky-wrapper:has(.pom-section) {
-    height: calc(100lvh - var(--site-header-height) + var(--footer-height)) !important;
   }
 
   .section-sticky-wrapper:has(.pom-section) > .pom-section {
-    height: calc(100lvh - var(--site-header-height)) !important;
   }
 }
 
@@ -874,17 +855,13 @@ h6 {
   /* Peace of Mind is intentionally shorter than a full-screen panel so the
      footer is visible immediately below it on the same mobile screen. */
   .pom-section {
-    height: calc(100lvh - var(--site-header-height) - var(--footer-height)) !important;
     min-height: 0 !important;
-    max-height: none !important;
     padding: 24px 0 14px !important;
     align-items: flex-start !important;
   }
   .section-sticky-wrapper:has(.pom-section) {
-    height: calc(100lvh - var(--site-header-height) - var(--footer-height)) !important;
   }
   .section-sticky-wrapper:has(.pom-section) > .pom-section {
-    height: calc(100lvh - var(--site-header-height) - var(--footer-height)) !important;
   }
   .pom-inner {
     gap: 14px !important;
@@ -913,14 +890,11 @@ h6 {
 
 @media (max-width: 575px) {
   .pom-section {
-    height: calc(100lvh - var(--site-header-height) - var(--footer-height)) !important;
     padding: 18px 0 10px !important;
   }
   .section-sticky-wrapper:has(.pom-section) {
-    height: calc(100lvh - var(--site-header-height) - var(--footer-height)) !important;
   }
   .section-sticky-wrapper:has(.pom-section) > .pom-section {
-    height: calc(100lvh - var(--site-header-height) - var(--footer-height)) !important;
   }
   .pom-inner {
     gap: 10px !important;
@@ -1300,7 +1274,6 @@ h6 {
 }
 @media (max-width: 767px) {
   .ls-section {
-    min-height: 100svh !important;
   }
   .ls-container {
     height: auto !important;
@@ -1683,9 +1656,7 @@ main > section:not(.corp-hero):not(.legacy-contact .contact-main) .container > h
   .gh-section,
   .na-section,
   .ls-section {
-    height: auto !important;
     min-height: calc(100svh - var(--site-header-height)) !important;
-    max-height: none !important;
   }
 
   /* Sticky-panel selectors have higher specificity than the section classes. */
@@ -1694,21 +1665,16 @@ main > section:not(.corp-hero):not(.legacy-contact .contact-main) .container > h
     .premium, .fun-section, .ai-section, .ll-section, .gh-section,
     .na-section, .ls-section
   ) {
-    height: auto !important;
     min-height: calc(100svh - var(--site-header-height)) !important;
-    max-height: none !important;
   }
 
   .pom-section,
   .section-sticky-wrapper:has(.pom-section) > .pom-section {
-    height: auto !important;
     min-height: calc(100svh - var(--site-header-height) - var(--footer-height)) !important;
-    max-height: none !important;
   }
 
   /* Let the final panel's wrapper follow its content and keep the footer hand-off. */
   .section-sticky-wrapper:has(.pom-section) {
-    height: auto !important;
     min-height: calc(100svh - var(--footer-height)) !important;
   }
 }
