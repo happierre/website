@@ -68,6 +68,15 @@
   --btn-font-weight: 700;
   --btn-letter-spacing: 1px;
 }
+
+/* One source of truth for the fixed header offset used by landing sections. */
+@media (max-width: 1199px) {
+  :root { --site-header-height: 75px; }
+}
+@media (max-width: 575px) {
+  :root { --site-header-height: 72px; }
+}
+
 *,
 *::before,
 *::after {
@@ -438,7 +447,7 @@ h6 {
 .happiness,
 .na-section,
 .pom-section {
-  height: calc(100svh - 80px) !important;
+  height: calc(100svh - var(--site-header-height)) !important;
   min-height: 0 !important;
   max-height: none !important;
 }
