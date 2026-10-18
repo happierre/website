@@ -8,8 +8,6 @@
   position: -webkit-sticky !important;
   position: sticky !important;
   top: var(--site-header-height);
-  height: calc(100vh - var(--site-header-height)) !important;
-  min-height: unset !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,7 +23,6 @@
 
   .exercise-banner {
     top: var(--site-header-height) !important;
-    height: calc(100svh - var(--site-header-height)) !important;
   }
 }
 
@@ -161,3 +158,12 @@
 .exercise-banner__flash { display: none !important; }
 .exercise-banner__bg--bottom { transition: none !important; }
 .exercise-banner__label { transition: none !important; }
+
+
+/* Keep the original sticky-panel height on tablet/desktop only. */
+@media (min-width: 768px) {
+  .exercise-banner { height: calc(100vh - var(--site-header-height)) !important; min-height: unset !important; }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .exercise-banner { height: calc(100svh - var(--site-header-height)) !important; }
+}
