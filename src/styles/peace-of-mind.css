@@ -3,7 +3,6 @@
   position: relative;
   overflow: hidden;
   background: var(--gradient-hero);
-  min-height: 85vh;
   display: flex;
   align-items: center;
   padding: 60px 0;
@@ -352,3 +351,6 @@
 @media (max-width: 767px) {
   .pom-card { transform: translateY(-8px); }
 }
+
+
+@media (min-width: 768px) { .pom-section { min-height: 85vh; } }
