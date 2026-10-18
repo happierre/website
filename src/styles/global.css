@@ -1648,13 +1648,7 @@ main > section:not(.corp-hero):not(.legacy-contact .contact-main) .container > h
     .hero, .exercise-banner, .brain-cortex, .have-everything, .happiness,
     .premium, .fun-section, .ai-section, .ll-section, .gh-section,
     .na-section, .ls-section
-  ) {
-    height: auto !important;
-    min-height: calc(100svh - var(--site-header-height)) !important;
-    max-height: none !important;
-  }
-
-  /* Match the specificity of the sticky-panel geometry rules above. */
+  ),
   .fullpage-sticky-wrapper > section:is(
     .hero, .exercise-banner, .brain-cortex, .have-everything, .happiness,
     .premium, .fun-section, .ai-section, .ll-section, .gh-section,
