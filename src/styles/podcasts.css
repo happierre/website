@@ -2,7 +2,6 @@
   position: relative;
   overflow: hidden;
   width: 100%;
-  min-height: 90vh;
   display: flex;
   align-items: flex-start;
   padding: calc(var(--site-header-height) + 8vh) 0 60px;
@@ -389,3 +388,6 @@
   .ll-sub { margin-top: 8px !important; margin-bottom: 0 !important; }
   .ll-stack-outer { margin-top: 0 !important; }
 }
+
+
+@media (min-width: 768px) { .ll-section { min-height: 90vh; } }
