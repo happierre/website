@@ -1656,25 +1656,33 @@ main > section:not(.corp-hero):not(.legacy-contact .contact-main) .container > h
   .gh-section,
   .na-section,
   .ls-section {
+    height: auto !important;
     min-height: calc(100svh - var(--site-header-height)) !important;
+    max-height: none !important;
   }
 
-  /* Sticky-panel selectors have higher specificity than the section classes. */
+  /* Match the specificity of the sticky-panel geometry rules above. */
   .fullpage-sticky-wrapper > section:is(
     .hero, .exercise-banner, .brain-cortex, .have-everything, .happiness,
     .premium, .fun-section, .ai-section, .ll-section, .gh-section,
     .na-section, .ls-section
   ) {
+    height: auto !important;
     min-height: calc(100svh - var(--site-header-height)) !important;
+    max-height: none !important;
   }
 
   .pom-section,
   .section-sticky-wrapper:has(.pom-section) > .pom-section {
+    height: auto !important;
     min-height: calc(100svh - var(--site-header-height) - var(--footer-height)) !important;
+    max-height: none !important;
   }
 
-  /* Let the final panel's wrapper follow its content and keep the footer hand-off. */
+  /* Keep the final panel's wrapper tied to its content and footer hand-off. */
   .section-sticky-wrapper:has(.pom-section) {
+    height: auto !important;
     min-height: calc(100svh - var(--footer-height)) !important;
+    max-height: none !important;
   }
 }
