@@ -279,7 +279,6 @@
 /* Mobile composition: centre the headline, copy and phone as one balanced group. */
 @media (max-width: 767px) {
   .fun-section {
-    min-height: 100svh !important;
     padding: 20px 16px !important;
     align-items: center !important;
   }
