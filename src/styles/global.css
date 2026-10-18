@@ -1644,18 +1644,11 @@ main > section:not(.corp-hero):not(.legacy-contact .contact-main) .container > h
 
 /* Mobile landing-page section height contract: one source of truth. */
 @media (max-width: 767px) {
-  .hero,
-  .exercise-banner,
-  .brain-cortex,
-  .have-everything,
-  .happiness,
-  .premium,
-  .fun-section,
-  .ai-section,
-  .ll-section,
-  .gh-section,
-  .na-section,
-  .ls-section {
+  main :is(
+    .hero, .exercise-banner, .brain-cortex, .have-everything, .happiness,
+    .premium, .fun-section, .ai-section, .ll-section, .gh-section,
+    .na-section, .ls-section
+  ) {
     height: auto !important;
     min-height: calc(100svh - var(--site-header-height)) !important;
     max-height: none !important;
@@ -1672,15 +1665,15 @@ main > section:not(.corp-hero):not(.legacy-contact .contact-main) .container > h
     max-height: none !important;
   }
 
-  .pom-section,
-  .section-sticky-wrapper:has(.pom-section) > .pom-section {
+  main #peace-of-mind,
+  .section-sticky-wrapper:has(#peace-of-mind) > #peace-of-mind {
     height: auto !important;
     min-height: calc(100svh - var(--site-header-height) - var(--footer-height)) !important;
     max-height: none !important;
   }
 
   /* Keep the final panel's wrapper tied to its content and footer hand-off. */
-  .section-sticky-wrapper:has(.pom-section) {
+  .section-sticky-wrapper:has(#peace-of-mind) {
     height: auto !important;
     min-height: calc(100svh - var(--footer-height)) !important;
     max-height: none !important;
