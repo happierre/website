@@ -8,6 +8,8 @@
   position: -webkit-sticky !important;
   position: sticky !important;
   top: var(--site-header-height);
+  height: calc(100vh - var(--site-header-height)) !important;
+  min-height: unset !important;
   width: 100%;
   display: flex;
   align-items: center;
@@ -21,12 +23,14 @@
 
   .have-everything {
     top: var(--site-header-height) !important;
+    height: calc(100svh - var(--site-header-height)) !important;
   }
 }
 
 @media (max-width: 575px) {
   .have-everything {
     top: var(--site-header-height) !important;
+    height: calc(100svh - var(--site-header-height)) !important;
   }
 }
 
@@ -150,6 +154,7 @@
   }
 
   .have-everything {
+    min-height: 100vh;
     align-items: center;
     padding: 80px 0;
   }
@@ -261,13 +266,4 @@
   background: none !important;
   -webkit-text-fill-color: #fff !important;
   color: #fff !important;
-}
-
-
-/* Keep the original sticky-panel height on tablet/desktop only. */
-@media (min-width: 768px) {
-  .have-everything { height: calc(100vh - var(--site-header-height)) !important; min-height: unset !important; }
-}
-@media (min-width: 768px) and (max-width: 1199px) {
-  .have-everything { height: calc(100svh - var(--site-header-height)) !important; }
 }

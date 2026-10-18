@@ -2,6 +2,7 @@
   padding: 70px 0;
   background-image: var(--gradient-hero);
   text-align: center;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -91,6 +92,7 @@
 @media (max-width: 767px) {
   .premium {
     padding: 50px 0;
+    min-height: auto;
   }
 
   .premium__grid {
@@ -194,6 +196,3 @@
 .premium {
   background-image: var(--gradient-hero) !important;
 }
-
-
-@media (min-width: 768px) { .premium { min-height: 100vh; } }

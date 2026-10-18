@@ -24,7 +24,6 @@
   --container-padding-tablet: 33px;
   --container-padding-mobile: 20px;
   --site-header-height: 80px;
-  --footer-height: 100px;
 
   /* Brand gradients use only the official stops; the subtle glow is removed */
   --gradient-light: radial-gradient(circle at 0% 0%, #CAD0FB, transparent 75%), linear-gradient(225deg, var(--stop-light-b), var(--stop-light-a));
@@ -399,6 +398,7 @@ h6 {
   .na-section,
   .ls-section,
   .pom-section {
+    min-height: 100svh !important;
   }
 }
 
@@ -422,14 +422,10 @@ h6 {
   position: sticky !important;
   top: var(--site-header-height) !important;
   width: 100% !important;
+  height: calc(100svh - var(--site-header-height)) !important;
+  min-height: 0 !important;
+  max-height: none !important;
   box-sizing: border-box !important;
-}
-@media (min-width: 768px) {
-  .fullpage-sticky-wrapper > section {
-    height: calc(100svh - var(--site-header-height)) !important;
-    min-height: 0 !important;
-    max-height: none !important;
-  }
 }
 
 .exercise-banner-wrapper,
@@ -445,22 +441,21 @@ h6 {
   height: 160svh !important;
 }
 
-@media (min-width: 768px) {
-  .exercise-banner,
-  .brain-cortex,
-  .have-everything,
-  .happiness,
-  .na-section,
-  .pom-section {
-    height: calc(100svh - var(--site-header-height)) !important;
-    min-height: 0 !important;
-    max-height: none !important;
-  }
+.exercise-banner,
+.brain-cortex,
+.have-everything,
+.happiness,
+.na-section,
+.pom-section {
+  height: calc(100svh - var(--site-header-height)) !important;
+  min-height: 0 !important;
+  max-height: none !important;
 }
 
 @media (max-width: 1199px) {
   .fullpage-sticky-wrapper > section {
     top: var(--site-header-height) !important;
+    height: calc(100svh - var(--site-header-height)) !important;
   }
 
   .exercise-banner-wrapper,
@@ -483,12 +478,14 @@ h6 {
   .na-section,
   .pom-section {
     top: var(--site-header-height) !important;
+    height: calc(100svh - var(--site-header-height)) !important;
   }
 }
 
 @media (max-width: 575px) {
   .fullpage-sticky-wrapper > section {
     top: var(--site-header-height) !important;
+    height: calc(100svh - var(--site-header-height)) !important;
   }
 
   .exercise-banner,
@@ -498,6 +495,7 @@ h6 {
   .na-section,
   .pom-section {
     top: var(--site-header-height) !important;
+    height: calc(100svh - var(--site-header-height)) !important;
   }
 }
 
@@ -552,6 +550,7 @@ h6 {
   }
 
   .exercise-banner-wrapper {
+    height: 215svh !important;
   }
 
   .exercise-banner-wrapper,
@@ -560,25 +559,42 @@ h6 {
   .happiness-compounds-wrapper,
   .na-sticky-wrapper,
   .section-sticky-wrapper {
+    height: 180svh !important;
   }
 
   .exercise-banner-wrapper {
+    height: 195svh !important;
   }
 }
 
 /* Final panel: leave room for the footer while preserving the sticky hand-off. */
+@media (max-width: 767px) {
+  .pom-section {
+    height: calc(100svh - var(--site-header-height) - var(--footer-height, 0px)) !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
 
+  .section-sticky-wrapper:has(.pom-section) {
+    height: calc(100svh - var(--footer-height, 0px)) !important;
+  }
+}
 
 @media (max-width: 575px) {
   .pom-section {
+    height: calc(100dvh - 52px - var(--footer-height, 0px)) !important;
   }
 
+  .section-sticky-wrapper:has(.pom-section) {
+    height: calc(100svh - var(--footer-height, 0px)) !important;
+  }
 }
 
 /* Mobile panel geometry: use the large viewport so panels remain full-height
    after Safari's browser chrome is out of the way. */
 @media (max-width: 767px) {
   .fullpage-sticky-wrapper > section {
+    height: calc(100lvh - var(--site-header-height)) !important;
   }
 
   .exercise-banner,
@@ -587,11 +603,16 @@ h6 {
   .happiness,
   .na-section,
   .pom-section {
+    height: calc(100lvh - var(--site-header-height)) !important;
   }
 
   .pom-section {
+    height: calc(100lvh - var(--site-header-height) - var(--footer-height, 0px)) !important;
   }
 
+  .section-sticky-wrapper:has(.pom-section) {
+    height: calc(100lvh - var(--footer-height, 0px)) !important;
+  }
 }
 
 
@@ -748,9 +769,11 @@ h6 {
   .na-sticky-wrapper,
   .section-sticky-wrapper,
   .page-sticky-wrapper {
+    height: 240svh !important;
   }
 
   .exercise-banner-wrapper {
+    height: 260svh !important;
   }
 }
 
@@ -758,7 +781,13 @@ h6 {
 /* The final panel gets only a short sticky runway equal to the footer
    height. This keeps it sticky, while the footer follows directly after it. */
 @media (max-width: 767px) {
+  .section-sticky-wrapper:has(.pom-section) {
+    height: calc(100lvh - var(--site-header-height) + var(--footer-height, 0px)) !important;
+  }
 
+  .section-sticky-wrapper:has(.pom-section) > .pom-section {
+    height: calc(100lvh - var(--site-header-height)) !important;
+  }
 }
 
 /* ── Mobile layout correction: align section headings to the 4C Cortex top edge ──
@@ -844,8 +873,17 @@ h6 {
   /* Peace of Mind is intentionally shorter than a full-screen panel so the
      footer is visible immediately below it on the same mobile screen. */
   .pom-section {
+    height: calc(100lvh - var(--site-header-height) - var(--footer-height, 120px)) !important;
+    min-height: 0 !important;
+    max-height: none !important;
     padding: 24px 0 14px !important;
     align-items: flex-start !important;
+  }
+  .section-sticky-wrapper:has(.pom-section) {
+    height: calc(100lvh - var(--site-header-height) - var(--footer-height, 120px)) !important;
+  }
+  .section-sticky-wrapper:has(.pom-section) > .pom-section {
+    height: calc(100lvh - var(--site-header-height) - var(--footer-height, 120px)) !important;
   }
   .pom-inner {
     gap: 14px !important;
@@ -874,7 +912,14 @@ h6 {
 
 @media (max-width: 575px) {
   .pom-section {
+    height: calc(100lvh - var(--site-header-height) - var(--footer-height, 120px)) !important;
     padding: 18px 0 10px !important;
+  }
+  .section-sticky-wrapper:has(.pom-section) {
+    height: calc(100lvh - var(--site-header-height) - var(--footer-height, 120px)) !important;
+  }
+  .section-sticky-wrapper:has(.pom-section) > .pom-section {
+    height: calc(100lvh - var(--site-header-height) - var(--footer-height, 120px)) !important;
   }
   .pom-inner {
     gap: 10px !important;
@@ -1150,7 +1195,7 @@ h6 {
   }
   .gh-phone-img {
     width: 88% !important;
-    max-height: calc(44svh - 120px) !important;
+    max-height: calc(44dvh - 120px) !important;
     margin: 0 auto !important;
   }
 }
@@ -1161,7 +1206,7 @@ h6 {
   }
   .gh-phone-img {
     width: 86% !important;
-    max-height: calc(42svh - 105px) !important;
+    max-height: calc(42dvh - 105px) !important;
   }
 }
 
@@ -1254,6 +1299,7 @@ h6 {
 }
 @media (max-width: 767px) {
   .ls-section {
+    min-height: 100svh !important;
   }
   .ls-container {
     height: auto !important;
@@ -1261,7 +1307,7 @@ h6 {
     padding-top: 36px !important;
   }
   .ls-table-scroll {
-    max-height: 65svh;
+    max-height: 65vh;
   }
   .ls-comparison {
     min-width: 700px !important;
@@ -1294,10 +1340,10 @@ h6 {
    component script and exposed as --footer-height. */
 @media (min-width: 768px) {
   .section-sticky-wrapper:has(.pom-section) {
-    height: calc(100vh - var(--site-header-height) - var(--footer-height)) !important;
+    height: calc(100vh - var(--site-header-height) - var(--footer-height, 100px)) !important;
   }
   .section-sticky-wrapper:has(.pom-section) > .pom-section {
-    height: calc(100vh - var(--site-header-height) - var(--footer-height)) !important;
+    height: calc(100vh - var(--site-header-height) - var(--footer-height, 100px)) !important;
     min-height: 0 !important;
     max-height: none !important;
     padding-top: 24px !important;
@@ -1618,38 +1664,4 @@ main > section:not(.corp-hero):not(.legacy-contact .contact-main) .container > h
   .ll-heading { margin-bottom: 8px !important; }
   .ll-sub { margin-top: 8px !important; margin-bottom: 0 !important; }
   .ll-stack-outer { margin-top: 0 !important; }
-}
-
-
-
-/* Mobile landing-page section height contract: one source of truth. */
-@media (max-width: 767px) {
-  main :is(
-    .hero, .exercise-banner, .brain-cortex, .have-everything, .happiness,
-    .premium, .fun-section, .ai-section, .ll-section, .gh-section,
-    .na-section, .ls-section
-  ),
-  .fullpage-sticky-wrapper > section:is(
-    .hero, .exercise-banner, .brain-cortex, .have-everything, .happiness,
-    .premium, .fun-section, .ai-section, .ll-section, .gh-section,
-    .na-section, .ls-section
-  ) {
-    height: auto !important;
-    min-height: calc(100svh - var(--site-header-height)) !important;
-    max-height: none !important;
-  }
-
-  main #peace-of-mind,
-  .section-sticky-wrapper:has(#peace-of-mind) > #peace-of-mind {
-    height: auto !important;
-    min-height: calc(100svh - var(--site-header-height) - var(--footer-height)) !important;
-    max-height: none !important;
-  }
-
-  /* Keep the final panel's wrapper tied to its content and footer hand-off. */
-  .section-sticky-wrapper:has(#peace-of-mind) {
-    height: auto !important;
-    min-height: calc(100svh - var(--site-header-height) - var(--footer-height)) !important;
-    max-height: none !important;
-  }
 }

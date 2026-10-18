@@ -25,10 +25,15 @@
 }
 
 @media (max-width: 767px) {
+  .happiness-compounds-wrapper {
+    height: auto !important;
+  }
 
   .happiness {
     position: relative !important;
     top: auto !important;
+    height: auto !important;
+    min-height: auto !important;
   }
 }
 
@@ -128,6 +133,7 @@
 @media (max-width: 767px) {
   .happiness {
     padding: 50px 0;
+    min-height: auto;
   }
 
   .happiness__inner {
@@ -156,6 +162,7 @@
 
   .happiness__compounds-img {
     width: auto;
+    height: 680px;
     max-width: 100%;
   }
 
@@ -187,6 +194,7 @@
   }
 
   .happiness__compounds-img {
+    height: 580px;
     width: auto;
     max-width: 100%;
   }
@@ -216,6 +224,7 @@
 
   .happiness__compounds-img {
     transform: translateY(18px);
+    max-height: calc(100dvh - 170px);
     height: auto;
     width: auto;
   }
@@ -232,5 +241,6 @@
 
   .happiness__compounds-img {
     transform: translateY(14px);
+    max-height: calc(100dvh - 145px);
   }
 }
