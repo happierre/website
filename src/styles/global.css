@@ -573,8 +573,6 @@ h6 {
   .pom-section {
   }
 
-  .section-sticky-wrapper:has(.pom-section) {
-  }
 }
 
 /* Mobile panel geometry: use the large viewport so panels remain full-height
@@ -594,8 +592,6 @@ h6 {
   .pom-section {
   }
 
-  .section-sticky-wrapper:has(.pom-section) {
-  }
 }
 
 
@@ -762,11 +758,7 @@ h6 {
 /* The final panel gets only a short sticky runway equal to the footer
    height. This keeps it sticky, while the footer follows directly after it. */
 @media (max-width: 767px) {
-  .section-sticky-wrapper:has(.pom-section) {
-  }
 
-  .section-sticky-wrapper:has(.pom-section) > .pom-section {
-  }
 }
 
 /* ── Mobile layout correction: align section headings to the 4C Cortex top edge ──
@@ -852,13 +844,8 @@ h6 {
   /* Peace of Mind is intentionally shorter than a full-screen panel so the
      footer is visible immediately below it on the same mobile screen. */
   .pom-section {
-    min-height: 0 !important;
     padding: 24px 0 14px !important;
     align-items: flex-start !important;
-  }
-  .section-sticky-wrapper:has(.pom-section) {
-  }
-  .section-sticky-wrapper:has(.pom-section) > .pom-section {
   }
   .pom-inner {
     gap: 14px !important;
@@ -888,10 +875,6 @@ h6 {
 @media (max-width: 575px) {
   .pom-section {
     padding: 18px 0 10px !important;
-  }
-  .section-sticky-wrapper:has(.pom-section) {
-  }
-  .section-sticky-wrapper:has(.pom-section) > .pom-section {
   }
   .pom-inner {
     gap: 10px !important;
