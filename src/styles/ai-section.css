@@ -238,3 +238,22 @@
     max-width: 100vw;
   }
 }
+
+
+/* Mobile: enlarge Pierre artwork and place Chat Now directly beneath it. */
+@media (max-width: 767px) {
+  .ai-section__image {
+    order: 2 !important;
+  }
+
+  .ai-section__book-img {
+    width: 120vw !important;
+    max-width: 120vw !important;
+    margin-left: -10vw !important;
+    margin-right: -10vw !important;
+  }
+
+  .ai-section__chat-cta {
+    order: 3 !important;
+  }
+}
