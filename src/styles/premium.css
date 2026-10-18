@@ -92,7 +92,6 @@
 @media (max-width: 767px) {
   .premium {
     padding: 50px 0;
-    min-height: auto;
   }
 
   .premium__grid {
