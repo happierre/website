@@ -181,7 +181,6 @@
 @media (max-width: 768px) {
   .na-section {
     padding: 60px 0;
-    min-height: auto;
   }
 
   .na-heading {
