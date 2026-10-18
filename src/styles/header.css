@@ -202,8 +202,6 @@ body.menu-open .site-header__mobile-panel,
 }
 
 @media (max-width: 1199px) {
-  :root { --site-header-height: 75px; }
-
   .site-header__inner {
     height: 75px;
     min-height: 75px;
@@ -262,8 +260,6 @@ body.menu-open .site-header__mobile-panel,
 }
 
 @media (max-width: 575px) {
-  :root { --site-header-height: 72px; }
-
   .site-header__mobile-panel {
     top: var(--site-header-height) !important;
   }
