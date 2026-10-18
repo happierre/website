@@ -952,26 +952,26 @@ import growIcon from '../assets/images/3234841-33a8600d.png';
 
 
 <style>
-  /* Shared, restrained scroll-reveal motion matching the landing page's entrance effects. */
+  /* Stronger scroll reveals: closer to the landing page's 60px / 800ms motion. */
   @media (prefers-reduced-motion: no-preference) {
     html.page-motion-ready .page-motion-reveal {
-      transition: opacity 700ms cubic-bezier(.2,.7,.2,1), transform 700ms cubic-bezier(.2,.7,.2,1);
+      transition: opacity 900ms cubic-bezier(.19,1,.22,1), transform 900ms cubic-bezier(.19,1,.22,1);
       transition-delay: var(--motion-delay, 0ms);
       will-change: opacity, transform;
     }
     html.page-motion-ready .page-motion-reveal:not(.page-motion-visible) {
       opacity: 0;
-      transform: translate3d(0, 26px, 0);
+      transform: translate3d(0, 60px, 0) scale(.97);
     }
     html.page-motion-ready .page-motion-reveal.page-motion-visible {
       opacity: 1;
-      transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0) scale(1);
     }
     html.page-motion-ready .page-motion-from-left:not(.page-motion-visible) {
-      transform: translate3d(-32px, 0, 0);
+      transform: translate3d(-72px, 0, 0) scale(.97);
     }
     html.page-motion-ready .page-motion-from-right:not(.page-motion-visible) {
-      transform: translate3d(32px, 0, 0);
+      transform: translate3d(72px, 0, 0) scale(.97);
     }
   }
   @media (prefers-reduced-motion: reduce) {
@@ -1020,7 +1020,7 @@ import growIcon from '../assets/images/3234841-33a8600d.png';
         el.dataset.pageMotionReady = 'true';
         el.classList.add('page-motion-reveal');
         if (direction) el.classList.add(direction);
-        if (selector === '.corp-benefit') el.style.setProperty('--motion-delay', (index % 4) * 90 + 'ms');
+        if (selector === '.corp-benefit') el.style.setProperty('--motion-delay', (index % 4) * 140 + 'ms');
         targets.push(el);
       });
     });
@@ -1034,7 +1034,7 @@ import growIcon from '../assets/images/3234841-33a8600d.png';
         entry.target.classList.add('page-motion-visible');
         observer.unobserve(entry.target);
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -45px 0px' });
+    }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
 
     targets.forEach(el => {
       observer.observe(el);
