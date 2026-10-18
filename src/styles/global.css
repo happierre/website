@@ -1150,7 +1150,7 @@ h6 {
   }
   .gh-phone-img {
     width: 88% !important;
-    max-height: calc(44dvh - 120px) !important;
+    max-height: calc(44svh - 120px) !important;
     margin: 0 auto !important;
   }
 }
@@ -1161,7 +1161,7 @@ h6 {
   }
   .gh-phone-img {
     width: 86% !important;
-    max-height: calc(42dvh - 105px) !important;
+    max-height: calc(42svh - 105px) !important;
   }
 }
 
@@ -1261,7 +1261,7 @@ h6 {
     padding-top: 36px !important;
   }
   .ls-table-scroll {
-    max-height: 65vh;
+    max-height: 65svh;
   }
   .ls-comparison {
     min-width: 700px !important;
