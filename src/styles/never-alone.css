@@ -6,8 +6,6 @@
 /* ── Section ── */
 .na-section {
   position: relative;
-  height: 100vh;
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -264,3 +262,6 @@
 
 /* This title sits over photography: keep it solid white for contrast. */
 .na-heading { background: none !important; -webkit-text-fill-color: #fff !important; color: #fff !important; }
+
+
+@media (min-width: 768px) { .na-section { height: 100vh; min-height: 100vh; } }
