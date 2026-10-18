@@ -25,13 +25,10 @@
 }
 
 @media (max-width: 767px) {
-  .happiness-compounds-wrapper {
-  }
 
   .happiness {
     position: relative !important;
     top: auto !important;
-    min-height: auto !important;
   }
 }
 
