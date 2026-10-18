@@ -2,7 +2,6 @@
   padding: 70px 0;
   background-image: var(--gradient-hero);
   text-align: center;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -195,3 +194,6 @@
 .premium {
   background-image: var(--gradient-hero) !important;
 }
+
+
+@media (min-width: 768px) { .premium { min-height: 100vh; } }
