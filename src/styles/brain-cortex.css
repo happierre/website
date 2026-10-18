@@ -7,8 +7,8 @@
 .brain-cortex {
   position: -webkit-sticky !important;
   position: sticky !important;
-  top: 80px;
-  height: calc(100vh - 80px) !important;
+  top: var(--site-header-height);
+  height: calc(100vh - var(--site-header-height)) !important;
   min-height: unset !important;
   width: 100%;
   display: flex;
@@ -28,15 +28,15 @@
   }
 
   .brain-cortex {
-    top: 55px !important;
-    height: calc(100svh - 55px) !important;
+    top: var(--site-header-height) !important;
+    height: calc(100svh - var(--site-header-height)) !important;
   }
 }
 
 @media (max-width: 575px) {
   .brain-cortex {
-    top: 52px !important;
-    height: calc(100svh - 52px) !important;
+    top: var(--site-header-height) !important;
+    height: calc(100svh - var(--site-header-height)) !important;
   }
 }
 
