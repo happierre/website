@@ -288,7 +288,6 @@
 @media (max-width: 767px) {
   .pom-section {
     padding: 50px 0;
-    min-height: auto;
   }
 
   .pom-inner {
