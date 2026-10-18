@@ -1649,7 +1649,7 @@ main > section:not(.corp-hero):not(.legacy-contact .contact-main) .container > h
   /* Keep the final panel's wrapper tied to its content and footer hand-off. */
   .section-sticky-wrapper:has(#peace-of-mind) {
     height: auto !important;
-    min-height: calc(100svh - var(--footer-height)) !important;
+    min-height: calc(100svh - var(--site-header-height) - var(--footer-height)) !important;
     max-height: none !important;
   }
 }
